@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.section_frame{
+  width: 100%;
+  background-image: url(/img/bg/);
+}
+
+footer{
+  border-top: 2px solid rgba(239, 235, 230, 0.08);
+}
+
+/**
+* Font
+**/
+
+.red_hat_display{
+  font: var(--font-red-had-display);
+}
