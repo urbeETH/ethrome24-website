@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className=" flex flex-col items-center justify-between w-full pl-12 pr-[28px] py-4 sm:gap-0">
+    <footer className=" flex flex-col items-center justify-between w-full pl-12 pr-[28px] py-4 border-t-2 border-ethrome-brown ">
       <div className="flex flex-col items-center justify-between w-full gap-4 md:flex-row ">
         <Image src="/img/logo/ethRomeLogo.png" width={168} height={48} alt="logo footer"/>
         <p className="text-lg text-center text-white">

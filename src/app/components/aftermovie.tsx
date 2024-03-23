@@ -1,11 +1,14 @@
 "use client";
 
+
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
+import Image from "next/image";
 
 export default function Aftermovie() {
   return (
     <div className="relative section_frame">
+      <Image src="/img/decors/modanatura.svg" alt="aftermovie modanatura" width={100} height={27} className="absolute top-0 left-0 mix-blend-color-dodge opacity-[0.8]"/>
       <Marquee className="w-full flex justify-start items-center px-6 py-3">
         <h1 className="pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">
           What does ethrome stand for?
