@@ -7,6 +7,7 @@ import Header from "./components/header/header";
 import Footer from "./components/footer";
 
 const outfit = Outfit({ subsets: ["latin"] });
+
 const redHatDisplay = Red_Hat_Display({ subsets: ["latin"], variable:"--font-red-had-display" });
 
 export const metadata: Metadata = {

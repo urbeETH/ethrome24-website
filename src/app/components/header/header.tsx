@@ -27,7 +27,7 @@ export default function Header() {
   return (
     <>
       <div
-        className={`hidden md:flex items-center justify-between px-10 py-4 w-full`}
+        className={`relative hidden md:flex items-center justify-between px-10 py-4 w-full z-50`}
       >
         <Link href="/">
           <img src="/img/logo/ethRomeLogo.png" className="h-12" />

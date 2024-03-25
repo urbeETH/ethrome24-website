@@ -39,7 +39,12 @@ const experienceCol = [
 export default function Experience() {
   return (
     <div id="experience" className="relative section_frame">
-      <h1 className="px-[298px] pt-[104px] pb-[99px] text-ethrome-white text-[56px] text-center">
+      {/**Modanatura */}
+      <div className="flex flex-col justify-start items-center">
+      <div className="w-full h-[36.76px] modanatura opacity-[0.6]"></div>
+      <div className="w-full h-[36.76px] modanatura opacity-[0.4]"></div>
+      </div>    
+      <h1 className="px-[298px] pt-[23px] pb-[99px] text-ethrome-white text-[56px] text-center">
         {" "}
         What will you{" "}
         <span className="text-ethrome-yellow font-bold">find?</span>
@@ -61,11 +66,12 @@ export default function Experience() {
                   alt="modanatura box"
                   width={174.75}
                   height={10.56}
+                  className="svg-image"
                 />
               </div>
-              <img src={item.logo} alt="" />
+              <img src={item.logo} alt="" className="svg-image" />
             </div>
-            <img src={item.col} />
+            <img src={item.col} className="mix-blend-color-dodge opacity[0.12]" />
           </motion.div>
         ))}
       </div>

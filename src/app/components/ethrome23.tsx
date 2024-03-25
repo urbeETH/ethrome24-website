@@ -1,6 +1,7 @@
 "use client";
 
 import Marquee from "react-fast-marquee";
+import Image from "next/image";
 
 const ethrome23Numbers = [
   {
@@ -23,7 +24,8 @@ const ethrome23Numbers = [
 
 export default function ETHRome23() {
   return (
-    <div id="ethrome23" className="relative section_frame md:h-[810px]">
+    <div id="ethrome23" className="relative section_frame">
+     <div className="w-full h-[35.19px] modanatura_cols_roof"></div>
       <Marquee className="w-full flex px-6 py-3">
         <h1 className="pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">
           About Last Year
@@ -40,7 +42,7 @@ export default function ETHRome23() {
       </Marquee>
 
       <div className="bg_ethrome23 h-[810px]">
-        <div className="grid grid-cols-2 px-[211px] pt-[206px] pb-[144px] gap-14">
+        <div className="grid grid-cols-2 justify-center px-[211px] pt-[206px] pb-[144px] gap-14">
           {ethrome23Numbers.map((item,index) => (
             <div className="flex flex-col justify-center items-center px-8 py-7 gap-1 ethrome23_number_box">
               <p className="ethrome23_number">{item.number}</p>

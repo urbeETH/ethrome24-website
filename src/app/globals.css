@@ -31,6 +31,32 @@ body {
   background-image: url(/img/bg/);
 }
 
+.modanatura_cols {
+  background-image: url(/img/decors/modanatura_cols.svg);
+  background-position: left;
+  object-fit: cover;
+  background-repeat: repeat;
+  mix-blend-mode: color-dodge;
+  opacity: 0.08;
+}
+
+.modanatura_cols_roof {
+  background-image: url(/img/decors/modanatura_cols_roof.svg);
+  background-position: left;
+  object-fit: cover;
+  background-repeat: repeat;
+  mix-blend-mode: color-dodge;
+  opacity: 0.08;
+}
+
+.modanatura{
+  background-image: url(/img/decors/modanatura.svg);
+  background-position: left;
+  object-fit: cover;
+  background-repeat: repeat;
+  mix-blend-mode: color-dodge;
+}
+
 /**
 * Experience
 **/
@@ -47,10 +73,12 @@ body {
 }
 
 .experience_text_box:hover {
-
   background: #fabb00;
 }
 
+.svg-image:hover {
+  fill: #fabb00;
+}
 
 /**
 * ETHRome23

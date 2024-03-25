@@ -69,7 +69,7 @@ export default function Hackathon() {
         alt={"left icon"}
         width={48.04}
         height={847.75}
-        className="absolute left-[57px] bottom-0 mix-blend-color-dodge opacity-[0.8]"
+        className="absolute left-[57px] top-0 mix-blend-color-dodge opacity-[0.8]"
         style={{ width: "", height: "100%" }}
       />
       <Image
@@ -77,7 +77,7 @@ export default function Hackathon() {
         alt={"right cold icon"}
         width={48.04}
         height={847.75}
-        className="absolute right-[55.96px] bottom-0"
+        className="absolute right-[55.96px] top-0"
       />
     </div>
   );
