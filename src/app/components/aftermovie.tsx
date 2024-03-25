@@ -3,7 +3,6 @@
 
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Aftermovie() {

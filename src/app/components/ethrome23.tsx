@@ -53,7 +53,7 @@ export default function ETHRome23() {
       </div>
 
       <div className="absolute right-8 bottom-8 w-[220px] h-[44px] flex justify-start items-center gap-2 bg-ethrome-white rounded-[22px]">
-        <p className="pl-[28px] py-[10px] pr-4">Browse the gallery</p>
+        <p className="pl-[28px] py-[10px] pr-4 font-medium">Browse the gallery</p>
         <img src="/img/misc/right_arrow.svg" alt="button right arrow" />
       </div>
     </div>

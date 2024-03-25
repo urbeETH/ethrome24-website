@@ -40,7 +40,7 @@ export default function Experience() {
   return (
     <div id="experience" className="relative section_frame">
       {/**Modanatura */}
-      <div className="flex flex-col justify-start items-center">
+      <div className="flex flex-col justify-start items-center gap-2">
       <div className="w-full h-[36.76px] modanatura opacity-[0.6]"></div>
       <div className="w-full h-[36.76px] modanatura opacity-[0.4]"></div>
       </div>    
@@ -53,6 +53,7 @@ export default function Experience() {
       <div className="flex justify-between items-center px-[106px]">
         {experienceCol.map((item, index) => (
           <motion.div
+          key={index}
           whileHover={{translateY: "-10px"}}
           transition={{ ease: "linear", duration: 0.5}}
           className="flex flex-col justify-end items-center gap-7 h-[555px]">

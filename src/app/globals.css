@@ -49,7 +49,7 @@ body {
   opacity: 0.08;
 }
 
-.modanatura{
+.modanatura {
   background-image: url(/img/decors/modanatura.svg);
   background-position: left;
   object-fit: cover;
@@ -121,9 +121,21 @@ body {
 }
 
 /**
+* Sponsor Zone
+**/
+
+.sponsor_zone_description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  /* or 178% */
+}
+
+/**
 * Font
 **/
 
 .red_hat_display {
-  font: var(--font-red-had-display);
+  font-family: var(--font-red-hat-display);
 }

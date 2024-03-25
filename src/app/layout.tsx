@@ -10,7 +10,7 @@ const outfit = Outfit({ subsets: ["latin"] });
 
 const redHatDisplay = Red_Hat_Display({
   subsets: ["latin"],
-  variable: "--font-red-had-display",
+  variable: "--font-red-hat-display",
 });
 
 export const metadata: Metadata = {

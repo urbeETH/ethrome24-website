@@ -26,7 +26,7 @@ export default function SponsorZone() {
               <h1 className="font-bold text-white md:text-7xl text-left">
                 Sponsor Zone
               </h1>
-              <p className="text-ethrome-white text-lg leading-8 text-center md:text-left">
+              <p className="sponsor_zone_description text-ethrome-white text-center md:text-left red_hat_display">
                 Seize the chance to gain exceptional exposure, establish
                 valuable connections, and demonstrate your unwavering support
                 for the development of the blockchain space!

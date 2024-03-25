@@ -13,7 +13,7 @@ export default function AboveFold() {
       </div>
 
       <div className="flex flex-col items-center justify-center h-full">
-        <div className="z-10 flex flex-col items-center justify-between w-full h-full space-x-0 md:flex-row md:space-y-0 md:space-x-8 md:w-auto">
+        <div className="z-10 flex items-center justify-center w-full h-full md:w-auto gap-8">
           {/* logo */}
 
           <Image
@@ -38,9 +38,9 @@ export default function AboveFold() {
             </div>
 
             <div className="flex flex-col justify-start items-start gap-6">
-              <div className="flex flex-col items-start gap-2">
+              <div className="flex flex-col items-start gap-2 red_hat_display">
                 <div className="flex flex-col items-start text-ethrome-white text-xl">
-                  <p className="red_hat_display">
+                  <p className="">
                     Come, enjoy and build with care.
                   </p>
                   <p>
@@ -58,13 +58,14 @@ export default function AboveFold() {
           </div>
         </div>
       </div>
-      <Image
-        src="/img/aboveFold/sponsoredUrbe.png"
-        width={107}
-        height={37}
-        alt="sponsored by urbe.eth"
-        className="absolute bottom-[34px] left-1/2 -translate-x-1/2"
-      />
+      <a href="https://linktr.ee/urbe.eth" className="absolute bottom-[34px] left-1/2 -translate-x-1/2 z-10" target="_blank">
+        <Image
+          src="/img/aboveFold/sponsoredUrbe.png"
+          width={107}
+          height={37}
+          alt="sponsored by urbe.eth"
+        />
+      </a>
       <div className="absolute bottom-[5px] left-0 w-full h-[5px] bg-ethrome-brown"></div>
     </div>
   );

@@ -23,7 +23,7 @@ export default function Hackathon() {
               width={144}
               height={144}
             />
-            <div className=" text-ethrome-white text-xl leading-8 text-center">
+            <div className=" text-ethrome-white text-xl leading-8 text-center red_hat_display">
               <p>Unite with fellow hackers to foster</p>
               <p>
                 {" "}
@@ -40,17 +40,17 @@ export default function Hackathon() {
               width={144}
               height={144}
             />
-            <div className=" text-ethrome-white text-xl leading-8 text-center">
+            <div className=" text-ethrome-white text-xl leading-8 text-center red_hat_display">
               <p>
                 Address{" "}
                 <span className="font-bold">web3 most pressing challenges</span>
               </p>
               <p>
                 while getting inspired by the
-                <span className="font-bold">historic</span>
+                <span className="font-bold"> historic</span>
               </p>
               <p>
-                <span className="font-bold">spendour</span>of Rome.
+                <span className="font-bold">spendour </span>of Rome.
               </p>
             </div>
           </div>
@@ -65,19 +65,20 @@ export default function Hackathon() {
       />
 
       <Image
-        src={"/img/decors/flowers.svg"}
+        src={"/img/decors/flowers_hackathon.svg"}
         alt={"left icon"}
         width={48.04}
-        height={847.75}
+        height={0}
         className="absolute left-[57px] top-0 mix-blend-color-dodge opacity-[0.8]"
-        style={{ width: "", height: "100%" }}
+        style={{height: "102%" }}
       />
       <Image
         src={"/img/decors/flowers_gold.svg"}
         alt={"right cold icon"}
         width={48.04}
-        height={847.75}
+        height={0}
         className="absolute right-[55.96px] top-0"
+        style={{ height: "102%" }}
       />
     </div>
   );
