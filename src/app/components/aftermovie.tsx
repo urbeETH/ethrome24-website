@@ -4,10 +4,11 @@
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Aftermovie() {
   return (
-    <div className="relative section_frame">
+    <div id="aftermovie" className="relative section_frame">
       <Image src="/img/decors/modanatura.svg" alt="aftermovie modanatura" width={100} height={27} className="absolute top-0 left-0 mix-blend-color-dodge opacity-[0.8]"/>
       <Marquee className="w-full flex justify-start items-center px-6 py-3">
         <h1 className="pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">
@@ -21,6 +22,7 @@ export default function Aftermovie() {
         <source src="/video/aftermovie.mp4" type="video/webm" />
         Your browser does not support the video tag.
       </video>
+      <Link href="https://www.youtube.com/watch?v=Nn-zTA9lEy8" target="_blank">
       <motion.svg
         className="absolute right-10 bottom-10"
         width="123"
@@ -117,6 +119,7 @@ export default function Aftermovie() {
           stroke-width="6"
         />
       </motion.svg>
+      </Link>
     </div>
   );
 }

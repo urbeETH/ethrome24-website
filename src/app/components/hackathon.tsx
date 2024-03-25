@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Hackathon() {
   return (
-    <div className="relative section_frame">
+    <div id="hackathon" className="relative section_frame">
       <div className="flex flex-col justify-start items-center px-[298px] pt-[104px] pb-[205px] gap-[104px]">
         <div className="flex flex-col justify-start items-center">
           <h1 className="text-ethrome-white text-[56px]">

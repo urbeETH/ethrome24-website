@@ -16,6 +16,7 @@ const config: Config = {
         "ethrome-white" : "#F8FCFC",
         "ethrome-purple" : "#8314C7",
         "ethrome-brown" : "#261018",
+        "ethrome-cotta" : "#301320",
       }
     },
   },

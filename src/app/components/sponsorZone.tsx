@@ -5,7 +5,7 @@ import ButtonPurple from "./buttons/buttonPurple";
 
 export default function SponsorZone() {
   return (
-    <div className="relative section_frame pt-[168px] pb-[151px] pl-[223px] ">
+    <div id="sponsorZone" className="relative section_frame pt-[168px] pb-[151px] pl-[223px] ">
       <div className="flex flex-col justify-start max-w-[519px] items-center gap-9">
         <div className="flex flex-col items-center justify-start gap-3">
           <img

@@ -3,9 +3,11 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
+import { headerItems } from "./headerItems";
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
- 
+
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -22,7 +24,6 @@ export default function Header() {
     }
   };
 
-
   return (
     <>
       <div
@@ -31,39 +32,11 @@ export default function Header() {
         <Link href="/">
           <img src="/img/logo/ethRomeLogo.png" className="h-12" />
         </Link>
+
         <div className="flex items-center justify-center space-x-10 text-lg text-white font-semibold">
-          <h3
-            className="relative underline_item cursor-pointer"
-            onClick={() => scrollTo("intro")}
-          >
-            Aftermovie
-          </h3>
-          <h3
-            className="relative underline_item cursor-pointer"
-            onClick={() => scrollTo("hackathon")}
-          >
-            What is ETHRome
-          </h3>
-          <h3
-            className="relative underline_item cursor-pointer"
-            onClick={() => scrollTo("bounties")}
-          >
-            What will you find
-          </h3>
-          <Link
-            href="https://ethrome.notion.site/Regulation-7d77e4d4903d47baae9a6e8f21cf4200"
-            target="_blank"
-          >
-            <h3 className="relative underline_item cursor-pointer">
-              ETHRome 2023
-            </h3>
-          </Link>
-          <h3
-            className="relative underline_item cursor-pointer"
-            onClick={() => scrollTo("contact")}
-          >
-            Sponsor Zone
-          </h3>
+          {headerItems.map((item, index) => (
+            <a href={item.route} >{item.title}</a>
+          ))}
         </div>
       </div>
       <div
