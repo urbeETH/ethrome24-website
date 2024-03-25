@@ -41,10 +41,10 @@ export default function ETHRome23() {
         </h1>
       </Marquee>
 
-      <div className="bg_ethrome23 h-[810px]">
-        <div className="grid grid-cols-2 justify-center px-[211px] pt-[206px] pb-[144px] gap-14">
+      <div className="bg_ethrome23 h-[810px] flex justify-center items-center">
+        <div className="grid grid-cols-2 justify-center items-center px-[211px] pt-[206px] pb-[144px] gap-14">
           {ethrome23Numbers.map((item,index) => (
-            <div className="flex flex-col justify-center items-center px-8 py-7 gap-1 ethrome23_number_box">
+            <div  key={index} className="flex flex-col justify-center items-center px-8 py-7 gap-1 ethrome23_number_box">
               <p className="ethrome23_number">{item.number}</p>
               <p className="text-ethrome-white text-[40px] font-light">{item.text}</p>
             </div>

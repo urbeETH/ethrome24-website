@@ -35,7 +35,7 @@ export default function Header() {
 
         <div className="flex items-center justify-center space-x-10 text-lg text-white font-semibold">
           {headerItems.map((item, index) => (
-            <a href={item.route} >{item.title}</a>
+            <a key={index} href={item.route} >{item.title}</a>
           ))}
         </div>
       </div>

@@ -35,7 +35,7 @@ export default function SponsorZone() {
           </div>
 
           <div className="flex flex-col items-center justify-start gap-2">
-            <ButtonPurple cta="Request deck" route="" />
+            <ButtonPurple cta="Request deck" route="mailto:sponsor@ethrome.org?subject=Request%20ETHRome%20Deck" />
             <a
               className="text-ethrome-white text-center underline opacity-[64%]"
               href="mailto:sponsor@ethrome.org"
