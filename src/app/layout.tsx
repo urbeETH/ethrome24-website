@@ -3,8 +3,6 @@ import { Outfit } from "next/font/google";
 import { Red_Hat_Display } from "next/font/google";
 
 import "./globals.css";
-import Header from "./components/header/header";
-import Footer from "./components/footer";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -49,9 +47,7 @@ export default function RootLayout({
       <body
         className={`${outfit.className} ${redHatDisplay.variable} bg-ethrome-BlackerThanPurple`}
       >
-        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );

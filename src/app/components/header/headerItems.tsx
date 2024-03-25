@@ -4,11 +4,11 @@ export const headerItems = [
         route: "#aftermovie",
       },
       {
-        title: "What is ETHRome",
+        title: "What is ETHRome?",
         route: "#hackathon",
       },
       {
-        title: "What will you find",
+        title: "What will you find?",
         route: "#experience",
       },
       {

@@ -12,7 +12,7 @@ export default function AboveFold() {
         <div className="w-full h-[36.76px] modanatura opacity-[0.4]"></div>
       </div>
 
-      <div className="flex flex-col items-center justify-center h-full">
+      <div className="flex flex-col items-center justify-center h-[calc(100%-63.578px)]">
         <div className="z-10 flex items-center justify-center w-full h-full md:w-auto gap-8">
           {/* logo */}
 
@@ -45,7 +45,7 @@ export default function AboveFold() {
                   </p>
                   <p>
                     <span className="font-bold">Account Abstraction </span>&
-                    <span className="font-bold"> Privacy</span>Tracks.
+                    <span className="font-bold"> Privacy </span>Tracks.
                   </p>
                 </div>
                 <p className="text-base text-ethrome-yellow leading-8 font-black italic">
