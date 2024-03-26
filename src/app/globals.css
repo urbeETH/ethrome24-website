@@ -92,8 +92,8 @@ body {
 }
 
 .ethrome23_number_box {
-  width: 401.33px;
-  height: 316px;
+  width: 288px;
+  height: 153.33px;
   box-sizing: border-box;
   border: 4px solid #fabb00;
 }
@@ -101,7 +101,7 @@ body {
 .ethrome23_number {
   font-style: normal;
   font-weight: 800;
-  font-size: 79.0435px;
+  font-size: 64px;
   line-height: 100px;
   /* identical to box height */
   background: linear-gradient(
@@ -138,4 +138,27 @@ body {
 
 .red_hat_display {
   font-family: var(--font-red-hat-display);
+}
+
+/**
+**
+* Desktop
+**
+**/
+
+/**
+* Ethrome23
+**/
+
+@media screen and (min-width: 728px) {
+  .ethrome23_number_box {
+    width: 401.33px;
+    height: 316px;
+    box-sizing: border-box;
+    border: 4px solid #fabb00;
+  }
+
+  .ethrome23_number {
+    font-size: 79.0435px;
+  }
 }

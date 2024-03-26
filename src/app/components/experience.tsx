@@ -44,7 +44,7 @@ export default function Experience() {
       <div className="w-full h-[36.76px] modanatura opacity-[0.6]"></div>
       <div className="w-full h-[36.76px] modanatura opacity-[0.4]"></div>
       </div>    
-      <h1 className="px-[298px] pt-[23px] pb-[99px] text-ethrome-white text-[56px] text-center">
+      <h1 className="px-6 pt-[23px] pb-[130px] text-ethrome-white text-[32px] text-center md:px-[298px] md:pb-[99px] md:text-[56px]">
         {" "}
         What will you{" "}
         <span className="text-ethrome-yellow font-bold">find?</span>

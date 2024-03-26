@@ -12,8 +12,8 @@ export default function AboveFold() {
         <div className="w-full h-[36.76px] modanatura opacity-[0.4]"></div>
       </div>
 
-      <div className="flex flex-col items-center justify-center h-[calc(100%-63.578px)]">
-        <div className="z-10 flex items-center justify-center w-full h-full md:w-auto gap-8">
+      <div className="flex flex-col items-center justify-center md:h-[calc(100%-63.578px)]">
+        <div className="z-10 flex flex-col items-center justify-center w-full h-full gap-8 md:w-auto md:flex-row">
           {/* logo */}
 
           <Image
