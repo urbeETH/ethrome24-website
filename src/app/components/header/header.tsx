@@ -35,9 +35,9 @@ export default function Header() {
 
         <div className="flex items-center justify-center space-x-10 text-lg text-white font-semibold">
           {headerItems.map((item, index) => (
-            <a key={index} href={item.route}>
+            <Link key={index} href={item.route}>
               {item.title}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
@@ -45,7 +45,7 @@ export default function Header() {
       {/** Mobile Menu */}
 
       <div
-        className={`flex flex-col md:hidden px-6 py-4 w-full transition-colors z-50`}
+        className={`relative flex flex-col md:hidden px-6 py-4 w-full transition-colors z-50`}
       >
         <div className={"flex items-center justify-between"}>
         <img src="/img/logo/ethRomeLogo.png" className="h-10" />
@@ -56,7 +56,7 @@ export default function Header() {
           />
         </div>
         {isMenuOpen && (
-          <div className="flex flex-col items-center mt-4 space-y-4 text-lg font-medium">
+          <div className="fixed flex flex-col items-center mt-4 space-y-4 text-lg font-medium">
             <h3
               className="cursor-pointer hover:underline"
               onClick={() => scrollTo("intro")}

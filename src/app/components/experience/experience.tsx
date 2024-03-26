@@ -15,7 +15,7 @@ export default function Experience() {
   };
 
   return (
-    <div id="experience" className="relative section_frame">
+    <div id="experience" className="relative section_frame overflow-hidden">
       {/**Modanatura */}
       <div className="flex flex-col justify-start items-center gap-2">
         <div className="w-full h-[36.76px] modanatura opacity-[0.6]"></div>

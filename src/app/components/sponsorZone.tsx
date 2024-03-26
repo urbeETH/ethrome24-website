@@ -5,7 +5,7 @@ import ButtonPurple from "./buttons/buttonPurple";
 
 export default function SponsorZone() {
   return (
-    <div id="sponsorZone" className="relative section_frame h-[810px] md:h-auto">
+    <div id="sponsorZone" className="relative section_frame h-[810px] overflow-hidden md:h-auto">
       {/**       <Image
         src="/img/decors/modanatura_cols.svg"
         alt="sponsor zone modanatura"

@@ -17,7 +17,7 @@ export default function Aftermovie() {
           What does ethrome stand for?
         </h1>
       </Marquee>
-      <video className="w-full" autoPlay muted loop>
+      <video className="w-full h-[810px] md:h-[auto] object-cover" autoPlay muted loop>
         <source src="/video/aftermovie.mp4" type="video/webm" />
         Your browser does not support the video tag.
       </video>
