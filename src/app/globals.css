@@ -76,8 +76,16 @@ body {
   background: #fabb00;
 }
 
-.svg-image:hover {
-  fill: #fabb00;
+.experience_logo_svg {
+  width: 81px;
+  height: 81px;
+  fill: none;
+  stroke: #301320;
+  stroke-width: 5px;
+}
+
+.experience_logo_svg:hover {
+  stroke: #fabb00;
 }
 
 /**

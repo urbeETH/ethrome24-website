@@ -35,18 +35,23 @@ export default function Header() {
 
         <div className="flex items-center justify-center space-x-10 text-lg text-white font-semibold">
           {headerItems.map((item, index) => (
-            <a key={index} href={item.route} >{item.title}</a>
+            <a key={index} href={item.route}>
+              {item.title}
+            </a>
           ))}
         </div>
       </div>
+
+      {/** Mobile Menu */}
+
       <div
-        className={`flex flex-col md:hidden px-4 py-4 fixed w-full transition-colors z-50`}
+        className={`flex flex-col md:hidden px-6 py-4 w-full transition-colors z-50`}
       >
         <div className={"flex items-center justify-between"}>
-          <img src="/ethrome_logo.png" className="w-40" />
+        <img src="/img/logo/ethRomeLogo.png" className="h-10" />
           <img
-            src={!isMenuOpen ? "/menu.svg" : "/menu_close.svg"}
-            className="h-6"
+            src={!isMenuOpen ? "/img/mobile/menu_burger.svg" : "/img/mobile/menu_burger.svg"}
+            className="h-8"
             onClick={() => toggleMenu()}
           />
         </div>

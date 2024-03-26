@@ -1,0 +1,43 @@
+export const experienceCol = [
+  {
+    text: "Web3 in an amazing venue",
+    logo: (
+      <>
+        <path d="M66.5254 28.9806V14.6077H51.6738" />
+        <path d="M14.2275 28.9806V14.6077H29.0791" />
+        <path d="M52.1506 67.0745L66.5234 67.0745L66.5234 52.2229" />
+        <path d="M28.6014 67.0745L14.2285 67.0745L14.2285 52.2229" />
+        <path d="M51.7967 10.0639L40.373 3.46838L28.9492 10.0639M51.7967 10.0639V23.2549L40.373 29.8504M51.7967 10.0639L40.373 16.6594M40.373 29.8504L28.9492 23.2549V10.0639M40.373 29.8504V16.6594M28.9492 10.0639L40.373 16.6594" />
+        <path d="M51.7967 58.1305L40.373 51.535L28.9492 58.1305M51.7967 58.1305V71.3215L40.373 77.917M51.7967 58.1305L40.373 64.726M40.373 77.917L28.9492 71.3215V58.1305M40.373 77.917V64.726M28.9492 58.1305L40.373 64.726" />
+        <path d="M77.9491 34.6612L66.5253 28.0657L55.1016 34.6612M77.9491 34.6612V47.8523L66.5253 54.4478M77.9491 34.6612L66.5253 41.2568M66.5253 54.4478L55.1016 47.8523V34.6612M66.5253 54.4478V41.2568M55.1016 34.6612L66.5253 41.2568" />
+        <path d="M25.6503 34.6612L14.2265 28.0657L2.80273 34.6612M25.6503 34.6612V47.8523L14.2265 54.4478M25.6503 34.6612L14.2265 41.2568M14.2265 54.4478L2.80273 47.8523V34.6612M14.2265 54.4478V41.2568M2.80273 34.6612L14.2265 41.2568" />
+      </>
+    ),
+    col: "/img/experience/col/web3_col.svg",
+  },
+  {
+    text: "Experienced Hackers and Mentors",
+    logo: "/img/experience/logo/hackers_mentors_logo.svg",
+    col: "/img/experience/col/hackers_mentors_col.svg",
+  },
+  {
+    text: "Networking and good vibes",
+    logo: "/img/experience/logo/networking_logo.svg",
+    col: "/img/experience/col/networking_col.svg",
+  },
+  {
+    text: "Amazing food!",
+    logo: "/img/experience/logo/food_logo.svg",
+    col: "/img/experience/col/food_col.svg",
+  },
+  {
+    text: "Side events",
+    logo: "/img/experience/logo/side_events_logo.svg",
+    col: "/img/experience/col/side_events_col.svg",
+  },
+  {
+    text: "Community's craft beer",
+    logo: "/img/experience/logo/beer_logo.svg",
+    col: "/img/experience/col/beer_col.svg",
+  },
+];
