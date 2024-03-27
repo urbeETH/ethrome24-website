@@ -3,22 +3,24 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+
 import { headerItems } from "./headerItems";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-    toggleMenu();
-  };
+  const { scrollY } = useScroll()
 
+ 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const scrollPosition = scrollY.get();
+  const headerBg = scrollPosition > 0.1 ? "#301320" : "#fabb00";
+
+  console.log(scrollPosition);
 
   return (
     <>
@@ -41,7 +43,7 @@ export default function Header() {
       {/** Mobile Menu */}
 
       <div
-        className={`relative flex flex-col md:hidden px-6 py-4 w-full transition-colors z-50`}
+        className={`fixed flex flex-col md:hidden px-6 py-4 w-full z-50 bg-[#301320]/30 backdrop-blur-md`}
       >
         <div className={"flex items-center justify-between"}>
           <img src="/img/logo/ethRomeLogo.png" className="h-10" />

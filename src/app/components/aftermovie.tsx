@@ -4,11 +4,13 @@
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 import Link from "next/link";
+import Marquez from "./marquez";
 
 export default function Aftermovie() {
   return (
     <div id="aftermovie" className="relative section_frame">
-      <div className="w-full h-[27px] modanatura_cols"></div>
+      <div className="w-full h-[27px] modanatura_cols"></div>   
+
       <Marquee className="w-full flex justify-start items-center px-6 py-3">
         <h1 className="pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">
           What does ethrome stand for?
@@ -17,6 +19,7 @@ export default function Aftermovie() {
           What does ethrome stand for?
         </h1>
       </Marquee>
+      
       <video className="w-full h-[810px] md:h-[auto] object-cover" autoPlay muted loop>
         <source src="/video/aftermovie.mp4" type="video/webm" />
         Your browser does not support the video tag.

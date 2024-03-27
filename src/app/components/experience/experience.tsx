@@ -80,7 +80,7 @@ export default function Experience() {
               height={`${item.colHeight}`}
               viewBox={`0 0 ${item.colWidth} ${item.colHeight}`}
               fill="none"
-              stroke-width="4.05941"
+              strokeWidth="4.05941"
               xmlns="http://www.w3.org/2000/svg"
               initial={{ stroke: "#301320" }} // Initial color
               animate={{

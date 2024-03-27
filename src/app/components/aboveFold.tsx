@@ -6,13 +6,13 @@ import ButtonPurple from "./buttons/buttonPurple";
 export default function AboveFold() {
   return (
     <div className="w-full relative h-[810px] md:h-[calc(100vh-80px)] ">
-      <div className="absolute w-full -top-[80px] left-0 flex flex-col justify-start items-start gap-[8.46px]">
+      <div className="absolute w-full top-0 left-0 flex flex-col justify-start items-start gap-[8.46px] md:-top-[80px]">
         <div className="w-full h-[36.76px] modanatura opacity-[0.6]"></div>
         <div className="w-full h-[36.76px] modanatura opacity-[0.5]"></div>
         <div className="w-full h-[36.76px] modanatura opacity-[0.4]"></div>
       </div>
 
-      <div className="w-full px-6 pt-16 flex flex-col items-center justify-center md:px-0 md:pt-0 md:h-[calc(100%-63.578px)]">
+      <div className="w-full px-6 pt-[136px] flex flex-col items-center justify-center md:px-0 md:pt-0 md:h-[calc(100%-63.578px)]">
         <div className=" z-10 flex flex-col items-center justify-center w-full h-full gap-0 md:gap-8 md:w-auto md:flex-row">
           {/* logo */}
 

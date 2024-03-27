@@ -53,7 +53,8 @@ export default function ETHRome23() {
               </div>
             ))}
           </div>
-          <div className="md:absolute md:right-8 md:bottom-8 w-[175px] h-[44px] flex justify-start items-center gap-2 bg-ethrome-white rounded-[22px]">
+
+          {/** <div className="md:absolute md:right-8 md:bottom-8 w-[175px] h-[44px] flex justify-start items-center gap-2 bg-ethrome-white rounded-[22px]">
             <Link
               href="/photogallery"
               target="_blank"
@@ -62,7 +63,7 @@ export default function ETHRome23() {
               Photogallery
             </Link>
             <img src="/img/misc/right_arrow.svg" alt="button right arrow" />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
