@@ -115,7 +115,7 @@ export default function Aftermovie() {
         <path
           d="M80.0234 61L48.5234 79.1865L48.5234 42.8135L80.0234 61Z"
           stroke="#13080E"
-          stroke-width="6"
+          strokeWidth="6"
         />
       </motion.svg>
       </Link>

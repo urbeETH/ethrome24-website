@@ -43,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="scroll-smooth" lang="en">
+    <html style={{ scrollBehavior: "smooth" }} lang="en">
       <body
         className={`${outfit.className} ${redHatDisplay.variable} bg-ethrome-BlackerThanPurple`}
       >

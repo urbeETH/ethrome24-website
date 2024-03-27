@@ -1,4 +1,5 @@
 import Marquee from "react-fast-marquee";
+import GallerySwiper from "./gallerySwiper";
 
 export default function Photogallery() {
   return (
@@ -17,7 +18,7 @@ export default function Photogallery() {
           ETHROME 2023 Photogallery
         </h1>
       </Marquee>
-      
+      <GallerySwiper/>
     </div>
   );
 }

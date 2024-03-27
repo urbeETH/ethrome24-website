@@ -5,7 +5,7 @@ import ButtonPurple from "./buttons/buttonPurple";
 
 export default function AboveFold() {
   return (
-    <div className="w-full h-[calc(100vh-80px)] relative">
+    <div className="w-full relative h-[810px] md:h-[calc(100vh-80px)] ">
       <div className="absolute w-full -top-[80px] left-0 flex flex-col justify-start items-start gap-[8.46px]">
         <div className="w-full h-[36.76px] modanatura opacity-[0.6]"></div>
         <div className="w-full h-[36.76px] modanatura opacity-[0.5]"></div>

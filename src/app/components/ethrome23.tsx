@@ -40,7 +40,7 @@ export default function ETHRome23() {
         </Marquee>
 
         <div className="w-full bg_ethrome23 h-[810px] flex flex-col justify-center items-center gap-20 md:flex-row md:gap-0">
-          <div className="flex flex-col justify-center items-center px-[78px] gap-10 md:flex-row">
+          <div className="flex flex-col justify-center items-center px-6 md:px-[78px] gap-10 md:flex-row">
             {ethrome23Numbers.map((item, index) => (
               <div
                 key={index}

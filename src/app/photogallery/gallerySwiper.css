@@ -1,0 +1,11 @@
+.swiper-scrollbar {
+    display: none;
+  }
+  
+  /**Navigation Buttons**/
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #ffe711 !important;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+  }

@@ -17,11 +17,7 @@ export default function Header() {
   };
 
   const toggleMenu = () => {
-    if (!isMenuOpen) {
-      setIsMenuOpen(true);
-    } else {
-      setIsMenuOpen(false);
-    }
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -48,55 +44,26 @@ export default function Header() {
         className={`relative flex flex-col md:hidden px-6 py-4 w-full transition-colors z-50`}
       >
         <div className={"flex items-center justify-between"}>
-        <img src="/img/logo/ethRomeLogo.png" className="h-10" />
+          <img src="/img/logo/ethRomeLogo.png" className="h-10" />
           <img
-            src={!isMenuOpen ? "/img/mobile/menu_burger.svg" : "/img/mobile/menu_burger.svg"}
+            src={
+              !isMenuOpen
+                ? "/img/mobile/menu_burger.svg"
+                : "/img/mobile/menu_burger_close.svg"
+            }
             className="h-8"
             onClick={() => toggleMenu()}
           />
         </div>
         {isMenuOpen && (
-          <div className="fixed flex flex-col items-center mt-4 space-y-4 text-lg font-medium">
-            <h3
-              className="cursor-pointer hover:underline"
-              onClick={() => scrollTo("intro")}
-            >
-              About
-            </h3>
-            <h3
-              className="cursor-pointer hover:underline"
-              onClick={() => scrollTo("hackathon")}
-            >
-              Tracks
-            </h3>
-            <h3
-              className="cursor-pointer hover:underline"
-              onClick={() => scrollTo("bounties")}
-            >
-              Bounties
-            </h3>
-            <h3
-              className="cursor-pointer hover:underline"
-              onClick={() => scrollTo("contact")}
-            >
-              Sponsor Zone
-            </h3>
-            <Link
-              href="https://ethrome.notion.site/Schedule-ff7f183b415c47c69aea2799540deb30"
-              target="_blank"
-            >
-              <h3 className="relative underline_item cursor-pointer">
-                Schedule
-              </h3>
-            </Link>
-            <Link
-              href="https://ethrome.notion.site/Regulation-7d77e4d4903d47baae9a6e8f21cf4200"
-              target="_blank"
-            >
-              <h3 className="relative underline_item cursor-pointer">
-                Regulation
-              </h3>
-            </Link>
+          <div className="fixed top-0 left-0 w-full h-[calc(100%-72px)] mt-[72px] bg-ethrome-BlackerThanPurple">
+            <div className="flex flex-col h-full justify-center items-center text-xl font-medium gap-14">
+              {headerItems.map((item, index) => (
+                <Link key={index} href={item.route} onClick={toggleMenu} className="px-7 py-1 bg-ethrome-white rounded-[22px]">
+                  {item.title}
+                </Link>
+              ))}
+            </div>
           </div>
         )}
       </div>
