@@ -58,7 +58,7 @@ export default function Header() {
           />
         </div>
         {isMenuOpen && (
-          <div className="fixed top-0 left-0 w-full h-[calc(100%-72px)] mt-[72px] bg-ethrome-BlackerThanPurple">
+          <div className="fixed top-0 left-0 w-full h-screen mt-[72px] bg-ethrome-BlackerThanPurple">
             <div className="flex flex-col h-full justify-center items-center text-xl font-medium gap-14">
               {headerItems.map((item, index) => (
                 <Link key={index} href={item.route} onClick={toggleMenu} className="px-7 py-1 bg-ethrome-white rounded-[22px]">
