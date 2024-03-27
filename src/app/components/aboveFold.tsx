@@ -37,7 +37,7 @@ export default function AboveFold() {
               />
             </div>
 
-            <div className="flex flex-col items-center md:justify-start items-start gap-6">
+            <div className="flex flex-col items-center md:justify-start md:items-start gap-6">
               <div className="flex flex-col items-center md:items-start gap-2 red_hat_display">
                 <div className="flex flex-col text-center items-center md:items-start text-ethrome-white text-xl">
                   <p className="">Come, enjoy and build with care.</p>
@@ -50,7 +50,10 @@ export default function AboveFold() {
                   4-6 October 2024
                 </p>
               </div>
-              <ButtonPurple cta="Feel the vibe" route="https://twitter.com/ETHRome" />
+              <ButtonPurple
+                cta="Feel the vibe"
+                route="https://twitter.com/ETHRome"
+              />
             </div>
           </div>
         </div>
