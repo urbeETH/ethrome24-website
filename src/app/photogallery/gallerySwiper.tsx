@@ -1,9 +1,12 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Scrollbar } from "swiper/modules";
+import {
+  Navigation,
+  Scrollbar,
+  Autoplay,
+} from "swiper/modules";
 
-import { motion } from "framer-motion";
 
 // Import Swiper styles
 import "swiper/css";
@@ -17,23 +20,28 @@ import { gallerySwiperItems } from "./gallerySwiperItems";
 export default function GallerySwiper() {
   return (
     <>
-      <div className="relative w-full h-screen flex flex-col justify-between items-center">
+      <div
+        className="relative w-full flex flex-col justify-between items-center"
+        style={{ height: "calc(100vh - 72px)" }}
+      >
         <Swiper
-          className="w-full h-screen"
-          modules={[Navigation, Scrollbar]}
-          spaceBetween={50}
-          slidesPerView={1}
+          className="w-full h-full"
+          modules={[Navigation, Scrollbar, Autoplay]}
+          spaceBetween={0}
+          slidesPerView={"auto"}
           navigation
           scrollbar={{ draggable: true }}
           zoom={true}
           loop={true}
           watchSlidesProgress={true}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          centeredSlides={true}
         >
           {gallerySwiperItems.map((item, index) => (
             <SwiperSlide key={index}>
-              <img src={`${item.immago}`} className="object-contain w-full h-full" />
+              <img
+                src={`${item.immago}`}
+                className="object-cover w-full h-full slide-image"
+              />
             </SwiperSlide>
           ))}
         </Swiper>

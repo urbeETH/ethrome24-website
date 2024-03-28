@@ -2,6 +2,7 @@
 
 import Marquee from "react-fast-marquee";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const ethrome23Numbers = [
   {
@@ -24,23 +25,36 @@ export default function ETHRome23() {
       <div className="w-full h-[35.19px] modanatura_cols_roof"></div>
 
       <div className="w-full flex justify-start items-center md:flex-col">
-        <Marquee className="w-full px-6 py-3 md:flex">
-          <h1 className="pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">
+        <Marquee
+          className="marquee_custom_container w-full px-6 py-3 md:flex"
+        >
+          <h1 className="marquee_txt pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">
             About Last Year
           </h1>
-          <h1 className="pl-6 text-ethrome-yellow text-[32px] uppercase font-semibold tracking-[16px]">
+          <h1 className="marquee_txt pl-6 text-ethrome-yellow text-[32px] uppercase font-semibold tracking-[16px]">
             About Last Year
           </h1>
-          <h1 className="pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">
+          <h1 className="marquee_txt pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">
             About Last Year
           </h1>
-          <h1 className="pl-6 text-ethrome-yellow text-[32px] uppercase font-semibold tracking-[16px]">
+          <h1 className="marquee_txt pl-6 text-ethrome-yellow text-[32px] uppercase font-semibold tracking-[16px]">
             About Last Year
           </h1>
         </Marquee>
 
-        <div className="w-full bg_ethrome23 h-[810px] flex flex-col justify-center items-center gap-20 md:flex-row md:gap-0">
-          <div className="flex flex-col justify-center items-center px-6 md:px-[78px] gap-10 md:flex-row">
+        <div className="relative w-full h-[810px] flex flex-col justify-center items-center gap-20 md:flex-row md:gap-0">
+          <motion.div
+            className="ethrome23_bg -z-10"
+            animate={{
+              x: ["0", "5%", "0%", "-5%", "0%"], // Translate from left to right and back
+            }}
+            transition={{
+              duration: 24,
+              repeat: Infinity,
+            }}
+          />
+
+          <div className="flex flex-col justify-center items-center px-6 md:px-[78px] gap-10 md:flex-row z-40">
             {ethrome23Numbers.map((item, index) => (
               <div
                 key={index}
@@ -54,7 +68,7 @@ export default function ETHRome23() {
             ))}
           </div>
 
-          {/** <div className="md:absolute md:right-8 md:bottom-8 w-[175px] h-[44px] flex justify-start items-center gap-2 bg-ethrome-white rounded-[22px]">
+          <div className="md:absolute md:right-8 md:bottom-8 w-[175px] h-[44px] flex justify-start items-center gap-2 bg-ethrome-white rounded-[22px] z-40">
             <Link
               href="/photogallery"
               target="_blank"
@@ -63,7 +77,7 @@ export default function ETHRome23() {
               Photogallery
             </Link>
             <img src="/img/misc/right_arrow.svg" alt="button right arrow" />
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

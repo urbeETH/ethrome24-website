@@ -18,7 +18,8 @@ export default function Photogallery() {
           ETHROME 2023 Photogallery
         </h1>
       </Marquee>
-      <GallerySwiper/>
+
+      <GallerySwiper />
     </div>
   );
 }

@@ -11,7 +11,7 @@ export default function Aftermovie() {
     <div id="aftermovie" className="relative section_frame">
       <div className="w-full h-[27px] modanatura_cols"></div>   
 
-      <Marquee className="w-full flex justify-start items-center px-6 py-3">
+      <Marquee className="marquee_custom_container w-full flex justify-start items-center px-6 py-3">
         <h1 className="pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">
           What does ethrome stand for?
         </h1>

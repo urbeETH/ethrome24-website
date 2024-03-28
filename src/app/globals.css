@@ -15,7 +15,7 @@
   }
 }*/
 
-html{
+html {
   width: 100%;
   max-width: 100%;
   height: 100%;
@@ -67,28 +67,9 @@ body {
   mix-blend-mode: color-dodge;
 }
 
-.rfm-marquee-container{
+.marquee_custom_container{
   display: none !important;
 }
-
-/*
-.marqueez_container {
-  width: 100%;
-  overflow: hidden;
-  flex-direction: column-reverse;
-  rotate: -90deg;
-}
-
-.marqueez_item {
-  white-space: nowrap;
-  animation: marquee 25s linear infinite;
-}
-
-@keyframes marquee {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-*/
 
 /**
 * Experience
@@ -102,9 +83,8 @@ body {
   /* or 20px */
   text-align: center;
   color: #14010c;
- /* background: #301320;*/
+  /* background: #301320;*/
 }
-
 
 .experience_logo_svg {
   width: 81px;
@@ -118,11 +98,14 @@ body {
 * ETHRome23
 **/
 
-.bg_ethrome23 {
-  background-image: url(/img/ethrome23/about.png);
-  background-position: center;
-  background-size: cover;
+.ethrome23_bg {
+  position: absolute;
+  width: 120%;
+  height: 810px;
+  background-image: url(/img/ethrome23/venue.webp);
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .ethrome23_number_box {
@@ -130,6 +113,7 @@ body {
   height: 153.33px;
   box-sizing: border-box;
   border: 4px solid #fabb00;
+  background-color: #13080ed7;
 }
 
 .ethrome23_number {
@@ -185,17 +169,13 @@ body {
 **/
 
 @media screen and (min-width: 728px) {
-  
-  .rfm-marquee-container{
+  .marquee_custom_container {
     display: flex !important;
   }
-  
-  
+
   .ethrome23_number_box {
     width: 401.33px;
     height: 316px;
-    box-sizing: border-box;
-    border: 4px solid #fabb00;
   }
 
   .ethrome23_number {

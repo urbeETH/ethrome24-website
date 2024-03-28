@@ -32,7 +32,7 @@ export default function Hackathon() {
         <div className="flex flex-col justify-start items-center gap-16 md:gap-24 md:flex-row">
           <div className="flex flex-col justify-start items-center gap-3 md:gap-4">
             <Image
-              src={"/img/hackathon/romans.svg"}
+              src={"/img/hackathon/colosseum.svg"}
               alt="romans"
               width={0}
               height={0}
@@ -50,7 +50,7 @@ export default function Hackathon() {
           </div>
           <div className="flex flex-col justify-start items-center gap-3 md:gap-4">
             <Image
-              src={"/img/hackathon/colosseum.svg"}
+              src={"/img/hackathon/romans.svg"}
               alt="romans"
               width={0}
               height={0}
@@ -59,7 +59,9 @@ export default function Hackathon() {
             <div className=" text-ethrome-white text-xl leading-8 text-center red_hat_display md:max-w-[374px]">
               <p>
                 Address{" "}
-                <span className="font-bold">web3 most pressing challenges </span>
+                <span className="font-bold">
+                  web3 most pressing challenges{" "}
+                </span>
                 while getting inspired by the
                 <span className="font-bold"> historic </span>
                 <span className="font-bold">spendour </span>of Rome.
