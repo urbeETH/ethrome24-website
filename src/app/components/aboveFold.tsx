@@ -45,7 +45,7 @@ export default function AboveFold() {
                   <p className="">Come, enjoy and build with care.</p>
                   <p>
                     <span className="font-bold">Account Abstraction </span>&
-                    <span className="font-bold"> Privacy </span>Tracks.
+                    <span className="font-bold"> Privacy </span>tracks.
                   </p>
                 </div>
                 <p className="text-base text-ethrome-yellow leading-8 font-black italic">
