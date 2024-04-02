@@ -6,7 +6,7 @@ import GrainBg from "./grainBg";
 
 export default function AboveFold() {
   return (
-    <div className="w-full relative h-screen lg:h-[calc(100vh-80px)]">
+    <div className="w-full relative min-h-[810px] h-screen lg:h-[calc(100vh-80px)]">
       <GrainBg />
       <div className="absolute w-full top-0 left-0 flex flex-col justify-start items-start gap-[8.46px] lg:-top-[80px]">
         <div className="w-full h-[36.76px] modanatura opacity-[0.6]"></div>

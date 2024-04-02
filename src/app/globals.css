@@ -39,6 +39,7 @@ body {
 .section_frame {
   width: 100%;
   max-width: 100%;
+  min-height: 810px;
 }
 
 .grain {
@@ -223,7 +224,12 @@ body {
 * Ethrome23
 **/
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
+  .section_frame {
+    min-height: unset;
+  }
+  
+  
   .marquee_custom_container {
     display: flex !important;
   }

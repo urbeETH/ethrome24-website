@@ -88,7 +88,7 @@ export default function Hackathon() {
         alt={"columns icon"}
         width={371}
         height={0}
-        className="hackathon_double_columns absolute px-[9.5px] bottom-0 mix-blend-color-dodge opacity-[0.8] lg:left-[170px] lg:px-0 "
+        className="hackathon_double_columns absolute left-[9.5px] px-[9.5px] bottom-0 mix-blend-color-dodge opacity-[0.8] lg:left-[170px] lg:px-0 "
       />
       <Image
         src={"/img/decors/flowers_hackathon.svg"}
