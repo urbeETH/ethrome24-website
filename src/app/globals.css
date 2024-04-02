@@ -98,6 +98,10 @@ body {
 * Experience
 **/
 
+.experience_columns_box{
+  justify-content: flex-end;
+}
+
 .experience_text_box {
   font-style: normal;
   font-weight: 700;
@@ -266,5 +270,9 @@ body {
 
   .hackathon_double_columns {
     left: 150px !important;
+  }
+
+  .experience_columns_box{
+    justify-content: center;
   }
 }

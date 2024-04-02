@@ -70,7 +70,7 @@ export default function Experience() {
                 translateY: "-10px",
                 transition: { duration: 1, ease: "linear" },
               }}
-              className="flex flex-col justify-end items-center gap-7 h-full"
+              className="experience_columns_box flex flex-col items-center gap-7 h-full"
               //animate={controlsArray[index]}
               onMouseEnter={() => handleHover(index)}
              // onMouseLeave={handleHoverEnd}
