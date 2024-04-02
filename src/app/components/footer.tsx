@@ -5,13 +5,12 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className=" flex flex-col items-center justify-center md:justify-between w-full px-12 py-4 border-t-2 border-ethrome-brown gap-6 md:gap-0 ">
-      <div className="flex flex-col items-center justify-between w-full gap-3 md:flex-row ">
+    <footer className="relative flex flex-col items-center justify-center lg:justify-between w-full px-12 py-4 border-t-2 border-ethrome-brown gap-6 lg:gap-0 ">
+      <div className="flex flex-col items-center justify-between w-full gap-3 lg:flex-row ">
         <Image src="/img/logo/ethRomeLogo.png" width={168} height={48} alt="logo footer"/>
-        <p className="text-lg text-center text-white">
+        <p className="text-lg text-center text-white lg:absolute lg:left-1/2 lg:-translate-x-1/2 ">
           Hacking history, shaping the future.
         </p>
-
         <div className="flex items-center gap-3">
           <Icon
             onClick={() => window.open("https://twitter.com/ETHRome", "_blank")}

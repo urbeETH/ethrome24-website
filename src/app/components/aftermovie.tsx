@@ -8,7 +8,7 @@ import Marquez from "./marquez";
 
 export default function Aftermovie() {
   return (
-    <div id="aftermovie" className="relative section_frame">
+    <div id="aftermovie" className="relative section_frame h-screen max-h-screen">
       <div className="w-full h-[27px] modanatura_cols"></div>   
 
       <Marquee className="marquee_custom_container w-full flex justify-start items-center px-6 py-3">
@@ -20,7 +20,7 @@ export default function Aftermovie() {
         </h1>
       </Marquee>
       
-      <video className="w-full h-[810px] md:h-[auto] object-cover" autoPlay muted loop>
+      <video className="w-full object-cover h-[calc(100vh-27px)] lg:h-[calc(100vh-99px)]" autoPlay muted loop>
         <source src="/video/aftermovie.mp4" type="video/webm" />
         Your browser does not support the video tag.
       </video>

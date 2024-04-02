@@ -19,16 +19,18 @@ export default function ExperienceSwiper({
 }: {
   className?: string;
 }) {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+  //const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   // Function to handle hover
-  const handleHover = (index: any) => {
-    setHoveredIndex(index);
+   // Function to handle hover
+   const handleHover = (index: number) => {
+    setActiveIndex(index);
   };
 
   // Function to handle hover end
   const handleHoverEnd = () => {
-    setHoveredIndex(null);
+    setActiveIndex(0);
   };
 
   return (
@@ -38,25 +40,26 @@ export default function ExperienceSwiper({
       >
         <Swiper
           className="w-full"
-          spaceBetween={10}
-          slidesPerView={2}
+          spaceBetween={200}
+          slidesPerView={3}
           zoom={true}
           loop={true}
           modules={[Autoplay]}
           watchSlidesProgress={true}
-          onSlideChange={() => console.log("slide change")}
+          //onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
           onSwiper={(swiper) => console.log(swiper)}
           autoplay={{
             delay: 2500,
-            disableOnInteraction: true,
+            disableOnInteraction: false,
           }}
+          centeredSlides={true}
         >
           {experienceItems.map((item, index) => (
             <SwiperSlide key={index}>
               <motion.div
                 whileHover={{ translateY: "-10px" }}
                 transition={{ ease: "linear", duration: 0.5 }}
-                className="flex flex-col justify-end items-center gap-7 h-[555px]"
+                className="flex flex-col justify-end items-center gap-7 h-[613px]"
                 onMouseEnter={() => handleHover(index)}
                 onMouseLeave={handleHoverEnd}
               >
@@ -64,10 +67,9 @@ export default function ExperienceSwiper({
                   <div className="flex flex-col justify-start items-center gap-px">
                     <motion.div
                       initial={{ backgroundColor: "#301320" }} // Initial color
-                      animate={{
-                        backgroundColor:
-                          hoveredIndex === index ? "#fabb00" : "#301320",
-                      }} // Change fill color on hover
+                      /*animate={{
+                        stroke: activeIndex === index ? "#fabb00" : "#301320",
+                      }} */
                       className="flex justify-center items-center px-4 py-2 w-[174.75px] experience_text_box"
                     >
                       {item.text}
@@ -85,9 +87,9 @@ export default function ExperienceSwiper({
                     className="experience_logo_svg"
                     xmlns="http://www.w3.org/2000/svg"
                     initial={{ stroke: "#301320" }} // Initial color
-                    animate={{
-                      stroke: hoveredIndex === index ? "#fabb00" : "#301320",
-                    }} // Change fill color on hover
+                    /*animate={{
+                      stroke: activeIndex === index ? "#fabb00" : "#301320",
+                    }}*/ 
                   >
                     {item.logo}
                   </motion.svg>
@@ -100,9 +102,9 @@ export default function ExperienceSwiper({
                   strokeWidth="4.05941"
                   xmlns="http://www.w3.org/2000/svg"
                   initial={{ stroke: "#301320" }} // Initial color
-                  animate={{
-                    stroke: hoveredIndex === index ? "hsla(45, 100%, 49%, 0.68)" : "#301320",
-                  }} // Change fill color on hover
+                 /* animate={{
+                    stroke: activeIndex === index ? "#fabb00" : "#301320",
+                  }} */
                 >
                   {item.col}
                 </motion.svg>

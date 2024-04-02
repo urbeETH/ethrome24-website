@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+//import { Outfit } from "next/font/google";
 import { Red_Hat_Display } from "next/font/google";
+
+import locaFont from "next/font/local";
 
 import "./globals.css";
 
-const outfit = Outfit({ subsets: ["latin"] });
+//const outfit = Outfit({ subsets: ["latin"] });
+
+const outfit = locaFont({
+  src: "./Outfit-VariableFont_wght.woff2",
+  variable: "--font-outfit",
+});
 
 const redHatDisplay = Red_Hat_Display({
   subsets: ["latin"],
@@ -45,7 +52,7 @@ export default function RootLayout({
   return (
     <html style={{ scrollBehavior: "smooth" }} lang="en">
       <body
-        className={`${outfit.className} ${redHatDisplay.variable} bg-ethrome-BlackerThanPurple`}
+        className={`${outfit.variable} ${redHatDisplay.variable} bg-ethrome-BlackerThanPurple outfit`}
       >
         {children}
       </body>

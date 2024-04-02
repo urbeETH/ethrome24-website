@@ -1,12 +1,9 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  Scrollbar,
-  Autoplay,
-} from "swiper/modules";
+import { Navigation, Scrollbar, Autoplay } from "swiper/modules";
 
+import Image from "next/image";
 
 // Import Swiper styles
 import "swiper/css";
@@ -40,7 +37,9 @@ export default function GallerySwiper() {
             <SwiperSlide key={index}>
               <img
                 src={`${item.immago}`}
-                className="object-cover w-full h-full slide-image"
+                alt={`EthRome 2023 photo ${index} `}
+                className="object-cover w-full h-full"
+                loading="lazy"
               />
             </SwiperSlide>
           ))}

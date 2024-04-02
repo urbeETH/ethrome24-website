@@ -1,8 +1,8 @@
 export const headerItems = [
-    {
+    /*{
         title: "Aftermovie",
         route: "#aftermovie",
-      },
+      },*/
       {
         title: "What is ETHRome?",
         route: "#hackathon",

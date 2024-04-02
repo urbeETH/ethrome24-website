@@ -21,30 +21,30 @@ const ethrome23Numbers = [
 
 export default function ETHRome23() {
   return (
-    <div id="ethrome23" className="relative section_frame">
+    <div id="ethrome23" className="relative section_frame overflow-hidden h-screen">
       <div className="w-full h-[35.19px] modanatura_cols_roof"></div>
 
-      <div className="w-full flex justify-start items-center md:flex-col">
+      <div className="ethrome23_frame relative w-full h-[calc(100vh-35.19px)] flex justify-start items-center lg:flex-col">
         <Marquee
-          className="marquee_custom_container w-full px-6 py-3 md:flex"
+          className="marquee_custom_container w-full px-6 py-3 lg:flex"
         >
-          <h1 className="marquee_txt pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">
+          <h1 className=" pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">
             About Last Year
           </h1>
-          <h1 className="marquee_txt pl-6 text-ethrome-yellow text-[32px] uppercase font-semibold tracking-[16px]">
+          <h1 className=" pl-6 text-ethrome-yellow text-[32px] uppercase font-semibold tracking-[16px]">
             About Last Year
           </h1>
-          <h1 className="marquee_txt pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">
+          <h1 className=" pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">
             About Last Year
           </h1>
-          <h1 className="marquee_txt pl-6 text-ethrome-yellow text-[32px] uppercase font-semibold tracking-[16px]">
+          <h1 className=" pl-6 text-ethrome-yellow text-[32px] uppercase font-semibold tracking-[16px]">
             About Last Year
           </h1>
         </Marquee>
 
-        <div className="relative w-full h-[810px] flex flex-col justify-center items-center gap-20 md:flex-row md:gap-0">
+        <div className="relative w-full h-full py-4 flex flex-col justify-center items-center gap-20 overflow-hidden lg:justify-start lg:items-start lg:flex-row lg:gap-0 lg:py-0">
           <motion.div
-            className="ethrome23_bg -z-10"
+            className="ethrome23_bg -z-10 h-screen"
             animate={{
               x: ["0", "5%", "0%", "-5%", "0%"], // Translate from left to right and back
             }}
@@ -54,21 +54,21 @@ export default function ETHRome23() {
             }}
           />
 
-          <div className="flex flex-col justify-center items-center px-6 md:px-[78px] gap-10 md:flex-row z-40">
+          <div className="h-full flex flex-col justify-center items-center lg:pl-6 lg:pl-[33px] lg:py-8 gap-5 z-40 ">
             {ethrome23Numbers.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col justify-center items-center px-8 py-7 gap-1 ethrome23_number_box"
+                className="flex flex-col justify-center items-center gap-2 ethrome23_number_box"
               >
-                <p className="ethrome23_number">{item.number}</p>
-                <p className="text-ethrome-white text-[28px] font-light md:text-[40px]">
+                <div className="ethrome23_number">{item.number}</div>
+                <div className="text-ethrome-white text-2xl font-light lg:text-3xl">
                   {item.text}
-                </p>
+                </div>
               </div>
             ))}
           </div>
 
-          <div className="md:absolute md:right-8 md:bottom-8 w-[175px] h-[44px] flex justify-start items-center gap-2 bg-ethrome-white rounded-[22px] z-40">
+          <div className="lg:absolute lg:right-8 lg:bottom-8 w-[175px] h-[44px] flex justify-start items-center gap-2 bg-ethrome-white rounded-[22px] z-40">
             <Link
               href="/photogallery"
               target="_blank"
