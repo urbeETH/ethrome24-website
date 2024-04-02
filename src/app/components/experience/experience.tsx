@@ -11,18 +11,20 @@ import GrainBg from "../grainBg";
 export default function Experience() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
+    // Function to handle hover
+    const handleHover = (index: any) => {
+      setHoveredIndex(index);
+    };
+
+  /*
   const controlsArray = experienceItems.map(() => useAnimation());
 
-  // Function to handle hover
-  const handleHover = (index: any) => {
-    setHoveredIndex(index);
-  };
+
 
   // Function to handle hover end
   const handleHoverEnd = () => {
     setHoveredIndex(null);
   };
-
   useEffect(() => {
     const animateElements = async () => {
       const delays = experienceItems.map(() => Math.random() * 3); // Generate random delays
@@ -36,8 +38,8 @@ export default function Experience() {
       );
     };
     animateElements();
-  }, []);
-
+  }, [controlsArray]); // Add controlsArray to dependencies array
+*/
   return (
     <div
       id="experience"
@@ -69,9 +71,9 @@ export default function Experience() {
                 transition: { duration: 1, ease: "linear" },
               }}
               className="flex flex-col justify-end items-center gap-7 h-full"
-              animate={controlsArray[index]}
+              //animate={controlsArray[index]}
               onMouseEnter={() => handleHover(index)}
-              onMouseLeave={handleHoverEnd}
+             // onMouseLeave={handleHoverEnd}
             >
               <div className="flex flex-col justify-start items-center gap-4">
                 <div className="flex flex-col justify-start items-center gap-px">

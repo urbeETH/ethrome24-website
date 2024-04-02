@@ -4,7 +4,6 @@
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 import Link from "next/link";
-import Marquez from "./marquez";
 
 export default function Aftermovie() {
   return (
