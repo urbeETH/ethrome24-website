@@ -50,7 +50,7 @@ export default function Hackathon() {
                   {" "}
                   Web3 most pressing challenges,
                 </span>{" "}
-                with a chance to soak in the culture, the food,
+                with a chance to soak in the culture, the food and{" "}
                 <span className="font-bold">the eternal city.</span>
               </p>
             </div>
@@ -72,7 +72,7 @@ export default function Hackathon() {
                   <span className="font-bold">
                     {" "}
                     As serial hackers, we understand what you want.
-                  </span>
+                  </span>{" "}
                   Come find out at ETHRome.
                 </p>
               </div>
