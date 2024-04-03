@@ -19,8 +19,8 @@ export default function Hackathon() {
       />
       <div className="hackathon_frame flex flex-col justify-start items-center">
         <div className="flex flex-col justify-start items-center"
-        style={{ fontSize: "min(max(2rem, 5vw), 3.5rem)" }}>
-          <div className="flex flex-col justify-start items-center text-center xl:max-w-[844px] ">
+        style={{ fontSize: "min(max(2rem, 3vw), 3.5rem)" }}>
+          <div className="flex flex-col justify-start items-center text-center lg:max-w-[844px] ">
             <h1 className="text-ethrome-white">
               The leading ETHalian Hackathon{" "}
               <span className="text-ethrome-yellow font-bold">
@@ -41,14 +41,14 @@ export default function Hackathon() {
               height={0}
               className="w-full max-w-20 xl:max-w-[144px]"
             />
-            <div className=" text-ethrome-white text-xl leading-8 text-center red_hat_display max-w-[342px] md:max-w-[400px]">
+            <div className=" text-ethrome-white text-xl leading-8 text-center red_hat_display max-w-[342px] lg:max-w-[358px]">
               <p>
                 This hackathon is all about{" "}
                 <span className="font-bold">
                   {" "}
                   Web3 most pressing challenges,
                 </span>{" "}
-                with a chance to soak in the culture, the food,
+                with a chance to soak in the culture, the food and{" "}
                 <span className="font-bold">the eternal city.</span>
               </p>
             </div>
@@ -62,23 +62,20 @@ export default function Hackathon() {
               className="w-full max-w-20 xl:max-w-[144px]"
             />
             <div
-              className="text-ethrome-white text-xl  leading-8 text-center red_hat_display max-w-[342px] md:max-w-[400px]">
+              className="text-ethrome-white text-xl leading-8 text-center red_hat_display max-w-[342px] lg:max-w-[358px]">
               <div className="flex flex-col justify-center items-center">
                 <p>
                   We like <span className="font-bold">showing</span>, not
-                  telling.
-                </p>
-                <p>
-                  <span className="font-bold">Building</span>, not talking.{" "}
+                  telling. <span className="font-bold">Building</span>, not
+                  talking.{" "}
+                  <span className="font-bold">
+                    {" "}
+                    As serial hackers, we understand what you want.
+                  </span>{" "}
+                  Come find out at ETHRome.
                 </p>
               </div>
-              <p>
-                <span className="font-bold">
-                  {" "}
-                  As serial hackers, we understand what you want.
-                </span>
-                Come find out at ETHRome.
-              </p>
+              <p></p>
             </div>
           </div>
         </div>
