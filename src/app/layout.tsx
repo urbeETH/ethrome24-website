@@ -5,6 +5,7 @@ import { Red_Hat_Display } from "next/font/google";
 import locaFont from "next/font/local";
 
 import "./globals.css";
+import { url } from "inspector";
 
 //const outfit = Outfit({ subsets: ["latin"] });
 
@@ -21,6 +22,11 @@ const redHatDisplay = Red_Hat_Display({
 export const metadata: Metadata = {
   title: "ETHRome 24",
   description: "The hackathon for builders by builders",
+  metadataBase: new URL('https://ethrome.org'),
+  keywords:["Hackathon", "ETHRome", "urbe.eth"],
+  authors: [{name:"limone.eth"}, {url: "https://www.limone.lol/"}, {name:"herminius.eth"}, {url:"https://herminius.eth.limo/"}],
+  creator:"urbe.eth",
+  publisher:"herminius.eth",
   openGraph: {
     title: "ETHRome 24",
     description: "The hackathon for builders by builders",
