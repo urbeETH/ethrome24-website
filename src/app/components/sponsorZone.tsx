@@ -17,18 +17,18 @@ export default function SponsorZone() {
         className="mix-blend-color-dodge opacity-[0.8]"*/}
       <div className="w-full h-[27px] modanatura_cols"></div>
 
-      <div className="relative flex flex-col justify-start px-6 pt-[120px] lg:px-0 lg:pt-[168px] lg:pb-[151px] lg:pl-[223px]">
+      <div className="relative flex flex-col justify-start px-6 pt-[120px] xl:px-0 xl:pt-[168px] xl:pb-[151px] xl:pl-[223px]">
         <div className="flex flex-col justify-start max-w-[519px] items-start gap-9">
           <div className="flex flex-col items-start justify-start gap-3">
             <img
               src="/img/sponsor_zone/sponsor_crown.svg"
-              className="w-20 h-20 drop-shadow-[0_10px_8px_rgba(131,20,199,0.25)] lg:h-40 lg:w-40"
+              className="w-20 h-20 drop-shadow-[0_10px_8px_rgba(131,20,199,0.25)] xl:h-40 xl:w-40"
             />
             <div className="flex flex-col justify-start items-start gap-4">
-              <h1 className="text-[32px] font-bold text-white lg:text-7xl text-left">
+              <h1 className="text-[32px] font-bold text-white xl:text-7xl text-left">
                 Sponsor Zone
               </h1>
-              <p className="sponsor_zone_description text-ethrome-white lg:text-left red_hat_display">
+              <p className="sponsor_zone_description text-ethrome-white xl:text-left red_hat_display">
                 Seize the chance to gain exceptional exposure, establish
                 valuable connections, and demonstrate your unwavering support
                 for the development of the blockchain space!
@@ -57,7 +57,7 @@ export default function SponsorZone() {
         alt="Temple"
         width={0}
         height={0}
-        className="absolute bottom-0 w-[404px] h-[353px] -right-[125px] lg:right-0 mix-blend-color-dodge opacity-[0.8] lg:h-[624px] lg:w-auto"
+        className="absolute bottom-0 w-[404px] h-[353px] -right-[125px] xl:right-0 mix-blend-color-dodge opacity-[0.8] xl:h-[624px] xl:w-auto"
       />
     </div>
   );

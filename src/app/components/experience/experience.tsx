@@ -8,38 +8,24 @@ import { experienceItems } from "./experienceItems";
 import ExperienceSwiper from "./experienceSwiper";
 import GrainBg from "../grainBg";
 
+
 export default function Experience() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-    // Function to handle hover
-    const handleHover = (index: any) => {
-      setHoveredIndex(index);
-    };
+  
+  //const controls = useAnimation();
 
-  /*
-  const controlsArray = experienceItems.map(() => useAnimation());
+  const handleHover = (index: any) => {
+    setHoveredIndex(index);
+    //controls.start({ translateY: -15 });
+  };
 
-
-
-  // Function to handle hover end
   const handleHoverEnd = () => {
     setHoveredIndex(null);
+    //controls.start({ translateY: 0 });
   };
-  useEffect(() => {
-    const animateElements = async () => {
-      const delays = experienceItems.map(() => Math.random() * 3); // Generate random delays
-      await Promise.all(
-        controlsArray.map(async (controls, index) => {
-          await controls.start({
-            y: [0, 15, 0],
-            transition: { duration: 3, delay: delays[index], repeat: Infinity },
-          });
-        })
-      );
-    };
-    animateElements();
-  }, [controlsArray]); // Add controlsArray to dependencies array
-*/
+  
+
   return (
     <div
       id="experience"
@@ -52,9 +38,9 @@ export default function Experience() {
         <div className="w-full h-[36.76px] modanatura opacity-[0.4]"></div>
       </div>
 
-      <div className="w-full lg:h-[calc(100vh-80px)] flex flex-col justify-between items-center">
+      <div className="w-full xl:h-[calc(100vh-80px)] flex flex-col justify-between items-center">
         <h1
-          className="px-6 pt-[23px] pb-[130px] text-ethrome-white text-center lg:px-[298px] lg:pb-[99px]"
+          className="px-6 pt-[23px] pb-[130px] text-ethrome-white text-center xl:px-[298px] xl:pb-[99px]"
           style={{ fontSize: "min(max(2rem, 3vw), 3.5rem)" }}
         >
           {" "}
@@ -62,18 +48,18 @@ export default function Experience() {
           <span className="text-ethrome-yellow font-bold">find?</span>
         </h1>
 
-        <div className="hidden w-full h-full justify-between items-center px-[106px] lg:flex">
+        <div className="hidden w-full h-full justify-between items-center px-[106px] xl:flex">
           {experienceItems.map((item, index) => (
             <motion.div
               key={index}
               whileHover={{
-                translateY: "-10px",
+                translateY: "10px",
                 transition: { duration: 1, ease: "linear" },
               }}
               className="experience_columns_box flex flex-col items-center gap-7 h-full"
-              //animate={controlsArray[index]}
+              //animate={controls}
               onMouseEnter={() => handleHover(index)}
-             // onMouseLeave={handleHoverEnd}
+              onMouseLeave={handleHoverEnd}
             >
               <div className="flex flex-col justify-start items-center gap-4">
                 <div className="flex flex-col justify-start items-center gap-px">
@@ -82,7 +68,7 @@ export default function Experience() {
                     animate={{
                       backgroundColor:
                         hoveredIndex === index ? "#fabb00" : "#301320",
-                    }} // Change fill color on hover
+                    }} 
                     className="flex justify-center items-center px-4 py-2 w-[174.75px] experience_text_box"
                   >
                     {item.text}
@@ -102,7 +88,7 @@ export default function Experience() {
                   initial={{ stroke: "#301320" }} // Initial color
                   animate={{
                     stroke: hoveredIndex === index ? "#fabb00" : "#301320",
-                  }} // Change fill color on hover
+                  }} 
                 >
                   {item.logo}
                 </motion.svg>
@@ -110,7 +96,7 @@ export default function Experience() {
               <motion.div
                 animate={{
                   opacity: hoveredIndex === index ? "0.32" : "1",
-                }} // Change fill color on hover
+                }} 
               >
                 <motion.svg
                   width={`${item.colWidth}`}
@@ -122,7 +108,7 @@ export default function Experience() {
                   initial={{ stroke: "#301320" }} // Initial color
                   animate={{
                     stroke: hoveredIndex === index ? "#fabb00" : "#301320",
-                  }} // Change fill color on hover
+                  }} 
                 >
                   {item.col}
                 </motion.svg>
@@ -131,7 +117,7 @@ export default function Experience() {
           ))}
         </div>
 
-        <ExperienceSwiper className="lg:hidden" />
+        <ExperienceSwiper className="xl:hidden" />
       </div>
     </div>
   );

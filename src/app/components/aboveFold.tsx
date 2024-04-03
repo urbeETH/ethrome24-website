@@ -6,16 +6,16 @@ import GrainBg from "./grainBg";
 
 export default function AboveFold() {
   return (
-    <div className="w-full relative min-h-[810px] h-screen lg:h-[calc(100vh-80px)]">
+    <div className="w-full relative min-h-[810px] h-screen xl:h-[calc(100vh-80px)]">
       <GrainBg />
-      <div className="absolute w-full top-0 left-0 flex flex-col justify-start items-start gap-[8.46px] lg:-top-[80px]">
+      <div className="absolute w-full top-0 left-0 flex flex-col justify-start items-start gap-[8.46px] xl:-top-[80px]">
         <div className="w-full h-[36.76px] modanatura opacity-[0.6]"></div>
         <div className="w-full h-[36.76px] modanatura opacity-[0.5]"></div>
         <div className="w-full h-[36.76px] modanatura opacity-[0.4]"></div>
       </div>
 
-      <div className="w-full px-6 pt-[136px] flex flex-col items-center justify-center lg:px-0 lg:pt-0 lg:h-[calc(100%-63.578px)]">
-        <div className=" z-10 flex flex-col items-center justify-center w-full h-full gap-0 lg:gap-8 lg:w-auto lg:flex-row">
+      <div className="w-full px-6 pt-[136px] flex flex-col items-center justify-center xl:px-0 xl:pt-0 xl:h-[calc(100%-63.578px)]">
+        <div className=" z-10 flex flex-col items-center justify-center w-full h-full gap-0 xl:gap-8 xl:w-auto xl:flex-row">
           {/* logo */}
 
           <Image
@@ -23,25 +23,25 @@ export default function AboveFold() {
             width={0}
             height={0}
             alt="ETHRome Logo"
-            className="w-[264px] h-[264px] lg:w-[480px] lg:h-[480px]"
+            className="w-full h-full max-w-[264px] max-h-[264px] md:max-w-[480px] md:max-h-[480px]"
           />
 
           {/**Right container */}
 
-          <div className="flex flex-col justify-center items-center lg:justify-start lg:items-start w-full gap-8">
+          <div className="flex flex-col justify-center items-center xl:justify-start xl:items-start w-full gap-8">
             <div className="flex flex-col items-start">
               <Image
                 src="/img/aboveFold/ethRomeLogoClaim_aboveFold.svg"
                 width={0}
                 height={0}
                 alt="ETHRome Logo Text & Claim"
-                className="w-[284px] h-[73.51px] lg:w-[424.96px] lg:h-[110px]"
+                className="w-full h-full max-w-[284px] max-h-[73.51px] md:max-w-[424.96px] md:max-h-[110px]"
               />
             </div>
 
-            <div className="flex flex-col items-center lg:justify-start lg:items-start gap-6">
-              <div className="flex flex-col items-center lg:items-start gap-2 red_hat_display">
-                <div className="flex flex-col text-center items-center lg:items-start text-ethrome-white text-xl">
+            <div className="flex flex-col items-center xl:justify-start xl:items-start gap-6">
+              <div className="flex flex-col items-center xl:items-start gap-2 red_hat_display">
+                <div className="flex flex-col text-center items-center xl:items-start text-ethrome-white text-xl">
                   <p className="">Come, enjoy and build with care.</p>
                   <p>
                     <span className="font-bold">Account Abstraction </span>&

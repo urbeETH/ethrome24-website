@@ -25,7 +25,7 @@ export default function Header() {
   return (
     <>
       <div
-        className={`relative hidden lg:flex items-center justify-between px-10 py-4 w-full z-50`}
+        className={`relative hidden xl:flex items-center justify-between px-10 py-4 w-full z-50`}
       >
         <Link href="/">
           <img src="/img/logo/ethRomeLogo.png" className="h-12" />
@@ -43,7 +43,7 @@ export default function Header() {
       {/** Mobile Menu */}
 
       <div
-        className={`fixed flex flex-col lg:hidden px-6 py-4 w-full z-50 bg-[#301320]/30 backdrop-blur-md`}
+        className={`fixed flex flex-col xl:hidden px-6 py-4 w-full z-50 backdrop-blur-md`}
       >
         <div className={"flex items-center justify-between"}>
           <img src="/img/logo/ethRomeLogo.png" className="h-10" />
