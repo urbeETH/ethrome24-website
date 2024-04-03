@@ -41,7 +41,7 @@ export default function Hackathon() {
               height={0}
               className="w-full max-w-20 xl:max-w-[144px]"
             />
-            <div className=" text-ethrome-white text-xl leading-8 text-center red_hat_display max-w-[342px] lg:max-w-[358px]">
+            <div className=" text-ethrome-white text-xl leading-8 text-center red_hat_display max-w-[342px] lg:max-w-[400px]">
               <p>
                 This hackathon is all about{" "}
                 <span className="font-bold">
@@ -62,7 +62,7 @@ export default function Hackathon() {
               className="w-full max-w-20 xl:max-w-[144px]"
             />
             <div
-              className="text-ethrome-white text-xl leading-8 text-center red_hat_display max-w-[342px] lg:max-w-[358px]">
+              className="text-ethrome-white text-xl leading-8 text-center red_hat_display max-w-[342px] lg:max-w-[400px]">
               <div className="flex flex-col justify-center items-center">
                 <p>
                   We like <span className="font-bold">showing</span>, not
