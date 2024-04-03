@@ -99,7 +99,7 @@ body {
 * Experience
 **/
 
-.experience_columns_box{
+.experience_columns_box {
   justify-content: flex-end;
 }
 
@@ -227,8 +227,7 @@ body {
   .section_frame {
     min-height: unset;
   }
-  
-  
+
   .marquee_custom_container {
     display: flex !important;
   }
@@ -246,7 +245,6 @@ body {
   .hackathon_double_columns {
     left: 170px;
   }
-
 }
 
 /**
@@ -272,7 +270,8 @@ body {
     left: 150px !important;
   }
 
-  .experience_columns_box{
+  .experience_columns_box {
     justify-content: center;
   }
 }
+
