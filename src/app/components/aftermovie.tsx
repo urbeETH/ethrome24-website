@@ -21,7 +21,7 @@ export default function Aftermovie() {
       </Marquee>
 
       <video className="w-full h-full object-cover" autoPlay muted loop playsInline>
-        <source src="/video/aftermovie.mp4" type="video/webm" />
+        <source src="/video/aftermovie.mov" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
