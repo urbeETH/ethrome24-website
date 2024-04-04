@@ -15,7 +15,7 @@ export default function AboveFold() {
       </div>
 
       <div className="w-full px-6 pt-[136px] flex flex-col items-center justify-center xl:px-0 xl:pt-0 xl:h-[calc(100%-63.578px)]">
-        <div className=" z-10 flex flex-col items-center justify-center w-full h-full gap-0 xl:gap-8 xl:w-auto xl:flex-row">
+        <div className="aboveFold_items_box z-10 flex flex-col items-center justify-center w-full h-full gap-0 xl:gap-8 xl:w-auto">
           {/* logo */}
 
           <Image
