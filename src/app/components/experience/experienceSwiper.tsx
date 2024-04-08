@@ -19,7 +19,6 @@ export default function ExperienceSwiper({
 }: {
   className?: string;
 }) {
-  //const [hoveredIndex, setHoveredIndex] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
   // Function to handle hover
@@ -45,13 +44,19 @@ export default function ExperienceSwiper({
           loop={true}
           modules={[Autoplay]}
           watchSlidesProgress={true}
-          onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+          onSlideChange={(swiper) => {
+            // Get the active index considering the loop
+            const activeIndex = swiper.realIndex;
+            console.log("Slide changed, activeIndex:", activeIndex);
+            setActiveIndex(activeIndex);
+          }}
           onSwiper={(swiper) => console.log(swiper)}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
           }}
-          centeredSlides={true}
+          centeredSlides={true}    
+          initialSlide={0}      
         >
           {experienceItems.map((item, index) => (
             <SwiperSlide key={index}>
@@ -75,9 +80,9 @@ export default function ExperienceSwiper({
                   <div className="flex flex-col justify-start items-center gap-px">
                     <motion.div
                       initial={{ backgroundColor: "#301320" }} // Initial color
-                      /* animate={{
+                       animate={{
                         backgroundColor: activeIndex === index ? "#fabb00" : "#301320",
-                      }}*/
+                      }}
                       className="flex justify-center items-center px-4 py-2 w-[174.75px] experience_text_box"
                     >
                       {item.text}
@@ -86,9 +91,9 @@ export default function ExperienceSwiper({
                       width="175"
                       height="11"
                       initial={{ fill: "#301320" }}
-                      /*animate={{
-                        fill: hoveredIndex === index ? "#fabb00" : "#301320",
-                      }}*/
+                      animate={{
+                        fill: activeIndex === index ? "#fabb00" : "#301320",
+                      }}
                     >
                       <path
                         d="M174.8,1.7H0V0.2h174.8V1.7z M1.5,9.3H0V2.9h1.5V9.3z M3.8,7.4H2.7V2.9h1.1V7.4z M6.5,9.3H5V2.9h1.5V9.3z
@@ -124,9 +129,9 @@ export default function ExperienceSwiper({
                     className="experience_logo_svg"
                     xmlns="http://www.w3.org/2000/svg"
                     initial={{ stroke: "#301320" }} // Initial color
-                    /* animate={{
+                     animate={{
                       stroke: activeIndex === index ? "#fabb00" : "#301320",
-                    }}*/
+                    }}
                   >
                     {item.logo}
                   </motion.svg>
@@ -139,9 +144,9 @@ export default function ExperienceSwiper({
                   strokeWidth="4.05941"
                   xmlns="http://www.w3.org/2000/svg"
                   initial={{ stroke: "#301320" }} // Initial color
-                  /* animate={{
+                   animate={{
                     stroke: activeIndex === index ? "#fabb00" : "#301320",
-                  }}*/
+                  }}
                 >
                   {item.col}
                 </motion.svg>
