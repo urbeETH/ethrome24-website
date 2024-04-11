@@ -21,62 +21,81 @@ const ethrome23Numbers = [
 
 export default function ETHRome23() {
   return (
-    <div id="ethrome23" className="relative section_frame overflow-hidden h-screen">
+    <div
+      id="ethrome23"
+      className="relative section_frame overflow-hidden h-screen"
+    >
       <div className="w-full h-[35.19px] modanatura_cols_roof"></div>
+      <Marquee className="marquee_desktop w-full px-6 py-3 xl:flex">
+        <h1 className=" pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">
+          About Last Year
+        </h1>
+        <h1 className=" pl-6 text-ethrome-yellow text-[32px] uppercase font-semibold tracking-[16px]">
+          About Last Year
+        </h1>
+        <h1 className=" pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">
+          About Last Year
+        </h1>
+        <h1 className=" pl-6 text-ethrome-yellow text-[32px] uppercase font-semibold tracking-[16px]">
+          About Last Year
+        </h1>
+      </Marquee>
 
-      <div className="ethrome23_frame relative w-full h-[calc(100vh-35.19px)] flex justify-start items-center lg:flex-col">
-        <Marquee
-          className="marquee_custom_container w-full px-6 py-3 lg:flex"
-        >
-          <h1 className=" pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">
-            About Last Year
-          </h1>
-          <h1 className=" pl-6 text-ethrome-yellow text-[32px] uppercase font-semibold tracking-[16px]">
-            About Last Year
-          </h1>
-          <h1 className=" pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">
-            About Last Year
-          </h1>
-          <h1 className=" pl-6 text-ethrome-yellow text-[32px] uppercase font-semibold tracking-[16px]">
-            About Last Year
-          </h1>
-        </Marquee>
+      {/**
+     *       <Marquee
+        className="marquee_mobile w-[810px] px-6 py-3 xl:flex"
+        direction="up"
+      >
+        <h1 className=" pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px] -rotate-90">
+          About Last Year
+        </h1>
+        <h1 className=" pl-6 text-ethrome-yellow text-[32px] uppercase font-semibold tracking-[16px] -rotate-90">
+          About Last Year
+        </h1>
+        <h1 className=" pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px] -rotate-90">
+          About Last Year
+        </h1>
+        <h1 className=" pl-6 text-ethrome-yellow text-[32px] uppercase font-semibold tracking-[16px] -rotate-90">
+          About Last Year
+        </h1>
+      </Marquee>
+     */}
 
-        <div className="relative w-full h-full py-4 flex flex-col justify-center items-center gap-20 overflow-hidden lg:justify-start lg:items-start lg:flex-row lg:gap-0 lg:py-0">
-          <motion.div
-            className="ethrome23_bg -z-10 h-screen"
-            animate={{
-              x: ["0", "5%", "0%", "-5%", "0%"], // Translate from left to right and back
-            }}
-            transition={{
-              duration: 24,
-              repeat: Infinity,
-            }}
-          />
+      <motion.div
+        className="w-full h-full object-cover ethrome23_bg -z-10"
+        animate={{
+          x: ["0", "5%", "0%", "-5%", "0%"], // Translate from left to right and back
+        }}
+        transition={{
+          duration: 24,
+          repeat: Infinity,
+        }}
+      />
 
-          <div className="h-full flex flex-col justify-center items-center lg:pl-6 lg:pl-[33px] lg:py-8 gap-5 z-40 ">
-            {ethrome23Numbers.map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col justify-center items-center gap-2 ethrome23_number_box"
-              >
-                <div className="ethrome23_number">{item.number}</div>
-                <div className="text-ethrome-white text-2xl font-light lg:text-3xl">
-                  {item.text}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="lg:absolute lg:right-8 lg:bottom-8 w-[175px] h-[44px] flex justify-start items-center gap-2 bg-ethrome-white rounded-[22px] z-40">
-            <Link
-              href="/photogallery"
-              target="_blank"
-              className="pl-7 py-[10px] font-medium"
+      <div className="w-full h-full flex justify-center items-center xl:justify-start xl:items-start ">
+        <div className=" h-[calc(100%-35.19px)] xl:h-[calc(100%-107.19px)] flex flex-col justify-center items-center xl:pl-[33px] xl:py-8 gap-5">
+          {ethrome23Numbers.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col justify-center items-center gap-2 ethrome23_number_box"
             >
-              Photogallery
-            </Link>
-            <img src="/img/misc/right_arrow.svg" alt="button right arrow" />
+              <div className="ethrome23_number">{item.number}</div>
+              <div className="text-ethrome-white text-2xl font-light xl:text-3xl">
+                {item.text}
+              </div>
+            </div>
+          ))}
+          <div className="photogallery_button_box">
+            <div className="xl:absolute xl:right-8 xl:bottom-8 w-[175px] h-[44px] flex justify-start items-center gap-2 bg-ethrome-white rounded-[22px] z-40">
+              <Link
+                href="/photogallery"
+                target="_blank"
+                className="pl-7 py-[10px] font-medium"
+              >
+                Photogallery
+              </Link>
+              <img src="/img/misc/right_arrow.svg" alt="button right arrow" />
+            </div>
           </div>
         </div>
       </div>

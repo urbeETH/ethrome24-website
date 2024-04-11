@@ -5,6 +5,7 @@ import { Red_Hat_Display } from "next/font/google";
 import locaFont from "next/font/local";
 
 import "./globals.css";
+import { url } from "inspector";
 
 //const outfit = Outfit({ subsets: ["latin"] });
 
@@ -21,6 +22,11 @@ const redHatDisplay = Red_Hat_Display({
 export const metadata: Metadata = {
   title: "ETHRome 24",
   description: "The hackathon for builders by builders",
+  metadataBase: new URL('https://ethrome.org'),
+  keywords:["Hackathon", "ETHRome", "urbe.eth"],
+  authors: [{name:"limone.eth"}, {url: "https://www.limone.lol/"}, {name:"herminius.eth"}, {url:"https://herminius.eth.limo/"}],
+  creator:"urbe.eth",
+  publisher:"herminius.eth",
   openGraph: {
     title: "ETHRome 24",
     description: "The hackathon for builders by builders",
@@ -28,12 +34,12 @@ export const metadata: Metadata = {
     siteName: "ETHRome",
     images: [
       {
-        url: "https://ethrome24-website.vercel.app/img/aboveFold/ethRomeLogo_aboveFold.svg", // Must be an absolute URL
+        url: "https://www.ethrome.org/opengraph-image.png", 
         width: 800,
         height: 600,
       },
       {
-        url: "https://ethrome24-website.vercel.app/img/aboveFold/ethRomeLogo_aboveFold.svg", // Must be an absolute URL
+        url: "https://www.ethrome.org/opengraph-image.png",
         width: 1800,
         height: 1600,
         alt: "ETHRome 24",
@@ -42,6 +48,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  twitter: {
+    card: 'summary_large_image',
+    site: "https://ethrome.org",
+    title: "ETHRome",
+    description: "The hackathon for builders by builders",
+    images: "https://www.ethrome.org/opengraph-image.png"
+  }
 };
 
 export default function RootLayout({

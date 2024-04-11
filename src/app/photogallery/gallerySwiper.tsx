@@ -14,6 +14,7 @@ import "./gallerySwiper.css";
 
 import { gallerySwiperItems } from "./gallerySwiperItems";
 
+
 export default function GallerySwiper() {
   return (
     <>
@@ -32,6 +33,7 @@ export default function GallerySwiper() {
           loop={true}
           watchSlidesProgress={true}
           centeredSlides={true}
+          lazyPreloadPrevNext={2}
         >
           {gallerySwiperItems.map((item, index) => (
             <SwiperSlide key={index}>
