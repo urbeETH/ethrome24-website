@@ -6,8 +6,11 @@ import GrainBg from "./grainBg";
 
 export default function SponsorZone() {
   return (
-    <div id="sponsorZone" className="relative section_frame  overflow-hidden h-screen">
-      <GrainBg/>
+    <div
+      id="sponsorZone"
+      className="relative section_frame  overflow-hidden h-screen"
+    >
+      <GrainBg />
       {/**       <Image
         src="/img/decors/modanatura_cols.svg"
         alt="sponsor zone modanatura"
@@ -37,7 +40,11 @@ export default function SponsorZone() {
           </div>
 
           <div className="flex flex-col items-center justify-start gap-2">
-            <ButtonPurple cta="Request deck" route="mailto:sponsor@ethrome.org?subject=Request%20ETHRome%20Deck" />
+            <ButtonPurple
+              cta="Request deck"
+              route="mailto:sponsor@ethrome.org?subject=Request%20ETHRome%20Deck"
+              variant="primary"
+            />
             <a
               className="text-ethrome-white text-center underline opacity-[64%]"
               href="mailto:sponsor@ethrome.org"
@@ -48,10 +55,10 @@ export default function SponsorZone() {
         </div>
       </div>
       <img
-          src="/img/decors/flowers.svg"
-          alt=""
-          className="absolute bottom-0 left-[43px] h-[calc(100%-27px)] mix-blend-color-dodge opacity-[0.8]"
-        />
+        src="/img/decors/flowers.svg"
+        alt=""
+        className="absolute bottom-0 left-[43px] h-[calc(100%-27px)] mix-blend-color-dodge opacity-[0.8]"
+      />
       <Image
         src="/img/sponsor_zone/temple.svg"
         alt="Temple"
