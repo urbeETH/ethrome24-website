@@ -52,10 +52,18 @@ export default function AboveFold() {
                   4-6 October 2024
                 </p>
               </div>
-              <ButtonPurple
-                cta="Feel the vibe"
-                route="https://twitter.com/ETHRome"
-              />
+              <div className="flex flex-row space-x-4">
+                <ButtonPurple
+                  cta="Apply to hack"
+                  route="https://form.jotform.com/241011812625343"
+                  variant="primary"
+                />
+                <ButtonPurple
+                  cta="Feel the vibe"
+                  route="https://x.com/ETHRome"
+                  variant="outline"
+                />
+              </div>
             </div>
           </div>
         </div>
