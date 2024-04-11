@@ -38,7 +38,7 @@ export default function ExperienceSwiper({
       >
         <Swiper
           className="w-full"
-          spaceBetween={200}
+          spaceBetween={187}
           slidesPerView={3}
           zoom={true}
           loop={true}
@@ -56,7 +56,12 @@ export default function ExperienceSwiper({
             disableOnInteraction: false,
           }}
           centeredSlides={true}    
-          initialSlide={0}      
+          initialSlide={0}   
+          breakpoints={{
+            414:{
+              spaceBetween:200
+            }
+          }}      
         >
           {experienceItems.map((item, index) => (
             <SwiperSlide key={index}>
