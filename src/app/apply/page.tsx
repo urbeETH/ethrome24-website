@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   creator: "urbe.eth",
   publisher: "herminius.eth",
   openGraph: {
-    title: "ETHRome 24",
+    title: "Apply to ETHRome 24",
     description:
       "The hackathon for builders by builders, on Privacy & Account Abstraction, from Oct 4th to 6th, 2024",
     url: "https://ethrome.org",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "https://ethrome.org",
-    title: "Apply to ETHRome",
+    title: "Apply to ETHRome 24",
     description:
       "The hackathon for builders by builders, on Privacy & Account Abstraction, from Oct 4th to 6th, 2024",
     images: "https://www.ethrome.org/opengraph-image.png",
