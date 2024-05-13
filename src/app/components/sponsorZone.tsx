@@ -67,7 +67,7 @@ export default function SponsorZone() {
         <>
           {/** Partners */}
           <div className="hidden flex flex-col justify-start items-start gap-6 xl:flex">
-            {!switchSponsor && (
+            {switchSponsor && (
               <div className="flex flex-col gap-6">
                 <div className="flex justify-start items-start gap-2">
                   <div
@@ -108,7 +108,7 @@ export default function SponsorZone() {
           </div>
         </>
 
-        {switchSponsor && (
+        {!switchSponsor && (
           <>
             {/** Sponsors  */}
 
