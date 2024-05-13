@@ -1,14 +1,16 @@
 "use client";
 
+import { sponsorsItems } from "./sponsorsItems";
+import { partnersItems } from "./partnersItems";
+
 import Image from "next/image";
-import ButtonPurple from "./buttons/buttonPurple";
-import GrainBg from "./grainBg";
 import { useState } from "react";
 
-import { partnersItems } from "./partnersItems";
-import { sponsorsItems } from "./sponsorsItems";
-
-export default function SponsorZone() {
+export default function SponsorZoneMobile({
+  className,
+}: {
+  className?: string;
+}) {
   const [switchSponsor, setswitchSponsor] = useState(false);
 
   const togglesponsor = () => {
@@ -16,57 +18,13 @@ export default function SponsorZone() {
   };
 
   return (
-    <div
-      id="sponsorZone"
-      className="relative section_frame  overflow-hidden h-screen"
-    >
-      <GrainBg />
-      {/**       <Image
-        src="/img/decors/modanatura_cols.svg"
-        alt="sponsor zone modanatura"
-        width={0}
-        height={27}
-        style={{ width: "100%" }}
-        className="mix-blend-color-dodge opacity-[0.8]"*/}
+    <div className={`${className}`}>
       <div className="w-full h-[27px] modanatura_cols"></div>
 
-      <div className="relative flex flex-col justify-between px-6  pt-[120px] xl:flex-row xl:px-0 xl:pt-[168px] xl:pb-[151px] xl:pl-[223px] xl:pr-20">
-        <div className="flex flex-col justify-start max-w-[519px] items-start gap-9">
-          <div className="flex flex-col items-start justify-start gap-3">
-            <img
-              src="/img/sponsor_zone/sponsor_crown.svg"
-              className="w-20 h-20 drop-shadow-[0_10px_8px_rgba(131,20,199,0.25)] xl:h-40 xl:w-40"
-            />
-            <div className="flex flex-col justify-start items-start gap-4">
-              <h1 className="text-[32px] font-bold text-white xl:text-7xl text-left">
-                Sponsor Zone
-              </h1>
-              <p className="sponsor_zone_description text-ethrome-white xl:text-left red_hat_display">
-                Seize the chance to gain exceptional exposure, establish
-                valuable connections, and demonstrate your unwavering support
-                for the development of the blockchain space!
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center justify-start gap-2">
-            <ButtonPurple
-              cta="Request deck"
-              route="mailto:sponsor@ethrome.org?subject=Request%20ETHRome%20Deck"
-              variant="primary"
-            />
-            <a
-              className="text-ethrome-white text-center underline opacity-[64%]"
-              href="mailto:sponsor@ethrome.org"
-            >
-              sponsor@ethrome.org
-            </a>
-          </div>
-        </div>
-
+      <div className="flex pt-10 pb-24 px-6">
         <>
           {/** Partners */}
-          <div className="hidden flex flex-col justify-start items-start gap-6 xl:flex">
+          <div className="flex flex-col justify-start items-start gap-6">
             {!switchSponsor && (
               <div className="flex flex-col gap-6">
                 <div className="flex justify-start items-start gap-2">
@@ -83,7 +41,7 @@ export default function SponsorZone() {
                     PARTNERS
                   </div>
                 </div>
-                <div className="grid xl:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 gap-4">
                   {partnersItems.map((item, index) => (
                     <div
                       key={index}
@@ -112,7 +70,7 @@ export default function SponsorZone() {
           <>
             {/** Sponsors  */}
 
-            <div className="hidden flex flex-col gap-6 xl:flex">
+            <div className="flex flex-col gap-6">
               <div className="flex justify-start items-start gap-2">
                 <div
                   onClick={togglesponsor}
@@ -129,11 +87,11 @@ export default function SponsorZone() {
               </div>
 
               <div className="flex flex-col justify-start items-start gap-6">
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-2 gap-3">
                   {sponsorsItems.map((item, index) => (
                     <div
                       key={index}
-                      className="flex flex-col min-w-[200px] h-[136px] relative sponsor_zone_box_bg"
+                      className="flex flex-col justify-center items-center min-w-[165px] h-[112px] relative sponsor_zone_box_bg"
                     >
                       <div>
                         <Image
@@ -153,11 +111,6 @@ export default function SponsorZone() {
           </>
         )}
       </div>
-      <img
-        src="/img/decors/flowers.svg"
-        alt=""
-        className="absolute bottom-0 left-[43px] h-[calc(100%-27px)] mix-blend-color-dodge opacity-[0.8]"
-      />
     </div>
   );
 }

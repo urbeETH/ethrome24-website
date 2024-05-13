@@ -11,7 +11,7 @@ export default function ButtonPurple({
   cta: string;
   route: string;
   className?: string;
-  variant: "primary" | "outline";
+  variant?: "primary" | "outline";
 }) {
   if (variant === "outline") {
     return (

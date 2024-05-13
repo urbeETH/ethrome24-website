@@ -8,6 +8,8 @@ import Hackathon from "./components/hackathon";
 import Experience from "./components/experience/experience";
 import ETHRome23 from "./components/ethrome23";
 
+import SponsorZoneMobile from "./components/sponsorZoneMobile";
+
 export default function Home() {
   return (
     <>
@@ -18,6 +20,7 @@ export default function Home() {
       <Experience />
       <ETHRome23 />
       <SponsorZone />
+      <SponsorZoneMobile className="xl:hidden"/>
       <Footer />
     </>
   );

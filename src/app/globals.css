@@ -72,6 +72,16 @@ body {
   opacity: 0.08;
 }
 
+.modanatura_sponsor_zone {
+  background-image: url(/img/sponsor_zone/modanatura_sponsor_zone.svg);
+  background-position: left;
+  object-fit: cover;
+  background-repeat: repeat;
+  mix-blend-mode: color-dodge;
+  opacity: 0.4;
+}
+
+
 .modanatura {
   background-image: url(/img/decors/modanatura.svg);
   background-position: left;
@@ -209,6 +219,11 @@ body {
   font-size: 18px;
   line-height: 32px;
   /* or 178% */
+}
+
+
+.sponsor_zone_box_bg{
+  background-color: rgba(42,15,28,0.4);
 }
 
 /**
