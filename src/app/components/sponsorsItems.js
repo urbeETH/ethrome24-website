@@ -1,5 +1,3 @@
-"use client"
-
 export const sponsorsItems = [
     {
         sponsor_logo: "/img/sponsor_zone/sponsors/logo-ens.svg",

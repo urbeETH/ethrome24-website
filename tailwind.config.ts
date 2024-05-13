@@ -18,7 +18,7 @@ const config: Config = {
         "ethrome-dark-purple" : "#5b0e8b",
         "ethrome-brown" : "#261018",
         "ethrome-cotta" : "#301320",
-      }
+      },
     },
   },
   plugins: [],
