@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="relative flex flex-col items-center justify-center xl:justify-between w-full px-12 py-4 border-t-2 border-ethrome-brown gap-6 xl:gap-0 ">
       <div className="flex flex-col items-center justify-between w-full gap-3 xl:flex-row ">
         <Image src="/img/logo/ethRomeLogo.png" width={168} height={48} alt="logo footer"/>
-        <div className="flex flex-col item-center justify-center text-lg text-center text-white xl:flex-row">
+        <div className="flex flex-col item-center justify-center text-sm text-center text-white xl:flex-row xl:text-base">
         <p className="flex items-center justify-center">
           WER S.R.L. <span className="hidden px-1 xl:block"> • </span>  
         </p>
