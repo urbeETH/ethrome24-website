@@ -8,9 +8,23 @@ export default function Footer() {
     <footer className="relative flex flex-col items-center justify-center xl:justify-between w-full px-12 py-4 border-t-2 border-ethrome-brown gap-6 xl:gap-0 ">
       <div className="flex flex-col items-center justify-between w-full gap-3 xl:flex-row ">
         <Image src="/img/logo/ethRomeLogo.png" width={168} height={48} alt="logo footer"/>
-        <p className="text-lg text-center text-white xl:absolute xl:left-1/2 xl:-translate-x-1/2 ">
-          Hacking history, shaping the future.
+        <div className="flex flex-col item-center justify-center text-lg text-center text-white xl:flex-row">
+        <p className="flex items-center justify-center">
+          WER S.R.L. <span className="hidden px-1 xl:block"> • </span>  
         </p>
+        <p className="flex items-center justify-center">
+        Via Beata Maria De Mattias, 2  <span className="hidden px-1 xl:block"> - </span>
+        </p>
+        <p className="flex items-center justify-center">
+         00183 Roma (RM) <span className="hidden px-1 xl:block"> • </span> 
+        </p>
+        <p className="flex items-center justify-center">
+        17627411006 <span className="hidden px-1 xl:block"> • </span> 
+        </p>
+        <p className="flex items-center justify-center">
+        info@wersrl.com
+        </p>
+        </div>
         <div className="flex items-center gap-3">
           <Icon
             onClick={() => window.open("https://twitter.com/ETHRome", "_blank")}
