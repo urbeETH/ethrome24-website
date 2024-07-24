@@ -29,6 +29,9 @@ export default function SponsorZoneMobile({
     {
       sponsor_logo: "/img/sponsor_zone/sponsors/logo-buidlguidl.svg",
     },
+    {
+      sponsor_logo: "/img/sponsor_zone/sponsors/logo-purpleDAO.svg",
+    },
   ];
 
   return (
@@ -116,7 +119,7 @@ export default function SponsorZoneMobile({
                 ))}
               </div>
 
-                {/**Last */}
+              {/**Last */}
               <div className="flex flex-col w-[322px] h-[112px] gap-[3px]">
                 <div className="flex justify-center items-center sponsor_zone_box_bg h-[88px] py-2 px-5">
                   <Image

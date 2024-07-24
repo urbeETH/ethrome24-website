@@ -12,6 +12,9 @@ export const sponsorsItems = [
         sponsor_logo: "/img/sponsor_zone/sponsors/logo-buidlguidl.svg"
     },
     {
+        sponsor_logo: "/img/sponsor_zone/sponsors/logo-purpleDAO.svg"
+    },
+    {
         sponsor_logo: "/img/sponsor_zone/sponsors/logo-ethereum.svg"
     },
 ]
