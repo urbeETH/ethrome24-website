@@ -32,6 +32,9 @@ export default function SponsorZoneMobile({
     {
       sponsor_logo: "/img/sponsor_zone/sponsors/logo-purpleDAO.svg",
     },
+    {
+      sponsor_logo: "/img/sponsor_zone/sponsors/logo-aztec.svg",
+    },
   ];
 
   return (
