@@ -101,6 +101,13 @@ body {
   display: none !important;
 }
 
+.absolute_info{
+  background: linear-gradient(0deg, rgba(239, 235, 230, 0.12), rgba(239, 235, 230, 0.12)), url(/img/bg/grain.gi), rgba(19, 8, 14, 0.8);
+  background-blend-mode: color-dodge, color-dodge, normal;
+  backdrop-filter: blur(12px);
+}
+
+
 /**
 * Hackathon
 **/
@@ -143,66 +150,17 @@ body {
 * ETHRome23
 **/
 
-.ethrome23_bg {
+.location_bg {
   position: absolute;
   left: -7%;
   width: 115%;
   /* height: 810px; */
   height: 100%;
   max-height: 100%;
-  background-image: url(/img/ethrome23/venue.webp);
+  background-image: url(/img/location/location.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-.ethrome23_number_box {
-  position: relative;
-  max-width: 257px;
-  min-width: 254px;
-  height: 196px;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding-left: 28px;
-  padding-right: 28px;
-  /*padding: clamp(0px,10vw,2rem);*/
-  box-sizing: border-box;
-  border: 4px solid #fabb00;
-}
-
-.ethrome23_number_box:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(19, 8, 14, 0.52);
-  backdrop-filter: blur(10px);
-  z-index: -1;
-}
-
-.ethrome23_number {
-  max-height: 81px;
-  font-style: normal;
-  font-weight: 800;
-  font-size: clamp(1rem, 4rem, 4rem);
-  line-height: auto;
-  /* identical to box height */
-  background: linear-gradient(
-      5.63deg,
-      rgba(250, 187, 0, 0.8) -1.47%,
-      rgba(250, 187, 0, 0.24) 29.78%,
-      rgba(250, 187, 0, 0.8) 39.52%,
-      rgba(250, 187, 0, 0.14) 50.28%,
-      rgba(250, 187, 0, 0.54) 66.16%,
-      rgba(250, 187, 0, 0.24) 96.9%
-    ),
-    #4f250e;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
 }
 
 .photogallery_button_box {

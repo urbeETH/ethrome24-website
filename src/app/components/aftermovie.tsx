@@ -4,7 +4,24 @@ import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 import Link from "next/link";
 
+
 export default function Aftermovie() {
+
+  const ethrome23metrics = [
+    {
+      number: "300",
+      text: "attendees",
+    },
+    {
+      number: "14",
+      text: "sponsors",
+    },
+    {
+      number: "40+",
+      text: "projects",
+    },
+  ];
+
   return (
     <div
       id="aftermovie"
@@ -20,14 +37,41 @@ export default function Aftermovie() {
         </h1>
       </Marquee>
 
-      <video className="w-full h-full object-cover" autoPlay muted loop playsInline>
+      <video
+        className="w-full h-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
         <source src="/video/aftermovie.mov" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <Link href="https://www.youtube.com/watch?v=Nn-zTA9lEy8" target="_blank">
+      <div className="absolute left-0 bottom-0 flex flex-col justify-center items-start py-6 pl-10 pr-16 gap-4 absolute_info">
+        <div className="flex justify-center items-center w-[164px] h-[44px] bg-ethrome-purple uppercase text-ethrome-white text-base rounded-[22px] drop-shadow-[0_10px_8px_rgba(131,20,199,0.25)] ${className} hover:bg-ethrome-dark-purple">
+          2023 Metrics
+        </div>
+        <div className="flex justify-center items-center gap-10">
+          <div className="flex flex-col justify-center items-center">
+            <p className="text-ethrome-yellow text-[40px] outfit">300</p>
+            <p className="text-ethrome-white text-base outfit">attendees</p>
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <p className="text-ethrome-yellow text-[40px]">14</p>
+            <p className="text-ethrome-white text-base">sponsors</p>
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <p className="text-ethrome-yellow text-[40px]">40+</p>
+            <p className="text-ethrome-white text-base">projects</p>
+          </div>
+        </div>
+
+        <div className="grain"></div>
+      </div>
+
+      <Link className="absolute top-10 right-10 sm:top-auto sm:bottom-10" href="https://www.youtube.com/watch?v=Nn-zTA9lEy8" target="_blank">
         <motion.svg
-          className="absolute right-10 bottom-10"
           width="123"
           height="123"
           viewBox="0 0 123 123"

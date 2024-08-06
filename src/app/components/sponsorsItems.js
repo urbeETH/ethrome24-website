@@ -20,4 +20,7 @@ export const sponsorsItems = [
     {
         sponsor_logo: "/img/sponsor_zone/sponsors/logo-aztec.svg"
     },
+    {
+        sponsor_logo: "/img/sponsor_zone/sponsors/logo-fhenix.svg"
+    },
 ]

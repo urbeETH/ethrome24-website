@@ -1,8 +1,8 @@
 export const headerItems = [
-    /*{
+    {
         title: "Aftermovie",
         route: "#aftermovie",
-      },*/
+      },
       {
         title: "What is ETHRome?",
         route: "#hackathon",
@@ -12,8 +12,8 @@ export const headerItems = [
         route: "#experience",
       },
       {
-        title: "ETHRome 2023",
-        route: "#ethrome23",
+        title: "Location",
+        route: "#location",
       },
       {
         title: "Sponsor Zone",
