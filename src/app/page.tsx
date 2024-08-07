@@ -8,6 +8,7 @@ import Experience from "./components/experience/experience";
 import Location from "./components/location";
 
 import SponsorZone from "./components/sponsorZone";
+import PhotogalleryLanding from "./components/photogallerylanding";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Experience />
       <Location />
       <SponsorZone />
+      <PhotogalleryLanding />
       <Footer />
     </>
   );
