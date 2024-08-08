@@ -30,7 +30,7 @@ export default function Location() {
           <p className="text-ethrome-yellow text-[40px] outfit">Talent Garden Roma</p>
           <p className="text-ethrome-white text-base outfit">Via Ostiense, 92 - 00154 Roma RM</p>
         </div>
-      <div className="absolute grain">
+      <div className="grain">
       </div>
       </div>
 
