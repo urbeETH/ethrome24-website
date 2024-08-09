@@ -5,7 +5,7 @@ import AboveFold from "./components/aboveFold";
 import Aftermovie from "./components/aftermovie";
 import Hackathon from "./components/hackathon";
 import Experience from "./components/experience/experience";
-import Location from "./components/location";
+import Location from "./components/location/location";
 
 import SponsorZone from "./components/sponsorZone";
 import PhotogalleryLanding from "./components/photogallerylanding";
