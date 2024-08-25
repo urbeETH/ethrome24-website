@@ -69,7 +69,7 @@ export default function AboveFold() {
         </div>
       </div>
       <a
-        href="https://linktr.ee/urbe.eth"
+        href="https://urbe.build/"
         className="absolute bottom-[34px] left-1/2 -translate-x-1/2 z-10"
         target="_blank"
       >
