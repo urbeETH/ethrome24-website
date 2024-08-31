@@ -7,7 +7,7 @@ import Hackathon from "./components/hackathon";
 import Experience from "./components/experience/experience";
 import Location from "./components/location/location";
 
-import SponsorZone from "./components/sponsorZone";
+import SponsorZone from "./components/sponsorZone/sponsorZone";
 import PhotogalleryLanding from "./components/photogallerylanding";
 
 export default function Home() {

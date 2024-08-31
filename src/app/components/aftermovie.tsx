@@ -53,15 +53,15 @@ export default function Aftermovie() {
           2023 Metrics
         </div>
         <div className="flex justify-center items-center gap-10">
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-start items-start">
             <p className="text-ethrome-yellow text-[40px] outfit">300</p>
             <p className="text-ethrome-white text-base outfit">attendees</p>
           </div>
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-start items-start">
             <p className="text-ethrome-yellow text-[40px]">14</p>
             <p className="text-ethrome-white text-base">sponsors</p>
           </div>
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-start items-start">
             <p className="text-ethrome-yellow text-[40px]">40+</p>
             <p className="text-ethrome-white text-base">projects</p>
           </div>

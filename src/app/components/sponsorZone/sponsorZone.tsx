@@ -1,13 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import ButtonPurple from "./buttons/buttonPurple";
-import GrainBg from "./grainBg";
+import ButtonPurple from "../buttons/buttonPurple";
+import GrainBg from "../grainBg";
 
 import { partnersItems } from "./partnersItems";
-import { sponsorsItems } from "./sponsorsItems";
+import { sponsorsItemsTier1 } from "./sponsorsItems";
+import { sponsorsItemsTier2 } from "./sponsorsItems";
 
-export default function SponsorZone_new() {
+export default function SponsorZone() {
   return (
     <div id="sponsorZone" className="section_frame ">
       <GrainBg />
@@ -20,24 +21,49 @@ export default function SponsorZone_new() {
             Sponsors
           </div>
 
-          <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
-            {sponsorsItems.map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col w-[155px] h-[112px] gap-[3px] xl:w-[200px] xl:h-[136px]"
-              >
-                <div className="flex justify-center items-center sponsor_zone_box_bg h-[112px] py-2 px-5">
-                  <Image
-                    src={item.sponsor_logo}
-                    alt="logo img"
-                    width={160}
-                    height={96}
-                    style={{ opacity: "0.8" }}
-                  />
+          <div className="w-full flex flex-col justify-start items-start gap-10">
+            {/** TIER 1 */}
+            <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+              {sponsorsItemsTier1.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col w-[155px] h-[112px] gap-[3px] xl:w-[246px] xl:h-[168px]"
+                >
+                  <div className="flex justify-center items-center sponsor_zone_box_bg h-[112px] xl:h-[auto] py-2 px-5">
+                    <Image
+                      src={item.sponsor_logo}
+                      alt="logo img"
+                      width={200}
+                      height={128}
+                      style={{ opacity: "0.8" }}
+                    />
+                  </div>
+                  <div className="w-full h-[21px] modanatura_sponsor_zone"></div>
                 </div>
-                <div className="w-full h-[21px] modanatura_sponsor_zone"></div>
-              </div>
-            ))}
+              ))}
+            </div>
+            {/** TIER 2 */}
+            <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
+              {sponsorsItemsTier2.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col w-[155px] h-[112px] gap-[3px] xl:w-[202px] xl:h-[136px]"
+                >
+                  <div className="flex justify-center items-center sponsor_zone_box_bg h-[112px] xl:h-[auto] py-2 px-5">
+                    <Image
+                      src={item.sponsor_logo}
+                      alt="logo img"
+                      width={200}
+                      height={128}
+                      style={{ opacity: "0.8" }}
+                    />
+                  </div>
+                  <div className="w-full h-[21px] modanatura_sponsor_zone"></div>
+                </div>
+              ))}
+            </div>
+
+
           </div>
         </div>
 

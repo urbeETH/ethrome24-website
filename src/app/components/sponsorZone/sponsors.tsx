@@ -1,9 +1,9 @@
 "use client";
 
-import { sponsorsItems } from "./sponsorsItems";
+import { sponsorsItemsTier1 } from "./sponsorsItems";
 import Image from "next/image";
 
-export default function Sponsors() {
+export default function Sponsors_old() {
   return (
     <div className="flex flex-col justify-start items-start gap-6">
       {/** TIER 1 */}
@@ -12,7 +12,7 @@ export default function Sponsors() {
           TIER 1
         </div>
         <div className="flex flex-col  xl:flex-row gap-3">
-          {sponsorsItems.map((item, index) => (
+          {sponsorsItemsTier1.map((item, index) => (
             <div key={index} className="flex flex-col min-w-[628px] h-[438px]">
               <div>
                 <Image
