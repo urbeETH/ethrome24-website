@@ -51,4 +51,7 @@ export const partnersItems = [
     {
         partners_logo: "/img/sponsor_zone/partners/logo-talentProtocol.svg"
     },
+    {
+        partners_logo: "/img/sponsor_zone/partners/logo-poap.svg"
+    },
 ]
