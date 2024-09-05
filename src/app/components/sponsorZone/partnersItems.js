@@ -48,4 +48,7 @@ export const partnersItems = [
     {
         partners_logo: "/img/sponsor_zone/partners/logo-banklessdao.svg"
     },
+    {
+        partners_logo: "/img/sponsor_zone/partners/logo-talentProtocol.svg"
+    },
 ]
