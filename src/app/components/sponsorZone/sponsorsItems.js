@@ -35,5 +35,11 @@ export const sponsorsItemsTier2 = [
     {
         sponsor_logo: "/img/sponsor_zone/sponsors/logo-taikai.svg"
     },
+    {
+        sponsor_logo: "/img/sponsor_zone/sponsors/logo-crossmint.svg"
+    },
+    {
+        sponsor_logo: "/img/sponsor_zone/sponsors/logo-biconomy.svg"
+    },
 ]
 
