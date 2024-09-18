@@ -2,6 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar, Autoplay } from "swiper/modules";
+import ButtonPurple from "../buttons/buttonPurple";
 
 // Import Swiper styles
 import "swiper/css";
@@ -32,6 +33,13 @@ export default function LocationGallerySwiper() {
         className="relative w-full flex flex-col justify-between items-center"
         style={{ height: "calc(100vh - 72px)" }}
       >
+        
+      <ButtonPurple
+        cta="Side Events"
+        route="https://lu.ma/ethrome-24"
+        variant="primary"
+        className="absolute right-4 top-4 z-30 md:hidden"
+      />
         <Swiper
           className="w-full h-full"
           modules={[Scrollbar, Autoplay]}

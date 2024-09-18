@@ -1,7 +1,6 @@
 "use client";
 
 import Marquee from "react-fast-marquee";
-import { motion } from "framer-motion";
 
 import LocationGallerySwiper from "./locationGallerySwiper";
 
@@ -39,8 +38,7 @@ export default function Location() {
         <div className="grain"></div>
       </div>
 
-      <LocationGallerySwiper/>
-
+      <LocationGallerySwiper />
 
       {/**       <motion.div
         className="w-full h-full object-cover location_bg -z-10"
