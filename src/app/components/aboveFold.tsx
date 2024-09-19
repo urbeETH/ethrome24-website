@@ -59,15 +59,9 @@ export default function AboveFold() {
                   variant="primary"
                 />
                 <ButtonPurple
-                  cta="Hacker Manual"
-                  route="https://builders-garden.notion.site/ETHRome-2024-Hacker-Manual-3d270d9f5d594d9a9faf2f34f6ee7eb5"
-                  variant="outline"
-                />
-                <ButtonPurple
                   cta="Side Events"
                   route="https://lu.ma/ethrome-24"
-                  variant="primary"
-                  className="hidden md:flex"
+                  variant="outline"
                 />
               </div>
             </div>

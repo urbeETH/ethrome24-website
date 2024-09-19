@@ -7,6 +7,7 @@ import GrainBg from "../grainBg";
 import { partnersItems } from "./partnersItems";
 import { sponsorsItemsTier1 } from "./sponsorsItems";
 import { sponsorsItemsTier2 } from "./sponsorsItems";
+import { sponsorsItemsTier3 } from "./sponsorsItems";
 
 export default function SponsorZone() {
   return (
@@ -63,6 +64,26 @@ export default function SponsorZone() {
               ))}
             </div>
 
+                          {/** TIER 3 */}
+            <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
+              {sponsorsItemsTier3.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col w-[150px] h-[112px] gap-[3px]"
+                >
+                  <div className="flex justify-center items-center sponsor_zone_box_bg h-[112px] xl:h-[auto] py-2 px-5">
+                    <Image
+                      src={item.sponsor_logo}
+                      alt="logo img"
+                      width={150}
+                      height={112}
+                      style={{ opacity: "0.8" }}
+                    />
+                  </div>
+                  <div className="w-full h-[21px] modanatura_sponsor_zone"></div>
+                </div>
+              ))}
+            </div>
 
           </div>
         </div>
