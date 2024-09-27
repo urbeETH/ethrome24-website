@@ -47,4 +47,25 @@ export const sponsorsItemsTier3 = [
   {
     sponsor_logo: "/img/sponsor_zone/sponsors/logo-superfluid.svg",
   },
+  {
+    sponsor_logo: "/img/sponsor_zone/sponsors/logo-web3privacynow.svg",
+  },
+  {
+    sponsor_logo: "/img/sponsor_zone/sponsors/logo-bandada.svg",
+  },
+  {
+    sponsor_logo: "/img/sponsor_zone/sponsors/logo-privy.svg",
+  },
+  {
+    sponsor_logo: "/img/sponsor_zone/sponsors/logo-alchemy.svg",
+  },
+  {
+    sponsor_logo: "/img/sponsor_zone/sponsors/logo-mbd.svg",
+  },
+  {
+    sponsor_logo: "/img/sponsor_zone/sponsors/logo-eas.svg",
+  },
+  {
+    sponsor_logo: "/img/sponsor_zone/sponsors/logo-pimlico.svg",
+  },
 ];
