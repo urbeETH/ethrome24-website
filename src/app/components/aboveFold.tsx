@@ -54,8 +54,8 @@ export default function AboveFold() {
               </div>
               <div className="flex flex-row space-x-4">
                 <ButtonPurple
-                  cta="Apply to hack"
-                  route="https://form.jotform.com/241011812625343"
+                  cta="Hacker Manual"
+                  route="https://builders-garden.notion.site/ETHRome-2024-Hacker-Manual-3d270d9f5d594d9a9faf2f34f6ee7eb5?pvs=74"
                   variant="primary"
                 />
                 <ButtonPurple
