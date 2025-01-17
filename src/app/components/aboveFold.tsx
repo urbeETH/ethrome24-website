@@ -44,16 +44,17 @@ export default function AboveFold() {
                 <div className="flex flex-col text-center items-center xl:items-start text-ethrome-white text-xl">
                   <p className="">Come, enjoy and build with care.</p>
                   <p>
-                    <span className="font-bold">Account Abstraction </span>&
+                    <span className="font-bold">AI, DeFi </span>&
                     <span className="font-bold"> Privacy </span>tracks.
                   </p>
                 </div>
                 <p className="text-base text-ethrome-yellow leading-8 font-black italic">
-                  4-6 October 2024
+                  11-13 April 2025
                 </p>
               </div>
               <div className="flex flex-row space-x-4">
-                <ButtonPurple
+               
+               {/** <ButtonPurple
                   cta="Hacker Manual"
                   route="https://builders-garden.notion.site/ETHRome-2024-Hacker-Manual-3d270d9f5d594d9a9faf2f34f6ee7eb5?pvs=74"
                   variant="primary"
@@ -62,6 +63,11 @@ export default function AboveFold() {
                   cta="Side Events"
                   route="https://lu.ma/ethrome-24"
                   variant="outline"
+                />*/}
+                <ButtonPurple
+                  cta="Apply to Hack"
+                  route=""
+                  variant="primary"
                 />
               </div>
             </div>

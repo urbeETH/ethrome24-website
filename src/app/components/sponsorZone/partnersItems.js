@@ -25,7 +25,7 @@ export const partnersItems = [
         partners_logo: "/img/sponsor_zone/partners/logo-ethbrno.svg"
     },
     {
-        partners_logo: "/img/sponsor_zone/partners/logo-ethistanbul.svg"
+        partners_logo: "/img/sponsor_zone/partners/logo-ethzurich.svg"
     },
     {
         partners_logo: "/img/sponsor_zone/partners/logo-hopera.svg"
@@ -37,16 +37,13 @@ export const partnersItems = [
         partners_logo: "/img/sponsor_zone/partners/logo-yomi.svg"
     },
     {
-        partners_logo: "/img/sponsor_zone/partners/logo-basedinlisbon.svg"
-    },
-    {
         partners_logo: "/img/sponsor_zone/partners/logo-builderstribe.svg"
     },
     {
         partners_logo: "/img/sponsor_zone/partners/logo-kernel.svg"
     },
     {
-        partners_logo: "/img/sponsor_zone/partners/logo-banklessdao.svg"
+        partners_logo: "/img/sponsor_zone/partners/logo-ethcluj.svg"
     },
     {
         partners_logo: "/img/sponsor_zone/partners/logo-talentProtocol.svg"

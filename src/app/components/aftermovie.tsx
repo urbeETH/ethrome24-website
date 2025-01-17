@@ -9,15 +9,15 @@ export default function Aftermovie() {
 
   const ethrome23metrics = [
     {
-      number: "300",
+      number: "250+",
       text: "attendees",
     },
     {
-      number: "14",
+      number: "20",
       text: "sponsors",
     },
     {
-      number: "40+",
+      number: "37",
       text: "projects",
     },
   ];
@@ -49,27 +49,19 @@ export default function Aftermovie() {
       </video>
 
       <div className="absolute left-0 bottom-0 flex flex-col justify-center items-start py-6 pl-10 pr-16 gap-4 absolute_info">
-        <div className="flex justify-center items-center w-[164px] h-[44px] bg-ethrome-purple uppercase text-ethrome-white text-base rounded-[22px] drop-shadow-[0_10px_8px_rgba(131,20,199,0.25)] ${className} hover:bg-ethrome-dark-purple">
-          2023 Metrics
-        </div>
+        <Link href="https://docs.google.com/presentation/d/1lZXKPC3p7DpeP9487bHy1eEQkpHEetlXYQwPmWU4Wl8/edit#slide=id.g30e42f5f6f0_1_487" target="_blank" className="flex justify-center items-center w-[164px] h-[44px] bg-ethrome-purple uppercase text-ethrome-white text-base rounded-[22px] drop-shadow-[0_10px_8px_rgba(131,20,199,0.25)] ${className} hover:bg-ethrome-dark-purple">
+        2024 Metrics
+        </Link>
         <div className="flex justify-center items-center gap-10">
-          <div className="flex flex-col justify-start items-start">
-            <p className="text-ethrome-yellow text-[40px] outfit">300</p>
-            <p className="text-ethrome-white text-base outfit">attendees</p>
-          </div>
-          <div className="flex flex-col justify-start items-start">
-            <p className="text-ethrome-yellow text-[40px]">14</p>
-            <p className="text-ethrome-white text-base">sponsors</p>
-          </div>
-          <div className="flex flex-col justify-start items-start">
-            <p className="text-ethrome-yellow text-[40px]">40+</p>
-            <p className="text-ethrome-white text-base">projects</p>
-          </div>
+        {ethrome23metrics.map((items,index)=>(
+          <div key={index} className="flex flex-col justify-start items-start">
+          <p className="text-ethrome-yellow text-[40px] outfit">{items.number}</p>
+          <p className="text-ethrome-white text-base outfit">{items.text}</p>
         </div>
-
+        ))}
+        </div>
         <div className="grain"></div>
       </div>
-
       <Link className="absolute top-10 right-10 sm:top-auto sm:bottom-10" href="https://www.youtube.com/watch?v=Nn-zTA9lEy8" target="_blank">
         <motion.svg
           width="123"

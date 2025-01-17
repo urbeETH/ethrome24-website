@@ -9,16 +9,16 @@ export default function PhotogalleryLanding() {
       <div className="w-full h-[27px] modanatura_cols"></div>
       <Marquee className="marquee_desktop w-full px-6 py-3 xl:flex">
         <h1 className="pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">
-          ETHROME 2023 Photogallery
+          ETHROME Photogallery
         </h1>
         <h1 className="pl-6 text-ethrome-yellow text-[32px] uppercase font-semibold tracking-[16px]">
-          ETHROME 2023 Photogallery
+          ETHROME Photogallery
         </h1>
         <h1 className="pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">
-          ETHROME 2023 Photogallery
+          ETHROME Photogallery
         </h1>
         <h1 className="pl-6 text-ethrome-yellow text-[32px] uppercase font-semibold tracking-[16px]">
-          ETHROME 2023 Photogallery
+          ETHROME Photogallery
         </h1>
       </Marquee>
       <GallerySwiper />

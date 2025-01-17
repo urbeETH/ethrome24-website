@@ -17,7 +17,7 @@ export default function SponsorZone() {
 
       <div className="w-full flex flex-col justify-center px-6 py-24 gap-16 2xl:px-20">
         {/** Sponsors  */}
-        <div className="w-full flex flex-col justify-start items-start gap-4">
+        {/**<div className="w-full flex flex-col justify-start items-start gap-4">
           <div className="flex flex-col justify-start items-center gap-4 md:flex-row">
             <div className="flex justify-center items-center w-[164px] h-[44px] bg-ethrome-purple uppercase text-ethrome-white text-base rounded-[22px] drop-shadow-[0_10px_8px_rgba(131,20,199,0.25)] ${className} hover:bg-ethrome-dark-purple">
               Sponsors
@@ -30,7 +30,7 @@ export default function SponsorZone() {
           </div>
 
           <div className="w-full flex flex-col justify-start items-start gap-10">
-            {/** TIER 1 */}
+            
             <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
               {sponsorsItemsTier1.map((item, index) => (
                 <div
@@ -50,7 +50,7 @@ export default function SponsorZone() {
                 </div>
               ))}
             </div>
-            {/** TIER 2 */}
+           
             <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
               {sponsorsItemsTier2.map((item, index) => (
                 <div
@@ -71,7 +71,7 @@ export default function SponsorZone() {
               ))}
             </div>
 
-            {/** TIER 3 */}
+           
             <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
               {sponsorsItemsTier3.map((item, index) => (
                 <div
@@ -92,7 +92,9 @@ export default function SponsorZone() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
+        
+        
 
         {/** Partners */}
         <div className="w-full flex flex-col justify-start items-start gap-4">
@@ -111,7 +113,7 @@ export default function SponsorZone() {
                     alt="logo img"
                     width={120}
                     height={72}
-                    style={{ opacity: "0.8" }}
+                    style={{ opacity: "0.8"}}
                   />
                 </div>
                 <div className="w-full h-[21px] modanatura_sponsor_zone"></div>
