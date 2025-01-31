@@ -52,9 +52,10 @@ export default function AboveFold() {
                   October 2025
                 </p>
               </div>
+              {/**
               <div className="flex flex-row space-x-4">
                
-               {/** <ButtonPurple
+                <ButtonPurple
                   cta="Hacker Manual"
                   route="https://builders-garden.notion.site/ETHRome-2024-Hacker-Manual-3d270d9f5d594d9a9faf2f34f6ee7eb5?pvs=74"
                   variant="primary"
@@ -63,13 +64,14 @@ export default function AboveFold() {
                   cta="Side Events"
                   route="https://lu.ma/ethrome-24"
                   variant="outline"
-                />*/}
+                />
                 <ButtonPurple
                   cta="Apply to Hack"
                   route=""
                   variant="primary"
                 />
               </div>
+              */}
             </div>
           </div>
         </div>

@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "Apply to ETHRome 24",
+  title: "Apply to ETHRome 25",
   description:
-    "The hackathon for builders by builders, on Privacy & Account Abstraction, from Oct 4th to 6th, 2024",
+    "The hackathon for builders by builders, on AI, DeFi & Privacy; from October 2025",
   metadataBase: new URL("https://ethrome.org/apply"),
   keywords: ["Hackathon", "ETHRome", "urbe.eth"],
   authors: [
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   creator: "urbe.eth",
   publisher: "herminius.eth",
   openGraph: {
-    title: "Apply to ETHRome 24",
+    title: "Apply to ETHRome 25",
     description:
-      "The hackathon for builders by builders, on Privacy & Account Abstraction, from Oct 4th to 6th, 2024",
+      "The hackathon for builders by builders, on AI, DeFi & Privacy; from October 2025",
     url: "https://ethrome.org",
     siteName: "ETHRome",
     images: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
         url: "https://www.ethrome.org/opengraph-image.png",
         width: 1800,
         height: 1600,
-        alt: "ETHRome 24",
+        alt: "ETHRome 25",
       },
     ],
     locale: "en_US",
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "https://ethrome.org",
-    title: "Apply to ETHRome 24",
+    title: "Apply to ETHRome 25",
     description:
-      "The hackathon for builders by builders, on Privacy & Account Abstraction, from Oct 4th to 6th, 2024",
+      "The hackathon for builders by builders, on AI, DeFi & Privacy; from October 2025",
     images: "https://www.ethrome.org/opengraph-image.png",
   },
 };
