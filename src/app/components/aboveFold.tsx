@@ -49,7 +49,7 @@ export default function AboveFold() {
                   </p>
                 </div>
                 <p className="text-base text-ethrome-yellow leading-8 font-black italic">
-                  11-13 April 2025
+                  October 2025
                 </p>
               </div>
               <div className="flex flex-row space-x-4">

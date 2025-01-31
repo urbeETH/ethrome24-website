@@ -2,6 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar, Autoplay } from "swiper/modules";
+import Image from "next/image";
 
 // Import Swiper styles
 import "swiper/css";
@@ -13,16 +14,16 @@ import "swiper/css/scrollbar";
 export default function LocationGallerySwiper() {
   const locationGallerySwiperItems = [
     {
-      immago: "/img/location/location_1.png",
+      immago: "/img/location/location_1.avif",
     },
     {
-      immago: "/img/location/location_2.png",
+      immago: "/img/location/location_2.avif",
     },
     {
-      immago: "/img/location/location_3.png",
+      immago: "/img/location/location_3.avif",
     },
     {
-      immago: "/img/location/location_4.png",
+      immago: "/img/location/location_4.avif",
     },
   ];
 
@@ -47,11 +48,12 @@ export default function LocationGallerySwiper() {
         >
           {locationGallerySwiperItems.map((item, index) => (
             <SwiperSlide key={index}>
-              <img
+              <Image
+                width={1440}
+                height={810}
                 src={`${item.immago}`}
                 alt={`location photo ${index} `}
                 className="object-cover w-full h-full"
-                loading="lazy"
               />
               <div className="location_gallery_swiper_overlay"/>
             </SwiperSlide>

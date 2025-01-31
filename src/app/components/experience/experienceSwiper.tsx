@@ -5,7 +5,6 @@ import { Autoplay } from "swiper/modules";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 // Import Swiper styles
 import "swiper/css";
