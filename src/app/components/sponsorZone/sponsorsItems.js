@@ -1,9 +1,9 @@
 export const sponsorsItemsTier1 = [
   {
-    sponsor_logo: "/img/sponsor_zone/sponsors/logo-esp.svg",
+    sponsor_logo: "/img/sponsor_zone/sponsors/logo-1Inch.svg",
   },
   {
-    sponsor_logo: "/img/sponsor_zone/sponsors/logo-1Inch.svg",
+    sponsor_logo: "/img/sponsor_zone/sponsors/logo-esp.svg",
   }
 ];
 

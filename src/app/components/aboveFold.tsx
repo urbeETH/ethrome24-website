@@ -49,7 +49,7 @@ export default function AboveFold() {
                   </p>
                 </div>
                 <p className="text-base text-ethrome-yellow leading-8 font-black italic">
-                  October 2025
+                  17-19 October 2025
                 </p>
               </div>
               <ButtonPurple
