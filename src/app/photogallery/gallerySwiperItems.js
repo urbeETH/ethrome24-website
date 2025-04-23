@@ -1,4 +1,33 @@
 export const gallerySwiperItems = [
+//2024
+  {
+    immago: "/img/photogallery/2024/_PLG3293.avif",
+  },
+  {
+    immago: "/img/photogallery/2024/_PLG3313.avif",
+  },
+  {
+    immago: "/img/photogallery/2024/_PLG3404.avif",
+  },
+  {
+    immago: "/img/photogallery/2024/_PLG2879.avif",
+  },
+  {
+    immago: "/img/photogallery/2024/_PLG2265.avif",
+  },
+  {
+    immago: "/img/photogallery/2024/_PLG3032.avif",
+  },
+  {
+    immago: "/img/photogallery/2024/_PLG2938.avif",
+  },
+  {
+    immago: "/img/photogallery/2024/_PLG2272.avif",
+  },
+  {
+    immago: "/img/photogallery/2024/_PLG2614.avif",
+  },
+//2023
   {
     immago: "/img/photogallery/_DSC6342-Enhanced-NRjpg.avif",
   },

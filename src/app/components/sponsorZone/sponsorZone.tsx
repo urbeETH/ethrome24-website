@@ -17,16 +17,18 @@ export default function SponsorZone() {
 
       <div className="w-full flex flex-col justify-center px-6 py-24 gap-16 2xl:px-20">
         {/** Sponsors  */}
-        {/**<div className="w-full flex flex-col justify-start items-start gap-4">
+        <div className="w-full flex flex-col justify-start items-start gap-4">
           <div className="flex flex-col justify-start items-center gap-4 md:flex-row">
             <div className="flex justify-center items-center w-[164px] h-[44px] bg-ethrome-purple uppercase text-ethrome-white text-base rounded-[22px] drop-shadow-[0_10px_8px_rgba(131,20,199,0.25)] ${className} hover:bg-ethrome-dark-purple">
               Sponsors
             </div>
+            {/**
             <ButtonPurple
               cta="Discover Bounties"
               route="https://builders-garden.notion.site/Prizes-and-Bounties-67cc396a9bef4d7ab478d04c124dc4df"
               variant="outline"
             />
+             */}
           </div>
 
           <div className="w-full flex flex-col justify-start items-start gap-10">
@@ -37,7 +39,7 @@ export default function SponsorZone() {
                   key={index}
                   className="flex flex-col w-[155px] h-[112px] gap-[3px] xl:w-[246px] xl:h-[168px]"
                 >
-                  <div className="flex justify-center items-center sponsor_zone_box_bg h-[112px] xl:h-[auto] py-2 px-5">
+                  <div className="flex justify-center items-center sponsor_zone_box_bg h-[112px] xl:min-h-[144px] xl:h-[auto] py-2 px-5">
                     <Image
                       src={item.sponsor_logo}
                       alt="logo img"
@@ -50,7 +52,7 @@ export default function SponsorZone() {
                 </div>
               ))}
             </div>
-           
+           {/**
             <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
               {sponsorsItemsTier2.map((item, index) => (
                 <div
@@ -91,8 +93,9 @@ export default function SponsorZone() {
                 </div>
               ))}
             </div>
+             */}
           </div>
-        </div> */}
+        </div>
         
         
 
@@ -145,7 +148,7 @@ export default function SponsorZone() {
             className="text-ethrome-white text-center underline opacity-[64%]"
             href="mailto:sponsor@ethrome.org"
           >
-            sponsor@ethrome.org
+            hello@urbe.build
           </a>
         </div>
       </div>

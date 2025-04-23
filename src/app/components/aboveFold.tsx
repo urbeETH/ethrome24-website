@@ -52,6 +52,11 @@ export default function AboveFold() {
                   October 2025
                 </p>
               </div>
+              <ButtonPurple
+                  cta="Apply to Hack"
+                  route="https://docs.google.com/forms/d/e/1FAIpQLSejn4me435Qisw_1aPcMQjuRTu6UEvPrjqm4m6zWXgXDu5Tew/viewform"
+                  variant="primary"
+                />
               {/**
               <div className="flex flex-row space-x-4">
                
