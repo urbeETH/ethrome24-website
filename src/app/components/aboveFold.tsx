@@ -14,7 +14,7 @@ export default function AboveFold() {
         <div className="w-full h-[36.76px] modanatura opacity-[0.4]"></div>
       </div>
 
-      <div className="w-full px-6 pt-[136px] flex flex-col items-center justify-center xl:px-0 xl:pt-0 xl:h-[calc(100%-63.578px)]">
+      <div className="w-full px-6 pt-[75px] flex flex-col items-center justify-center xl:px-0 xl:pt-0 xl:h-[calc(100%-63.578px)]">
         <div className="aboveFold_items_box z-10 flex flex-col items-center justify-center w-full h-full gap-0 xl:gap-8 xl:w-auto">
           {/* logo */}
 
@@ -87,9 +87,9 @@ export default function AboveFold() {
         target="_blank"
       >
         <Image
-          src="/img/aboveFold/sponsoredUrbe.png"
-          width={107}
-          height={37}
+          src="/img/aboveFold/hosted_by_urbe.eth.svg"
+          width={208}
+          height={63}
           alt="sponsored by urbe.eth"
         />
       </a>
