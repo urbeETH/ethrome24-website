@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     { url: "https://herminius.eth.limo/" },
   ],
   creator: "urbe.eth",
-  publisher: "herminius.eth",
+  publisher: "urbe.eth",
   openGraph: {
     title: "Apply to ETHRome 25",
     description:
