@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   keywords:["Hackathon", "ETHRome", "urbe.eth"],
   authors: [{name:"limone.eth"}, {url: "https://www.limone.lol/"},{name:"vdarph"}, {name:"herminius.eth"}, {url:"https://herminius.eth.limo/"}],
   creator:"urbe.eth",
-  //publisher:"",
+  publisher:"urbe.eth",
   openGraph: {
     title: "ETHRome 25",
     description: "The hackathon for builders by builders",
