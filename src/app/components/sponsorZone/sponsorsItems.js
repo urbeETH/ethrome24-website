@@ -13,6 +13,9 @@ export const sponsorsItemsTier1 = [
   },
   {
     sponsor_logo: "/img/sponsor_zone/sponsors/logo-ens.svg",
+  },
+  {
+    sponsor_logo: "/img/sponsor_zone/sponsors/logo-taikai.svg",
   }
 ];
 
