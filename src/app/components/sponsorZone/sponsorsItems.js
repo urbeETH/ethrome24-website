@@ -19,9 +19,13 @@ export const sponsorsItemsTier1 = [
   },
   {
     sponsor_logo: "/img/sponsor_zone/sponsors/logo-polkadot.svg",
+  },
+  {
+    sponsor_logo: "/img/sponsor_zone/sponsors/logo-calimero.svg",
   }
-
 ];
+
+
 
 export const sponsorsItemsTier2 = [
   {
