@@ -22,7 +22,11 @@ export const sponsorsItemsTier1 = [
   },
   {
     sponsor_logo: "/img/sponsor_zone/sponsors/logo-calimero.svg",
-  }
+  },
+  {
+    sponsor_logo: "/img/sponsor_zone/sponsors/logo-iexec.svg",
+  },
+
 ];
 
 

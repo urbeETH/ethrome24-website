@@ -99,7 +99,7 @@ export default function SponsorZone() {
         
         
 
-        {/** Partners */}
+        {/** Partners 
         <div className="w-full flex flex-col justify-start items-start gap-4">
           <div className="flex justify-center items-center w-[164px] h-[44px] bg-ethrome-purple uppercase text-ethrome-white text-base rounded-[22px] drop-shadow-[0_10px_8px_rgba(131,20,199,0.25)] ${className} hover:bg-ethrome-dark-purple">
             Partners
@@ -124,7 +124,9 @@ export default function SponsorZone() {
             ))}
           </div>
         </div>
+        */}
       </div>
+
       {/**Became sponsor */}
       <div className="w-full flex flex-col justify-between gap-16 px-20 py-8 bg-ethrome-cotta lg:flex-row lg:gap-2">
         <div className="flex flex-col items-center justify-start gap-2 text-ethrome-white">
