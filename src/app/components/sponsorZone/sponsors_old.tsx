@@ -1,12 +1,12 @@
 "use client";
 
-import { sponsorsItemsTier1 } from "./sponsorsItems";
+//import { sponsorsItemsTier1 } from "./sponsorsItems";
 import Image from "next/image";
 
 export default function Sponsors_old() {
   return (
     <div className="flex flex-col justify-start items-start gap-6">
-      {/** TIER 1 */}
+      {/** TIER 1 
       <div className="flex flex-col justify-start gap-3">
         <div className="border-[#261418] border-y-0.5 bg-ethrome-BlackerThanPurple text-[#712E42]">
           TIER 1
@@ -28,6 +28,7 @@ export default function Sponsors_old() {
           ))}
         </div>
       </div>
+      */}
 
       <div className="flex flex-col xl:flex-row">
         {/** TIER 2 */}

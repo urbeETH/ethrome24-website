@@ -4,10 +4,7 @@ import Image from "next/image";
 import ButtonPurple from "../buttons/buttonPurple";
 import GrainBg from "../grainBg";
 
-import { partnersItems } from "./partnersItems";
-import { sponsorsItemsTier1 } from "./sponsorsItems";
-import { sponsorsItemsTier2 } from "./sponsorsItems";
-import { sponsorsItemsTier3 } from "./sponsorsItems";
+import { bountySponsor, citizen, patrician } from "./sponsorsItems";
 
 export default function SponsorZone() {
   return (
@@ -15,26 +12,25 @@ export default function SponsorZone() {
       <GrainBg />
       <div className="w-full h-[27px] modanatura_cols"></div>
 
-      <div className="w-full flex flex-col justify-center px-6 py-24 gap-16 2xl:px-20">
+      <div className="w-full flex flex-col justify-center items-center px-6 pt-[88px] pb-24 gap-10 2xl:px-20">
         {/** Sponsors  */}
-        <div className="w-full flex flex-col justify-start items-start gap-4">
-          <div className="flex flex-col justify-start items-center gap-4 md:flex-row">
-            <div className="flex justify-center items-center w-[164px] h-[44px] bg-ethrome-purple uppercase text-ethrome-white text-base rounded-[22px] drop-shadow-[0_10px_8px_rgba(131,20,199,0.25)] ${className} hover:bg-ethrome-dark-purple">
-              Sponsors
+        <h1
+          className="px-6 text-ethrome-white text-center xl:px-[298px]"
+          style={{ fontSize: "min(max(2rem, 3vw), 3.5rem)" }}
+        >
+          {" "}
+          Meet our{" "}
+          <span className="text-ethrome-yellow font-bold">sponsors!</span>
+        </h1>
+        <div className="w-full flex flex-col justify-center items-start gap-10 xl:flex-row">
+          {/** Patrician */}
+          <div className="w-full xl:w-1/3 flex flex-col justify-center items-start gap-4">
+            <div className="patrician_bg flex justify-center items-center w-[116px] h-[44px] px-4 py-[7] uppercase text-ethrome-white text-base rounded-[22px]  ">
+              Patrician
             </div>
-            {/**
-            <ButtonPurple
-              cta="Discover Bounties"
-              route="https://builders-garden.notion.site/Prizes-and-Bounties-67cc396a9bef4d7ab478d04c124dc4df"
-              variant="outline"
-            />
-             */}
-          </div>
 
-          <div className="w-full flex flex-col justify-start items-start gap-10">
-            
-            <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
-              {sponsorsItemsTier1.map((item, index) => (
+            <div className="grid grid-cols-2 gap-4">
+              {patrician.map((item, index) => (
                 <div
                   key={index}
                   className="flex flex-col w-[155px] h-[112px] gap-[3px] xl:w-[246px] xl:h-[168px]"
@@ -52,14 +48,19 @@ export default function SponsorZone() {
                 </div>
               ))}
             </div>
-           {/**
-            <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
-              {sponsorsItemsTier2.map((item, index) => (
+          </div>
+          {/** Citizen */}
+          <div className="w-full xl:w-1/3 flex flex-col justify-center items-start gap-4">
+            <div className="citizen_bg flex justify-center items-center w-[95px] h-[44px] px-4 py-[7] uppercase text-ethrome-white text-base rounded-[22px]  ">
+              Citizen
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {citizen.map((item, index) => (
                 <div
                   key={index}
-                  className="flex flex-col w-[155px] h-[112px] gap-[3px] xl:w-[202px] xl:h-[136px]"
+                  className="flex flex-col w-[155px] h-[112px] gap-[3px] xl:w-[246px] xl:h-[168px]"
                 >
-                  <div className="flex justify-center items-center sponsor_zone_box_bg h-[112px] xl:h-[auto] py-2 px-5">
+                  <div className="flex justify-center items-center sponsor_zone_box_bg h-[112px] xl:min-h-[144px] xl:h-[auto] py-2 px-5">
                     <Image
                       src={item.sponsor_logo}
                       alt="logo img"
@@ -72,20 +73,25 @@ export default function SponsorZone() {
                 </div>
               ))}
             </div>
+          </div>
 
-           
-            <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
-              {sponsorsItemsTier3.map((item, index) => (
+          {/** Bounty Sponsor */}
+          <div className="w-full xl:w-1/3 flex flex-col justify-center items-start gap-4">
+            <div className="bountySponsor_bg flex justify-center items-center w-[179px] h-[44px] px-4 py-[7] text-ethrome-white text-base rounded-[22px] uppercase ">
+              Bounty Sponsor
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {bountySponsor.map((item, index) => (
                 <div
                   key={index}
-                  className="flex flex-col w-[150px] h-[112px] gap-[3px]"
+                  className="flex flex-col w-[155px] h-[112px] gap-[3px] xl:w-[246px] xl:h-[168px]"
                 >
-                  <div className="flex justify-center items-center sponsor_zone_box_bg h-[112px] xl:h-[auto] py-2 px-5">
+                  <div className="flex justify-center items-center sponsor_zone_box_bg h-[112px] xl:min-h-[144px] xl:h-[auto] py-2 px-5">
                     <Image
                       src={item.sponsor_logo}
                       alt="logo img"
-                      width={150}
-                      height={112}
+                      width={200}
+                      height={128}
                       style={{ opacity: "0.8" }}
                     />
                   </div>
@@ -93,38 +99,8 @@ export default function SponsorZone() {
                 </div>
               ))}
             </div>
-             */}
           </div>
         </div>
-        
-        
-
-        {/** Partners 
-        <div className="w-full flex flex-col justify-start items-start gap-4">
-          <div className="flex justify-center items-center w-[164px] h-[44px] bg-ethrome-purple uppercase text-ethrome-white text-base rounded-[22px] drop-shadow-[0_10px_8px_rgba(131,20,199,0.25)] ${className} hover:bg-ethrome-dark-purple">
-            Partners
-          </div>
-          <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
-            {partnersItems.map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col w-[148px] h-[112px] gap-[3px]"
-              >
-                <div className="flex justify-center items-center sponsor_zone_box_bg h-[88px] py-2 px-[14px]">
-                  <Image
-                    src={item.partners_logo}
-                    alt="logo img"
-                    width={120}
-                    height={72}
-                    style={{ opacity: "0.8"}}
-                  />
-                </div>
-                <div className="w-full h-[21px] modanatura_sponsor_zone"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-        */}
       </div>
 
       {/**Became sponsor */}
