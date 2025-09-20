@@ -192,6 +192,12 @@ body {
 * Sponsor Zone
 **/
 
+.marquee_sponsor_bg {
+  background-color: rgba(230, 181, 120, 0.12);
+  mix-blend-mode: color-dodge;
+  border: 2px solid #41182a2f;
+}
+
 .sponsor_zone_description {
   font-style: normal;
   font-weight: 400;
@@ -201,10 +207,65 @@ body {
 }
 
 .sponsor_zone_box_bg {
-  background-color: rgba(42, 15, 28, 0.7);
+  /* position: relative;
+ /* background-color: #30111e69;
+  border: 2px solid #41182a2f;*/
+  background-color: rgba(239, 235, 230, 0.12);
+  mix-blend-mode: color-dodge;
 }
 
-.patrician_bg {
+.sponsor_zone_box_bg::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  border: 2px solid transparent;
+  background: linear-gradient(
+      0deg,
+      rgba(171, 143, 155, 0.6) 0%,
+      rgba(171, 143, 155, 0.2) 100%
+    )
+    border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  border-radius: inherit;
+  box-sizing: border-box;
+}
+
+/*
+.sponsor_zone_border {
+  inset:0;
+  border: 2px solid transparent;
+  background: linear-gradient(
+      0deg,
+      rgba(171, 143, 155, 0.6) 0%,
+      rgba(171, 143, 155, 0.2) 100%
+    )
+    border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  border-radius: inherit;
+  box-sizing: border-box;
+}
+
+  /*
+.sponsor_zone_box_bg::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(171, 143, 155, 0.2) 0%,
+    rgba(171, 143, 155, 0.6) 100%
+  );
+  border-radius: 18px;
+  z-index: -1;
+  opacity: 0.4; /* Opacità del 40% solo per il bordo 
+}*/
+
+  .patrician_bg {
   background: #4f250e
     linear-gradient(
       45deg,
@@ -218,15 +279,15 @@ body {
 }
 
 .citizen_bg {
-  background: #8314c7
+  background: #700034
     linear-gradient(
       45deg,
-      rgba(205, 55, 199, 0.8) 0%,
-      rgba(205, 55, 199, 0.24) 32%,
-      rgba(205, 55, 199, 0.8) 42%,
-      rgba(205, 55, 199, 0.14) 53%,
-      rgba(205, 55, 199, 0.54) 69%,
-      rgba(205, 55, 199, 0.24) 100%
+      rgba(203, 43, 94, 1) 0%,
+      rgba(203, 43, 94, 0.24) 32%,
+      rgba(203, 43, 94, 0.8) 42%,
+      rgba(203, 43, 94, 0) 53%,
+      rgba(203, 43, 94, 0.54) 69%,
+      rgba(203, 43, 94, 0.24) 100%
     );
 }
 
@@ -234,14 +295,13 @@ body {
   background: #3e3e3e
     linear-gradient(
       45deg,
-      rgba(250, 187, 0, 0.8) 0%,
-      rgba(250, 187, 0, 0.24) 32%,
-      rgba(250, 187, 0, 0.8) 42%,
-      rgba(250, 187, 0, 0.14) 53%,
-      rgba(250, 187, 0, 0.54) 69%,
-      rgba(250, 187, 0, 0.24) 100%
+      rgba(213, 213, 213, 0.8) 0%,
+      rgba(213, 213, 213, 0.24) 32%,
+      rgba(213, 213, 213, 0.6) 42%,
+      rgba(213, 213, 213, 0.14) 53%,
+      rgba(213, 213, 213, 0.54) 69%,
+      rgba(213, 213, 213, 0.24) 100%
     );
-  mix-blend-mode: luminosity;
 }
 
 /**

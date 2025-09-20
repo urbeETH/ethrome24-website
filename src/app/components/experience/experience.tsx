@@ -65,10 +65,10 @@ export default function Experience() {
               <div className="flex flex-col justify-start items-center gap-4">
                 <div className="flex flex-col justify-start items-center gap-px">
                   <motion.div
-                    initial={{ backgroundColor: "#301320" }} // Initial color
+                    initial={{ backgroundColor: "#7D304B" }} // Initial color
                     animate={{
                       backgroundColor:
-                        hoveredIndex === index ? "#fabb00" : "#301320",
+                        hoveredIndex === index ? "#fabb00" : hoveredIndex !== null ? "#301320" : "#7D304B" 
                     }}
                     className="flex justify-center items-center px-4 py-2 w-[174.75px] experience_text_box"
                   >
@@ -77,9 +77,9 @@ export default function Experience() {
                   <motion.svg
                     width="175"
                     height="11"
-                    initial={{ fill: "#301320" }}
+                    initial={{ fill: "#7D304B" }}
                     animate={{
-                      fill: hoveredIndex === index ? "#fabb00" : "#301320",
+                      fill:  hoveredIndex === index ? "#fabb00" : hoveredIndex !== null ? "#301320" : "#7D304B" 
                     }}
                   >
                     <path
@@ -115,9 +115,9 @@ export default function Experience() {
                   viewBox="0 0 81 81"
                   className="experience_logo_svg"
                   xmlns="http://www.w3.org/2000/svg"
-                  initial={{ stroke: "#301320" }} // Initial color
+                  initial={{ stroke: "#7D304B" }} // Initial color
                   animate={{
-                    stroke: hoveredIndex === index ? "#fabb00" : "#301320",
+                    stroke:  hoveredIndex === index ? "#fabb00" : hoveredIndex !== null ? "#301320" : "#7D304B" 
                   }}
                 >
                   {item.logo}
@@ -135,9 +135,9 @@ export default function Experience() {
                   fill="none"
                   strokeWidth="4.05941"
                   xmlns="http://www.w3.org/2000/svg"
-                  initial={{ stroke: "#301320" }} // Initial color
+                  initial={{ stroke: "#7D304B" }} // Initial color
                   animate={{
-                    stroke: hoveredIndex === index ? "#fabb00" : "#301320",
+                    stroke:  hoveredIndex === index ? "#fabb00" : hoveredIndex !== null ? "#301320" : "#7D304B" 
                   }}
                 >
                   {item.col}

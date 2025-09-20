@@ -85,7 +85,7 @@ export default function ExperienceSwiper({
                     <motion.div
                       initial={{ backgroundColor: "#301320" }} // Initial color
                        animate={{
-                        backgroundColor: activeIndex === index ? "#fabb00" : "#301320",
+                        backgroundColor: activeIndex === index ? "#fabb00" :"#301320",
                       }}
                       className="flex justify-center items-center px-4 py-2 w-[174.75px] experience_text_box"
                     >
@@ -96,7 +96,7 @@ export default function ExperienceSwiper({
                       height="11"
                       initial={{ fill: "#301320" }}
                       animate={{
-                        fill: activeIndex === index ? "#fabb00" : "#301320",
+                        fill: activeIndex === index ? "#fabb00" : "#301320"
                       }}
                     >
                       <path
@@ -149,7 +149,7 @@ export default function ExperienceSwiper({
                   xmlns="http://www.w3.org/2000/svg"
                   initial={{ stroke: "#301320" }} // Initial color
                    animate={{
-                    stroke: activeIndex === index ? "#fabb00" : "#301320",
+                    stroke: activeIndex === index ? "#fabb00" : "#301320"
                   }}
                 >
                   {item.col}
