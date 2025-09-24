@@ -8,6 +8,7 @@ export default function AboveFold() {
   return (
     <div className="w-full relative min-h-[810px] h-screen xl:h-[calc(100vh-80px)]">
       <GrainBg />
+      {/**Modanatura top*/}
       <div className="absolute w-full top-0 left-0 flex flex-col justify-start items-start gap-[8.46px] xl:-top-[80px]">
         <div className="w-full h-[36.76px] modanatura opacity-[0.6]"></div>
         <div className="w-full h-[36.76px] modanatura opacity-[0.5]"></div>
@@ -40,9 +41,9 @@ export default function AboveFold() {
             </div>
 
             <div className="flex flex-col items-center xl:justify-start xl:items-start gap-6">
-              <div className="flex flex-col items-center xl:items-start gap-2 red_hat_display">
-                <div className="flex flex-col text-center items-center xl:items-start text-ethrome-white text-xl">
-                  <p className="">Come, enjoy and build with care.</p>
+              <div className="flex flex-col items-center xl:items-start gap-6 red_hat_display">
+                <div className="flex flex-col text-center items-center xl:items-start text-ethrome-white text-xl leading-9">
+                  <p>Come, enjoy and build with care.</p>
                   <p>
                     <span className="font-bold">AI, DeFi </span>&
                     <span className="font-bold"> Privacy </span>tracks.
@@ -93,7 +94,6 @@ export default function AboveFold() {
           alt="sponsored by urbe.eth"
         />
       </a>
-      <div className="absolute bottom-[5px] left-0 w-full h-[5px] bg-ethrome-brown"></div>
     </div>
   );
 }

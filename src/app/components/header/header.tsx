@@ -3,9 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-import { motion,AnimatePresence, useScroll } from "framer-motion";
-
-import { headerItems } from "./headerItems";
+import { motion, AnimatePresence, useScroll } from "framer-motion";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,8 +17,24 @@ export default function Header() {
   const scrollPosition = scrollY.get();
   const headerBg = scrollPosition > 0.1 ? "#301320" : "#fabb00";
 
-  console.log(scrollPosition);
-
+  const headerItems = [
+    {
+      title: "Meet our sponsors!",
+      route: "#sponsorZone",
+    },
+    {
+      title: "Location",
+      route: "#location",
+    },
+    {
+      title: "What will you find?",
+      route: "#experience",
+    },
+    {
+      title: "Aftermovie",
+      route: "#aftermovie",
+    },
+  ];
 
   return (
     <>
@@ -58,31 +72,31 @@ export default function Header() {
           />
         </div>
         <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            className="fixed top-0 left-0 w-full h-screen mt-[72px] bg-ethrome-BlackerThanPurple"
-            initial={{opacity: 0}}
-            animate={{opacity: 1}}
-            exit={{opacity:0}}
-            transition={{ ease: "easeIn", duration: "0.2" }}
-          >
-            <div
-              className="flex flex-col justify-center items-center text-xl font-medium gap-14"
-              style={{ height: "calc(100vh - 72px)" }}
+          {isMenuOpen && (
+            <motion.div
+              className="fixed top-0 left-0 w-full h-screen mt-[72px] bg-ethrome-BlackerThanPurple"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ ease: "easeIn", duration: "0.2" }}
             >
-              {headerItems.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.route}
-                  onClick={toggleMenu}
-                  className="px-7 py-1 bg-ethrome-white rounded-[22px]"
-                >
-                  {item.title}
-                </Link>
-              ))}
-            </div>
-          </motion.div>
-        )}
+              <div
+                className="flex flex-col justify-center items-center text-xl font-medium gap-14"
+                style={{ height: "calc(100vh - 72px)" }}
+              >
+                {headerItems.map((item, index) => (
+                  <Link
+                    key={index}
+                    href={item.route}
+                    onClick={toggleMenu}
+                    className="px-7 py-1 bg-ethrome-white rounded-[22px]"
+                  >
+                    {item.title}
+                  </Link>
+                ))}
+              </div>
+            </motion.div>
+          )}
         </AnimatePresence>
       </div>
     </>

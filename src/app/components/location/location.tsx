@@ -10,6 +10,7 @@ export default function Location() {
       id="location"
       className="relative section_frame overflow-hidden h-screen"
     >
+      {/**Modanatura */}
       <div className="w-full h-[35.19px] modanatura_cols_roof"></div>
       <Marquee className="marquee_desktop w-full px-6 py-3 xl:flex">
         <h1 className=" pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">

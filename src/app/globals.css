@@ -112,6 +112,16 @@ body {
   z-index: 9;
 }
 
+.line_height_text {
+  line-height: 140%;
+}
+
+.buttonPurple_bg {
+  background: linear-gradient(180deg, #8314c7 0%, #6402a1 100%);
+  box-shadow: 0px 12px 16px -4px rgba(131, 20, 199, 0.32);
+  border-radius: 22px;
+}
+
 /**
 * Hackathon
 **/
@@ -139,7 +149,6 @@ body {
   /* or 20px */
   text-align: center;
   color: #14010c;
-  /* background: #301320;*/
 }
 
 .experience_logo_svg {
@@ -148,6 +157,80 @@ body {
   fill: none;
   stroke: #301320;
   stroke-width: 5px;
+}
+
+.will_find_zone_box_bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background-color: #7d304b9c;
+  /*background-color: rgba(69, 45, 16, 0.24);*/
+  border-radius: 16px;
+  /*mix-blend-mode: color-dodge;*/
+}
+
+/* Stato hover attivo */
+.will_find_zone_box_bg.active {
+  background-color: #fabb00 !important;
+  /*mix-blend-mode: normal;*/
+}
+
+/* Stato hover inattivo */
+.will_find_zone_box_bg.inactive {
+  /*background-color: rgba(239, 235, 230, 0.12);*/
+  background-color: #301320;
+}
+
+
+.will_find_zone_box_bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+ /* background: linear-gradient(
+      0deg,
+      rgba(171, 143, 155, 0.6) 0%,
+      rgba(171, 143, 155, 0.2) 100%
+    )
+    border-box;*/
+    background: linear-gradient(
+      0deg,
+      rgba(171, 143, 155, 0.2) 0%,
+      rgba(171, 143, 155, 0.1) 100%
+    )
+    border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  border-radius: inherit;
+  box-sizing: border-box;
+}
+
+/* Classi per i colori */
+.fill-normal { fill: #7D304B; }
+.fill-dark { fill: #301320; }
+.fill-yellow { fill: #fabb00; }
+
+.stroke-normal { stroke: #7D304B; }
+.stroke-dark { stroke: #301320; }
+.stroke-yellow { stroke: #fabb00; }
+
+
+@keyframes experience_breath_anima{
+  0%, 100%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(15px);
+  }
+}
+
+.experience_breath{
+  animation: experience_breath_anima 3s ease-in-out infinite;
+}
+
+.experience_breath.animation-paused {
+  animation-play-state: paused;
 }
 
 /**
@@ -207,65 +290,36 @@ body {
 }
 
 .sponsor_zone_box_bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background-color: rgba(239, 235, 230, 0.12);
+  border-radius: 16px;
+  mix-blend-mode: color-dodge;
   /* position: relative;
  /* background-color: #30111e69;
   border: 2px solid #41182a2f;*/
-  background-color: rgba(239, 235, 230, 0.12);
-  mix-blend-mode: color-dodge;
 }
 
-.sponsor_zone_box_bg::before {
-  content:'';
-  position:absolute;
-  inset:0;
-  border: 2px solid transparent;
-  background: linear-gradient(
-      0deg,
-      rgba(171, 143, 155, 0.6) 0%,
-      rgba(171, 143, 155, 0.2) 100%
-    )
-    border-box;
-  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  border-radius: inherit;
-  box-sizing: border-box;
-}
-
-/*
-.sponsor_zone_border {
-  inset:0;
-  border: 2px solid transparent;
-  background: linear-gradient(
-      0deg,
-      rgba(171, 143, 155, 0.6) 0%,
-      rgba(171, 143, 155, 0.2) 100%
-    )
-    border-box;
-  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  border-radius: inherit;
-  box-sizing: border-box;
-}
-
-  /*
 .sponsor_zone_box_bg::before {
   content: "";
   position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
+  inset: 0;
+  border: 2px solid transparent;
   background: linear-gradient(
-    to bottom,
-    rgba(171, 143, 155, 0.2) 0%,
-    rgba(171, 143, 155, 0.6) 100%
-  );
-  border-radius: 18px;
-  z-index: -1;
-  opacity: 0.4; /* Opacità del 40% solo per il bordo 
-}*/
+      0deg,
+      rgba(171, 143, 155, 0.6) 0%,
+      rgba(171, 143, 155, 0.2) 100%
+    )
+    border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  border-radius: inherit;
+  box-sizing: border-box;
+}
 
-  .patrician_bg {
+.patrician_bg {
   background: #4f250e
     linear-gradient(
       45deg,
@@ -302,6 +356,17 @@ body {
       rgba(213, 213, 213, 0.54) 69%,
       rgba(213, 213, 213, 0.24) 100%
     );
+}
+
+/* Become Sponsor*/
+
+.becomeSponsor_bg::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  inset: 0;
+  background: rgba(239, 235, 230, 0.12);
+  mix-blend-mode: color-dodge;
 }
 
 /**

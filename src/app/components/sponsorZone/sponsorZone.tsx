@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import ButtonPurple from "../buttons/buttonPurple";
 import GrainBg from "../grainBg";
 import Marquee from "react-fast-marquee";
 
@@ -10,9 +9,13 @@ import Link from "next/link";
 
 export default function SponsorZone() {
   return (
-    <div id="sponsorZone" className="section_frame ">
+    <div id="sponsorZone" className="relative section_frame ">
       <GrainBg />
-      <div className="w-full h-[27px] modanatura_cols"></div>
+      {/**Modanatura */}
+      <div className="flex flex-col justify-start items-center gap-2">
+        <div className="w-full h-[36.76px] modanatura opacity-[0.6]"></div>
+        <div className="w-full h-[36.76px] modanatura opacity-[0.4]"></div>
+      </div>
 
       <div className="w-full pt-16 pb-28 flex flex-col justify-center items-start gap-10">
         {/** title + marquee */}
@@ -24,7 +27,7 @@ export default function SponsorZone() {
             {" "}
             Meet our{" "}
             <span className="text-ethrome-yellow font-bold">sponsors!</span>
-          </h1>         
+          </h1>
           <Marquee className="relative w-full flex justify-start items-center px-6 py-1 ">
             {/**blend bg */}
             <div className="absolute inset-0 marquee_sponsor_bg"></div>
@@ -168,15 +171,15 @@ export default function SponsorZone() {
                     target="_blank"
                     className="relative w-full h-[120.5px] rounded-2xl"
                   >
-                    <div className="absolute w-full h-full inset-0 sponsor_zone_box_bg rounded-2xl"></div>
+                    <div className="sponsor_zone_box_bg"></div>
 
                     <div className="w-full h-full p-2 flex flex-col justify-center items-center rounded-2xl">
                       <Image
                         src={item.sponsor_logo}
                         alt="logo img"
-                        width={150}
-                        height={128}
-                        style={{ opacity: "0.8" }}
+                        width={Number(item.width)}
+                        height={Number(item.height)}
+                        style={{ opacity: 0.8 }}
                       />
                     </div>
                   </Link>
@@ -196,14 +199,14 @@ export default function SponsorZone() {
                     target="_blank"
                     className="relative w-full h-[163.33px] rounded-2xl"
                   >
-                    <div className="absolute w-full h-full inset-0 sponsor_zone_box_bg rounded-2xl"></div>
+                    <div className=" sponsor_zone_box_bg"></div>
 
                     <div className="w-full h-full p-2 flex flex-col justify-center items-center rounded-2xl">
                       <Image
                         src={item.sponsor_logo}
                         alt="logo img"
-                        width={125}
-                        height={128}
+                        width={Number(item.width)}
+                        height={Number(item.height)}
                         style={{ opacity: "0.8" }}
                       />
                     </div>
@@ -225,16 +228,15 @@ export default function SponsorZone() {
                     target="_blank"
                     className="relative w-full h-[120.5px] rounded-2xl "
                   >
-                    <div className="absolute w-full h-full inset-0 sponsor_zone_box_bg rounded-2xl"></div>
-                    {/** Bordo con gradient e opacità */}
-                    <div className="absolute inset-0 sponsor_zone_border"></div>
+                    <div className=" sponsor_zone_box_bg"></div>
+                   
 
                     <div className="w-full h-full p-2 flex flex-col justify-center items-center rounded-2xl">
                       <Image
                         src={item.sponsor_logo}
                         alt="logo img"
-                        width={130}
-                        height={128}
+                        width={Number(item.width)}
+                        height={Number(item.height)}
                         style={{ opacity: "0.8" }}
                       />
                     </div>
@@ -243,34 +245,6 @@ export default function SponsorZone() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/**Became sponsor */}
-      <div className="w-full flex flex-col justify-between gap-16 px-20 py-8 bg-ethrome-cotta lg:flex-row lg:gap-2">
-        <div className="flex flex-col items-center justify-start gap-2 text-ethrome-white">
-          <p className="w-full text-start text-[56px] outfit">
-            Become our sponsor!
-          </p>
-          <p className="w-full text-start text-lg leading-8 red_hat_display">
-            Seize the chance to gain exceptional exposure, establish valuable
-            connections, and demonstrate your unwavering support for the
-            development of the blockchain space!
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center justify-center gap-2">
-          <ButtonPurple
-            cta="Request deck"
-            route="mailto:sponsor@ethrome.org?subject=Request%20ETHRome%20Deck"
-            variant="primary"
-          />
-          <a
-            className="text-ethrome-white text-center underline opacity-[64%]"
-            href="mailto:sponsor@ethrome.org"
-          >
-            hello@urbe.build
-          </a>
         </div>
       </div>
     </div>
