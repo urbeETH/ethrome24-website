@@ -53,11 +53,18 @@ export default function AboveFold() {
                   17-19 October 2025
                 </p>
               </div>
-              <ButtonPurple
+              <div className="flex flex-row space-x-4">
+                <ButtonPurple
                   cta="Apply to Hack"
                   route="https://docs.google.com/forms/d/e/1FAIpQLSejn4me435Qisw_1aPcMQjuRTu6UEvPrjqm4m6zWXgXDu5Tew/viewform"
                   variant="primary"
                 />
+                <ButtonPurple
+                  cta="Hacker Manual"
+                  route="https://ethrome25.notion.site/ETHRome-2025-Hacker-Manual-160d00c099af8080be9de5d98f45d2ca"
+                  variant="outline"
+                />
+              </div>
               {/**
               <div className="flex flex-row space-x-4">
                
