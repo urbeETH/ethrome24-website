@@ -29,7 +29,7 @@ export default function Experience() {
 
       <div className="w-full xl:h-[calc(100vh-90px)] flex flex-col justify-between items-center">
         <h1
-          className="px-6 pt-[104px] pb-[130px] text-ethrome-white text-center xl:px-[298px] xl:pb-[99px]"
+          className="px-6 pt-6 pb-[130px] text-ethrome-white text-center xl:px-[298px] xl:pb-[99px]"
           style={{ fontSize: "min(max(2rem, 3vw), 3.5rem)" }}
         >
           {" "}
