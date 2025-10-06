@@ -17,7 +17,7 @@ export default function SponsorZone() {
         <div className="w-full h-[36.76px] modanatura opacity-[0.4]"></div>
       </div>
 
-      <div className="w-full pt-16 pb-28 flex flex-col justify-center items-start gap-10">
+      <div className="w-full pt-16 pb-[88px] flex flex-col justify-center items-start gap-10">
         {/** title + marquee */}
         <div className="flex flex-col justify-center items-start gap-10">
           <h1
@@ -153,7 +153,6 @@ export default function SponsorZone() {
             </div>
           </Marquee>
         </div>
-
         {/** Sponsors  */}
         <div className="w-full flex flex-col justify-center items-center px-6 gap-10 2xl:px-20 2xl:items-start">
           <div className="w-full flex flex-col justify-center items-start gap-6 xl:flex-row">

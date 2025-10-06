@@ -14,8 +14,8 @@ export const patrician = [
   {
     sponsor_logo: "/img/sponsor_zone/sponsors/logo-1Inch.svg",
     sponsor_link: "https://1inch.io/",
-    width: "188.1",
-    height: "68.7",
+    width: "158.93",
+    height: "45.72",
   },
   {
     sponsor_logo: "/img/sponsor_zone/sponsors/logo-ens.svg",

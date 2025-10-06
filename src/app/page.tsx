@@ -8,6 +8,7 @@ import Location from "./components/location/location";
 import Experience from "./components/experience/experience";
 import Aftermovie from "./components/aftermovie";
 import BecomeSponsor from "./components/sponsorZone/becomeSponsor";
+import Schedule from "./components/schedule/schedule";
 //import PhotogalleryLanding from "./components/photogallerylanding";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <AboveFold />
       <Hackathon />
       <SponsorZone />
+      <Schedule />
       <Location />
       <Experience />     
       <Aftermovie />

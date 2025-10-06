@@ -3,7 +3,7 @@ import GrainBg from "../grainBg";
 
 export default function BecomeSponsor() {
   return (
-    <div className="relative">
+    <div className="relative hidden xl:flex">
       <GrainBg />
       <div
         id="becomeSponsor"

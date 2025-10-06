@@ -47,7 +47,7 @@ export default function Aftermovie() {
         Your browser does not support the video tag.
       </video>
 
-      <div className="absolute left-0 bottom-0 flex flex-col justify-center items-start py-6 pl-10 pr-16 gap-4 absolute_info">
+      <div className="hidden absolute left-0 bottom-0 xl:flex flex-col justify-center items-start py-6 pl-10 pr-16 gap-4 absolute_info">
         <Link
           href="https://docs.google.com/presentation/d/1lZXKPC3p7DpeP9487bHy1eEQkpHEetlXYQwPmWU4Wl8/edit#slide=id.g30e42f5f6f0_1_487"
           target="_blank"
