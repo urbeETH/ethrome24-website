@@ -6,7 +6,7 @@ import GrainBg from "./grainBg";
 
 export default function AboveFold() {
   return (
-    <div className="w-full relative min-h-[810px] h-screen xl:h-[calc(100vh-80px)]">
+    <div className="w-full relative h-screen min-h-[764px] xl:h-[calc(100vh-80px)]">
       <GrainBg />
       {/**Modanatura top*/}
       <div className="absolute w-full top-0 left-0 flex flex-col justify-start items-start gap-[8.46px] xl:-top-[80px]">
@@ -15,8 +15,8 @@ export default function AboveFold() {
         <div className="w-full h-[36.76px] modanatura opacity-[0.4]"></div>
       </div>
 
-      <div className="w-full px-6 pt-[75px] flex flex-col items-center justify-center xl:px-0 xl:pt-0 xl:h-[calc(100%-63.578px)]">
-        <div className="aboveFold_items_box z-10 flex flex-col items-center justify-center w-full h-full gap-0 xl:gap-8 xl:w-auto">
+      <div className="relative w-full h-screen min-h-[764px] px-6 pt-[136px] flex flex-col items-center justify-start xl:px-0 xl:pt-0 xl:justify-center xl:h-[calc(100vh-80px)] gap-6">
+        <div className="z-10 flex flex-col items-center justify-center w-full gap-0 xl:gap-8 xl:w-auto xl:flex-row">
           {/* logo */}
 
           <Image
@@ -24,7 +24,7 @@ export default function AboveFold() {
             width={0}
             height={0}
             alt="ETHRome Logo"
-            className="w-full h-full max-w-[264px] max-h-[264px] md:max-w-[480px] md:max-h-[480px]"
+            className="w-full h-full max-w-[264px] max-h-[264px] xl:max-w-[480px] xl:max-h-[480px]"
           />
 
           {/**Right container */}
@@ -36,7 +36,7 @@ export default function AboveFold() {
                 width={0}
                 height={0}
                 alt="ETHRome Logo Text & Claim"
-                className="w-full h-full max-w-[284px] max-h-[73.51px] md:max-w-[424.96px] md:max-h-[110px]"
+                className="w-full h-full max-w-[284px] max-h-[73.51px] xl:max-w-[424.96px] xl:max-h-[110px]"
               />
             </div>
 
@@ -88,19 +88,21 @@ export default function AboveFold() {
             </div>
           </div>
         </div>
+        <a
+          href="https://urbe.build/"
+          className="hidden xl:flex justify-center items-center pb-6"
+          target="_blank"
+        >
+          <Image
+            src="/img/aboveFold/hosted_by_urbe.eth.svg"
+            width={208}
+            height={63}
+            alt="sponsored by urbe.eth"
+          />
+        </a>
+        <div className="hidden absolute left-0 bottom-0 w-full h-[27px] modanatura_cols xl:block"></div>
+        <div className=" absolute left-0 bottom-0 w-full h-[35.19px] modanatura_cols_roof xl:hidden"></div>
       </div>
-      <a
-        href="https://urbe.build/"
-        className="absolute bottom-[34px] left-1/2 -translate-x-1/2 z-10"
-        target="_blank"
-      >
-        <Image
-          src="/img/aboveFold/hosted_by_urbe.eth.svg"
-          width={208}
-          height={63}
-          alt="sponsored by urbe.eth"
-        />
-      </a>
     </div>
   );
 }

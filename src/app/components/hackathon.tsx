@@ -7,19 +7,22 @@ export default function Hackathon() {
   return (
     <div
       id="hackathon"
-      className="relative section_frame py-12 h-[1137px] xl:h-screen xl:py-0 overflow-hidden"
+      className="relative section_frame pt-12 pb-4 xl:h-screen xl:py-0 overflow-hidden"
     >
       <GrainBg />
 
-      <Image
-        src={"/img/mobile/flowers_gold_mobile.svg"}
-        alt={"top gold icon"}
-        width={0}
-        height={0}
-        className="w-full h-12 xl:hidden"
-      />
-      <div className="w-full h-[27px] modanatura_cols"></div>
-      <div className="hackathon_frame flex flex-col justify-start items-center">
+      <div className="w-full h-12 xl:hidden" >
+         <Image
+          src={"/img/mobile/flowers_gold_mobile.svg"}
+          alt={"top gold icon"}
+          width={1281}
+          height={48}
+          className="w-full h-12 object-cover"
+          style={{ width: "100vw" }}
+        /> 
+      </div>
+
+      <div className="hackathon_frame flex flex-col justify-center items-center">
         <div
           className="flex flex-col justify-start items-center"
           style={{ fontSize: "min(max(2rem, 3vw), 3.5rem)" }}
@@ -36,7 +39,7 @@ export default function Hackathon() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-start items-center gap-16 xl:gap-24 xl:flex-row">
+        <div className="flex flex-col justify-center items-center gap-16 xl:gap-24 xl:flex-row">
           <div className="flex flex-col justify-start items-center gap-3 xl:gap-4">
             <Image
               src={"/img/hackathon/romans.svg"}
@@ -83,31 +86,34 @@ export default function Hackathon() {
           </div>
         </div>
       </div>
-      <Image
-        src={"/img/decors/double_columns.svg"}
-        alt={"columns icon"}
-        width={371}
-        height={0}
-        className="hackathon_double_columns absolute left-[9.5px] px-[9.5px] bottom-0 mix-blend-color-dodge opacity-[0.8] xl:left-[170px] xl:px-0 "
-      />
-      <div className="hidden xl:block absolute top-[27px] left-[57px] bottom-0 mix-blend-color-dodge opacity-[0.8]">
+      <div className="flex justify-center items-center pt-12">
+        <Image
+          src={"/img/decors/double_columns.svg"}
+          alt={"columns icon"}
+          width={371}
+          height={0}
+          className="hackathon_double_columns mix-blend-color-dodge opacity-[0.8] xl:absolute xl:left-[170px] bottom-0 "
+        />
+      </div>
+
+      <div className="hidden xl:block absolute top-0 left-[57px] bottom-0 mix-blend-color-dodge opacity-[0.8]">
         <Image
           src={"/img/decors/flowers_hackathon.svg"}
           alt={"left icon"}
           width={56}
           height={0}
           className="h-full w-auto object-contain"
-          style={{ height: "calc(100vh - 27px)" }} 
+          style={{ height: "100vh" }}
         />
       </div>
-      <div className="hidden xl:block absolute top-[27px] right-[55.96px] bottom-0">
+      <div className="hidden xl:block absolute top-0 right-[55.96px] bottom-0">
         <Image
           src={"/img/decors/flowers_gold.svg"}
           alt={"right gold icon"}
           width={56}
           height={0}
           className="h-full w-auto object-contain"
-          style={{ height: "calc(100vh - 27px)" }}
+          style={{ height: "100vh" }}
         />
       </div>
     </div>

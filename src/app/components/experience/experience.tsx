@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 
 import { experienceItems } from "./experienceItems";
 import ExperienceSwiper from "./experienceSwiper";
@@ -24,12 +23,17 @@ export default function Experience() {
       className="relative section_frame h-screen overflow-hidden"
     >
       <GrainBg />
-      {/**Modanatura */}
-      <div className="w-full h-[27px] modanatura_cols"></div>
-
-      <div className="w-full xl:h-[calc(100vh-90px)] flex flex-col justify-between items-center">
+      {/**Modanatura mobile */}
+      <div className="flex flex-col justify-start items-center gap-2 xl:hidden">
+        <div className="w-full h-[36.76px] modanatura opacity-[0.6]"></div>
+        <div className="w-full h-[36.76px] modanatura opacity-[0.4]"></div>
+      </div>
+      {/**Modanatura desktop */}
+      <div className="hidden w-full h-[27px] modanatura_cols xl:block"></div>
+      {/** Find */}
+      <div className="w-full h-screen flex flex-col justify-between items-center">
         <h1
-          className="px-6 pt-6 pb-[130px] text-ethrome-white text-center xl:px-[298px] xl:pb-[99px]"
+          className="pt-6 text-ethrome-white text-center xl:pt-20"
           style={{ fontSize: "min(max(2rem, 3vw), 3.5rem)" }}
         >
           {" "}
@@ -39,10 +43,10 @@ export default function Experience() {
 
         <div className="hidden absolute bottom-0 w-full h-full justify-between items-center px-[106px] xl:flex">
           {experienceItems.map((item, index) => (
-            <div 
+            <div
               key={index}
               className={`experience_columns_box flex flex-col items-center gap-7 h-full experience_breath ${
-                hoveredIndex === index ? 'animation-paused' : ''
+                hoveredIndex === index ? "animation-paused" : ""
               }`}
               style={{
                 animationDelay: `${index * 0.7}s`,

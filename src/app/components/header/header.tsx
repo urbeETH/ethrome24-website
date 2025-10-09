@@ -19,16 +19,16 @@ export default function Header() {
 
   const headerItems = [
     {
-      title: "Meet our sponsors!",
+      title: "Sponsors",
       route: "#sponsorZone",
+    },
+    {
+      title: "Schedule",
+      route: "#schedule",
     },
     {
       title: "Location",
       route: "#location",
-    },
-    {
-      title: "What will you find?",
-      route: "#experience",
     },
     {
       title: "Aftermovie",
@@ -45,7 +45,7 @@ export default function Header() {
           <img src="/img/logo/ethRomeLogo.png" className="h-12" />
         </Link>
 
-        <div className="flex items-center justify-center space-x-10 text-lg text-white font-semibold">
+        <div className="flex items-center justify-center space-x-10 text-lg text-ethrome-white font-medium opacity-60">
           {headerItems.map((item, index) => (
             <Link key={index} href={item.route}>
               {item.title}

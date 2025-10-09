@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Marquee from "react-fast-marquee";
 import Link from "next/link";
 
 export default function Aftermovie() {
@@ -20,32 +19,96 @@ export default function Aftermovie() {
     },
   ];
 
+  // Componente per il marquee orizzontale (Desktop)
+  const HorizontalMarquee = () => {
+    return (
+      <div className="w-full overflow-hidden relative">
+        <motion.div
+          className="flex items-center justify-start whitespace-nowrap"
+          initial={{ x: 0 }}
+          animate={{ x: "-50%" }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        >
+          {/* Serie di elementi per loop seamless */}
+          {[...Array(8)].map((_, index) => (
+            <h1
+              key={index}
+              className={`px-6 text-[32px] uppercase font-semibold tracking-[16px] ${
+                index % 2 === 0 ? "text-ethrome-white" : "text-ethrome-yellow"
+              }`}
+            >
+              What does ethrome stand for?
+            </h1>
+          ))}
+        </motion.div>
+      </div>
+    );
+  };
+
+  // Componente per il marquee verticale (Mobile)
+  const VerticalMarquee = () => {
+    return (
+      <div className="h-full overflow-hidden relative">
+        <motion.div
+          className="flex flex-col items-start justify-start"
+          initial={{ y: 0 }}
+          animate={{ y: "-50%" }}
+          transition={{
+            duration: 45,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        >
+          {/* Serie di elementi per loop seamless */}
+          {[...Array(8)].map((_, index) => (
+            <h1
+              key={index}
+              className={`text-[24px] uppercase font-semibold tracking-[8px] mb-4 [writing-mode:vertical-lr] [text-orientation:mixed] rotate-180 ${
+                index % 2 === 0 ? "text-ethrome-white" : "text-ethrome-yellow"
+              }`}
+            >
+              What does ethrome stand for?
+            </h1>
+          ))}
+        </motion.div>
+      </div>
+    );
+  };
+
   return (
     <div
       id="aftermovie"
-      className="relative section_frame h-screen max-h-screen overflow-hidden"
+      className="relative section_frame h-[calc(100vh-72px)] xl:h-screen overflow-hidden"
     >
       {/**Modanatura */}
       <div className="w-full h-[35.19px] modanatura_cols_roof"></div>
-      <Marquee className="marquee_desktop w-full flex justify-start items-center px-6 py-3">
-        <h1 className="pl-6 text-ethrome-white text-[32px] uppercase font-semibold tracking-[16px]">
-          What does ethrome stand for?
-        </h1>
-        <h1 className="pl-6 text-ethrome-yellow text-[32px] uppercase font-semibold tracking-[16px]">
-          What does ethrome stand for?
-        </h1>
-      </Marquee>
 
-      <video
-        className="w-full h-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-      >
-        <source src="/video/aftermovie.mov" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <div className="w-full h-screen flex justify-start items-start xl:h-auto xl:flex-col">
+        {/** Marquee - Desktop */}
+        <div className="hidden xl:block w-full py-3">
+          <HorizontalMarquee />
+        </div>
+
+        {/** Marquee - Mobile */}
+        <div className="xl:hidden w-full px-3">
+          <VerticalMarquee />
+        </div>
+
+        <video
+          className="w-full h-screen object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/video/aftermovie.mov" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
       <div className="hidden absolute left-0 bottom-0 xl:flex flex-col justify-center items-start py-6 pl-10 pr-16 gap-4 absolute_info">
         <Link
@@ -72,8 +135,9 @@ export default function Aftermovie() {
         </div>
         <div className="grain"></div>
       </div>
+      {/** Watch */}
       <Link
-        className="absolute top-10 right-10 sm:top-auto sm:bottom-10"
+        className="absolute right-10 bottom-10"
         href="https://www.youtube.com/watch?v=Nn-zTA9lEy8"
         target="_blank"
       >

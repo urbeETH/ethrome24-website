@@ -17,17 +17,19 @@ export default function SponsorZone() {
         <div className="w-full h-[36.76px] modanatura opacity-[0.4]"></div>
       </div>
 
-      <div className="w-full pt-16 pb-[88px] flex flex-col justify-center items-start gap-10">
+      <div className="w-full pt-10 xl:pt-16 pb-[104px] xl:pb-[88px] flex flex-col justify-center items-start gap-10">
         {/** title + marquee */}
-        <div className="flex flex-col justify-center items-start gap-10">
+        <div className="flex flex-col justify-center items-start gap-8 xl:gap-10">
+        <div className="w-screen flex justify-center items-start xl:justify-start">
           <h1
-            className="px-6 text-ethrome-white text-center 2xl:px-20"
+            className="text-ethrome-white text-center 2xl:px-20"
             style={{ fontSize: "min(max(2rem, 3vw), 3.5rem)" }}
           >
             {" "}
             Meet our{" "}
             <span className="text-ethrome-yellow font-bold">sponsors!</span>
           </h1>
+        </div>
           <Marquee className="relative w-full flex justify-start items-center px-6 py-1 ">
             {/**blend bg */}
             <div className="absolute inset-0 marquee_sponsor_bg"></div>

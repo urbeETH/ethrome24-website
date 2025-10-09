@@ -10,9 +10,9 @@ export default function Schedule() {
     <div id="schedule" className="relative section_frame ">
       <GrainBg />
 
-      <div className="w-full py-16 flex flex-col justify-center items-start gap-10">
+      <div className="w-full py-14 xl:py-16 flex flex-col justify-center items-start gap-8 xl:gap-10">
         {/** title */}
-        <div className="flex justify-center items-start">
+        <div className="w-full flex justify-center items-start xl:justify-start">
           <h1
             className="px-6 text-ethrome-white text-center 2xl:px-20"
             style={{ fontSize: "min(max(2rem, 3vw), 3.5rem)" }}
