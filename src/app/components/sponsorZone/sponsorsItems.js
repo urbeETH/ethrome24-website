@@ -83,4 +83,10 @@ export const bountySponsor = [
     width: "140.61",
     height: "27.8",
   },
+  {
+    sponsor_logo: "/img/sponsor_zone/sponsors/logo-xmtp.svg",
+    sponsor_link: "https://xmtp.org/",
+    width: "144",
+    height: "33.8",
+  },
 ];

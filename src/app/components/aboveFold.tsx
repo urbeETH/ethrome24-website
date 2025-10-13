@@ -6,7 +6,7 @@ import GrainBg from "./grainBg";
 
 export default function AboveFold() {
   return (
-    <div className="w-full relative h-screen min-h-[764px] xl:h-[calc(100vh-80px)]">
+    <div className="w-full relative h-screen min-h-[764px] xl:h-[calc(100vh-80px)] xl:min-h-0">
       <GrainBg />
       {/**Modanatura top*/}
       <div className="absolute w-full top-0 left-0 flex flex-col justify-start items-start gap-[8.46px] xl:-top-[80px]">
@@ -15,7 +15,7 @@ export default function AboveFold() {
         <div className="w-full h-[36.76px] modanatura opacity-[0.4]"></div>
       </div>
 
-      <div className="relative w-full h-screen min-h-[764px] px-6 pt-[136px] flex flex-col items-center justify-start xl:px-0 xl:pt-0 xl:justify-center xl:h-[calc(100vh-80px)] gap-6">
+      <div className="relative w-full h-screen min-h-[764px] px-6 pt-[136px] flex flex-col items-center justify-start xl:px-0 xl:pt-0 xl:justify-center xl:h-[calc(100vh-80px)] xl:min-h-0 gap-6">
         <div className="z-10 flex flex-col items-center justify-center w-full gap-0 xl:gap-8 xl:w-auto xl:flex-row">
           {/* logo */}
 

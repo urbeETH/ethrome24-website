@@ -22,7 +22,7 @@ export default function SponsorZone() {
         <div className="flex flex-col justify-center items-start gap-8 xl:gap-10">
         <div className="w-screen flex justify-center items-start xl:justify-start">
           <h1
-            className="text-ethrome-white text-center 2xl:px-20"
+            className="px-6 text-ethrome-white text-center 2xl:px-20"
             style={{ fontSize: "min(max(2rem, 3vw), 3.5rem)" }}
           >
             {" "}
