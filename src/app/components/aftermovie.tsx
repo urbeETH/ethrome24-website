@@ -82,7 +82,7 @@ export default function Aftermovie() {
   return (
     <div
       id="aftermovie"
-      className="relative section_frame h-[calc(100vh-72px)] xl:h-screen overflow-hidden"
+      className="relative h-screen overflow-hidden"
     >
       {/**Modanatura */}
       <div className="w-full h-[35.19px] modanatura_cols_roof"></div>
