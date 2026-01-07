@@ -50,9 +50,15 @@ export default function AboveFold() {
                   </p>
                 </div>
                 <p className="text-base text-ethrome-yellow leading-8 font-black italic">
-                  17-19 October 2025
+                  11-13 September 2026
                 </p>
               </div>
+              <ButtonPurple
+                  cta="Follow on X"
+                  route="https://x.com/ETHRome"
+                  variant="primary"
+                />
+              {/** 
               <div className="flex flex-row space-x-4">
                 <ButtonPurple
                   cta="Apply to Hack"

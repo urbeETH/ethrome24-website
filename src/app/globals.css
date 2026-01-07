@@ -296,6 +296,8 @@ body {
   background-color: rgba(239, 235, 230, 0.12);
   border-radius: 16px;
   mix-blend-mode: color-dodge;
+  z-index: 1;
+  isolation: isolate;
   /* position: relative;
  /* background-color: #30111e69;
   border: 2px solid #41182a2f;*/

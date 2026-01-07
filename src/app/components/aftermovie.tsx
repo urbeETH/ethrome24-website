@@ -10,11 +10,11 @@ export default function Aftermovie() {
       text: "attendees",
     },
     {
-      number: "20",
+      number: "14",
       text: "sponsors",
     },
     {
-      number: "37",
+      number: "65",
       text: "projects",
     },
   ];
@@ -112,11 +112,11 @@ export default function Aftermovie() {
 
       <div className="hidden absolute left-0 bottom-0 xl:flex flex-col justify-center items-start py-6 pl-10 pr-16 gap-4 absolute_info">
         <Link
-          href="https://docs.google.com/presentation/d/1lZXKPC3p7DpeP9487bHy1eEQkpHEetlXYQwPmWU4Wl8/edit#slide=id.g30e42f5f6f0_1_487"
+          href="https://www.figma.com/slides/wjU07M6dx5IGv0fXGPFPsx/ETHRome-25-Report?node-id=2-1184&t=mm8tkwakJOa5ROOm-0"
           target="_blank"
           className="flex justify-center items-center w-[164px] h-[44px] bg-ethrome-purple uppercase text-ethrome-white text-base rounded-[22px] drop-shadow-[0_10px_8px_rgba(131,20,199,0.25)] ${className} hover:bg-ethrome-dark-purple"
         >
-          2024 Metrics
+          2025 Metrics
         </Link>
         <div className="flex justify-center items-center gap-10">
           {ethrome23metrics.map((items, index) => (

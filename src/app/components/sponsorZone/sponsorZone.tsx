@@ -26,7 +26,7 @@ export default function SponsorZone() {
             style={{ fontSize: "min(max(2rem, 3vw), 3.5rem)" }}
           >
             {" "}
-            Meet our{" "}
+            Past Edition{" "}
             <span className="text-ethrome-yellow font-bold">sponsors!</span>
           </h1>
         </div>
