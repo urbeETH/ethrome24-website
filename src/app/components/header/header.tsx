@@ -23,14 +23,6 @@ export default function Header() {
       route: "#sponsorZone",
     },
     {
-      title: "Schedule",
-      route: "#schedule",
-    },
-    {
-      title: "Prizes",
-      route: "#prizes",
-    },
-    {
       title: "Location",
       route: "#location",
     },
