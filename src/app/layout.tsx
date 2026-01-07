@@ -19,7 +19,7 @@ const redHatDisplay = Red_Hat_Display({
 });
 
 export const metadata: Metadata = {
-  title: "ETHRome 25",
+  title: "ETHRome 26",
   description: "The hackathon for builders by builders",
   metadataBase: new URL('https://ethrome.org'),
   keywords:["Hackathon", "ETHRome", "urbe.eth"],
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   creator:"urbe.eth",
   publisher:"urbe.eth",
   openGraph: {
-    title: "ETHRome 25",
+    title: "ETHRome 26",
     description: "The hackathon for builders by builders",
     url: "https://ethrome.org",
     siteName: "ETHRome",
