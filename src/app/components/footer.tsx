@@ -32,7 +32,7 @@ export default function Footer() {
             className="text-4xl text-white cursor-pointer"
           />
           <Icon
-            onClick={() => window.open("mailto:urbe.eth@gmail.com")}
+            onClick={() => window.open("mailto:hello@urbe.build")}
             icon="material-symbols:mail-rounded"
             className="text-4xl text-white cursor-pointer z-10"
           />

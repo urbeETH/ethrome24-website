@@ -14,16 +14,22 @@ import "swiper/css/scrollbar";
 export default function LocationGallerySwiper() {
   const locationGallerySwiperItems = [
     {
-      immago: "/img/location/location_1.avif",
+      immago: "/img/location/2026/coworking.jpg",
+      width: 1600,
+      height: 1067,
+      alt: "The Urbe Hub coworking floor, the builders workspace",
     },
     {
-      immago: "/img/location/location_2.avif",
+      immago: "/img/location/2026/plenaria.jpg",
+      width: 2400,
+      height: 1601,
+      alt: "The Urbe Hub event hall, main stage for opening and closing",
     },
     {
-      immago: "/img/location/location_3.avif",
-    },
-    {
-      immago: "/img/location/location_4.avif",
+      immago: "/img/location/2026/focus.jpg",
+      width: 1600,
+      height: 1067,
+      alt: "An Urbe Hub focus room for mentor sessions and judging",
     },
   ];
 
@@ -48,10 +54,10 @@ export default function LocationGallerySwiper() {
           {locationGallerySwiperItems.map((item, index) => (
             <SwiperSlide key={index}>
               <Image
-                width={1440}
-                height={810}
+                width={item.width}
+                height={item.height}
                 src={`${item.immago}`}
-                alt={`location photo ${index} `}
+                alt={item.alt}
                 className="object-cover w-full h-full"
               />
               <div className="location_gallery_swiper_overlay" />
@@ -62,10 +68,19 @@ export default function LocationGallerySwiper() {
         <div className="w-[calc(100vw-60px)] xl:w-auto absolute left-0 bottom-0 p-4 xl:px-10 xl:py-6 flex flex-col justify-center items-center xl:items-start absolute_info">
           <div className="flex flex-col justify-center items-center xl:justify-start xl:items-start gap-1 xl:gap-2">
             <p className="text-ethrome-yellow text-[28px] xl:text-[40px] outfit">
-              Talent Garden Roma
+              Urbe Hub
             </p>
             <p className="text-ethrome-white text-base outfit">
-              Via Ostiense, 92 - 00154 Roma RM
+              Largo Dino Frisullo snc
+            </p>
+            <p className="text-ethrome-white text-base outfit">
+              Città dell&apos;Altra Economia
+            </p>
+            <p className="text-ethrome-white text-base outfit">
+              Testaccio, Rome
+            </p>
+            <p className="text-ethrome-white text-sm outfit">
+              Hosted in the organisers&apos; own space
             </p>
           </div>
           <div className="grain"></div>

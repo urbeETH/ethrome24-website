@@ -45,52 +45,34 @@ export default function AboveFold() {
                 <div className="flex flex-col text-center items-center xl:items-start text-ethrome-white text-xl leading-9">
                   <p>Come, enjoy and build with care.</p>
                   <p>
-                    <span className="font-bold">AI, DeFi </span>&
-                    <span className="font-bold"> Privacy </span>tracks.
+                    <span className="font-bold">AI, Finance </span>&
+                    <span className="font-bold"> Privacy</span>.
                   </p>
                 </div>
-                <p className="text-base text-ethrome-yellow leading-8 font-black italic">
-                  11-13 September 2026
-                </p>
+                <div className="flex flex-col items-center xl:items-start gap-1">
+                  <p className="text-base text-ethrome-yellow leading-8 font-black italic">
+                    11-13 September 2026
+                  </p>
+                  <p className="whitespace-nowrap text-sm text-ethrome-white opacity-80 leading-6">
+                    Urbe Hub · Testaccio, Rome
+                  </p>
+                  <p className="whitespace-nowrap text-sm text-ethrome-white opacity-80 leading-6">
+                    40 selected builders
+                  </p>
+                </div>
               </div>
-              <ButtonPurple
+              <div className="flex flex-row flex-wrap justify-center gap-4 xl:justify-start">
+                <ButtonPurple
+                  cta="Apply to Hack"
+                  route="https://luma.com/huhelf53"
+                  variant="primary"
+                />
+                <ButtonPurple
                   cta="Follow on X"
                   route="https://x.com/ETHRome"
-                  variant="primary"
-                />
-              {/** 
-              <div className="flex flex-row space-x-4">
-                <ButtonPurple
-                  cta="Apply to Hack"
-                  route="https://docs.google.com/forms/d/e/1FAIpQLSejn4me435Qisw_1aPcMQjuRTu6UEvPrjqm4m6zWXgXDu5Tew/viewform"
-                  variant="primary"
-                />
-                <ButtonPurple
-                  cta="Hacker Manual"
-                  route="https://ethrome25.notion.site/ETHRome-2025-Hacker-Manual-160d00c099af8080be9de5d98f45d2ca"
                   variant="outline"
                 />
               </div>
-              {/**
-              <div className="flex flex-row space-x-4">
-               
-                <ButtonPurple
-                  cta="Hacker Manual"
-                  route="https://builders-garden.notion.site/ETHRome-2024-Hacker-Manual-3d270d9f5d594d9a9faf2f34f6ee7eb5?pvs=74"
-                  variant="primary"
-                />
-                <ButtonPurple
-                  cta="Side Events"
-                  route="https://lu.ma/ethrome-24"
-                  variant="outline"
-                />
-                <ButtonPurple
-                  cta="Apply to Hack"
-                  route=""
-                  variant="primary"
-                />
-              </div>
-              */}
             </div>
           </div>
         </div>

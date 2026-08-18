@@ -41,7 +41,7 @@ export default function Experience() {
           <span className="text-ethrome-yellow font-bold">find?</span>
         </h1>
 
-        <div className="hidden absolute bottom-0 w-full h-full justify-between items-center px-[106px] xl:flex">
+        <div className="hidden absolute bottom-0 w-full h-full justify-evenly items-center px-[106px] xl:flex">
           {experienceItems.map((item, index) => (
             <div
               key={index}

@@ -1,4 +1,30 @@
+// ETHRome 2026 sponsors (current edition)
 export const patrician = [
+  {
+    sponsor_logo: "/img/sponsor_zone/sponsors/2026/team1-white-main.svg",
+    sponsor_link: "https://team1.blog/",
+    width: "178",
+    height: "50.09",
+  },
+  {
+    sponsor_logo: "/img/sponsor_zone/sponsors/2026/arkiv-white.svg",
+    sponsor_link: "https://arkiv.network/",
+    width: "185",
+    height: "42.62",
+  },
+];
+
+export const citizen = [
+  {
+    sponsor_logo: "/img/sponsor_zone/sponsors/2026/swarm-official-white.png",
+    sponsor_link: "https://www.ethswarm.org/",
+    width: "170",
+    height: "45.64",
+  },
+];
+
+// ETHRome 2025 sponsors, kept for the past-editions strip
+export const patrician2025 = [
   {
     sponsor_logo: "/img/sponsor_zone/sponsors/logo-base.svg",
     sponsor_link: "https://www.base.org/",
@@ -25,7 +51,7 @@ export const patrician = [
   },
 ];
 
-export const citizen = [
+export const citizen2025 = [
   {
     sponsor_logo: "/img/sponsor_zone/sponsors/logo-calimero.svg",
     sponsor_link: "https://calimero.network/",
@@ -58,7 +84,7 @@ export const citizen = [
   },
 ];
 
-export const bountySponsor = [
+export const bountySponsor2025 = [
   {
     sponsor_logo: "/img/sponsor_zone/sponsors/logo-civic.svg",
     sponsor_link: "https://www.civic.com/",
@@ -89,4 +115,10 @@ export const bountySponsor = [
     width: "144",
     height: "33.8",
   },
+];
+
+export const pastEditionSponsors = [
+  ...patrician2025,
+  ...citizen2025,
+  ...bountySponsor2025,
 ];

@@ -26,10 +26,6 @@ export default function Header() {
       title: "Location",
       route: "#location",
     },
-    {
-      title: "Aftermovie",
-      route: "#aftermovie",
-    },
   ];
 
   return (
@@ -41,12 +37,21 @@ export default function Header() {
           <img src="/img/logo/ethRomeLogo.png" className="h-12" />
         </Link>
 
-        <div className="flex items-center justify-center space-x-10 text-lg text-ethrome-white font-medium opacity-60">
-          {headerItems.map((item, index) => (
-            <Link key={index} href={item.route}>
-              {item.title}
-            </Link>
-          ))}
+        <div className="flex items-center justify-center space-x-10">
+          <div className="flex items-center justify-center space-x-10 text-lg text-ethrome-white font-medium opacity-60">
+            {headerItems.map((item, index) => (
+              <Link key={index} href={item.route}>
+                {item.title}
+              </Link>
+            ))}
+          </div>
+          <Link
+            href="https://luma.com/huhelf53"
+            target="_blank"
+            className="px-7 py-1 bg-ethrome-yellow text-[#13080E] text-lg font-medium rounded-[22px]"
+          >
+            Apply
+          </Link>
         </div>
       </div>
 
@@ -90,6 +95,14 @@ export default function Header() {
                     {item.title}
                   </Link>
                 ))}
+                <Link
+                  href="https://luma.com/huhelf53"
+                  target="_blank"
+                  onClick={toggleMenu}
+                  className="px-7 py-1 bg-ethrome-yellow text-[#13080E] rounded-[22px]"
+                >
+                  Apply
+                </Link>
               </div>
             </motion.div>
           )}

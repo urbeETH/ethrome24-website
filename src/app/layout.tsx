@@ -20,7 +20,7 @@ const redHatDisplay = Red_Hat_Display({
 
 export const metadata: Metadata = {
   title: "ETHRome 26",
-  description: "The hackathon for builders by builders",
+  description: "The hackathon for builders by builders: AI, Finance and Privacy in Rome, 11-13 September 2026.",
   metadataBase: new URL('https://ethrome.org'),
   keywords:["Hackathon", "ETHRome", "urbe.eth"],
   authors: [{name:"limone.eth"}, {url: "https://www.limone.lol/"},{name:"vdarph"}, {name:"herminius.eth"}, {url:"https://herminius.eth.limo/"}],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   publisher:"urbe.eth",
   openGraph: {
     title: "ETHRome 26",
-    description: "The hackathon for builders by builders",
+    description: "The hackathon for builders by builders: AI, Finance and Privacy in Rome, 11-13 September 2026.",
     url: "https://ethrome.org",
     siteName: "ETHRome",
     images: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         url: "https://www.ethrome.org/opengraph-image.png",
         width: 1800,
         height: 1600,
-        alt: "ETHRome 25",
+        alt: "ETHRome 26",
       },
     ],
     locale: "en_US",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: "https://ethrome.org",
     title: "ETHRome",
-    description: "The hackathon for builders by builders",
+    description: "The hackathon for builders by builders: AI, Finance and Privacy in Rome, 11-13 September 2026.",
     images: "https://www.ethrome.org/opengraph-image.png"
   }
 };

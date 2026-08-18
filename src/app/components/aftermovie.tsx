@@ -111,6 +111,9 @@ export default function Aftermovie() {
       </div>
 
       <div className="hidden absolute left-0 bottom-0 xl:flex flex-col justify-center items-start py-6 pl-10 pr-16 gap-4 absolute_info">
+        <p className="text-ethrome-yellow text-[28px] outfit">
+          ETHRome 2025, the previous edition
+        </p>
         <Link
           href="https://www.figma.com/slides/wjU07M6dx5IGv0fXGPFPsx/ETHRome-25-Report?node-id=2-1184&t=mm8tkwakJOa5ROOm-0"
           target="_blank"
@@ -133,6 +136,12 @@ export default function Aftermovie() {
             </div>
           ))}
         </div>
+        <div className="grain"></div>
+      </div>
+      {/** Tag - Mobile */}
+      <div className="xl:hidden absolute left-[60px] bottom-0 p-4 flex flex-col justify-center items-start gap-1 absolute_info">
+        <p className="text-ethrome-yellow text-base outfit">ETHRome 2025</p>
+        <p className="text-ethrome-white text-xs outfit">aftermovie</p>
         <div className="grain"></div>
       </div>
       {/** Watch */}
