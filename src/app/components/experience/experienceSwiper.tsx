@@ -109,7 +109,7 @@ export default function ExperienceSwiper({
                 <motion.svg
                   width={`${item.colWidth}`}
                   height={`${item.colHeight}`}
-                  viewBox={`0 0 ${item.colWidth} ${item.colHeight}`}
+                  viewBox={`0 0 ${parseFloat(item.colWidth)} ${parseFloat(item.colHeight)}`}
                   fill="none"
                   strokeWidth="4.05941"
                   xmlns="http://www.w3.org/2000/svg"
