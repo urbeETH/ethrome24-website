@@ -13,6 +13,45 @@ const nextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        // The hacker guide is a standalone static page under public/hackerguide.
+        // Next serves files in public by exact path only, so /hackerguide would
+        // 404 without this: it maps the clean URL onto the actual index.html.
+        // /hackerguide/ works too, via the default trailing-slash redirect.
+        source: "/hackerguide",
+        destination: "/hackerguide/index.html",
+      },
+    ];
+  },
+  async headers() {
+    return [
+      {
+        // The guide is unlisted: nothing on ethrome.org links to it, and it is
+        // meant for approved hackers only. The meta robots tag inside the page
+        // covers the HTML, this covers every asset served under the path too.
+        // Deliberately NOT a robots.txt Disallow, which would publish the URL
+        // to anyone reading it.
+        source: "/hackerguide/:path*",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow, noarchive",
+          },
+        ],
+      },
+      {
+        source: "/hackerguide",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow, noarchive",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

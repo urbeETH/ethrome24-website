@@ -1,0 +1,1092 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ETHRome 2026 Hacker Guide</title>
+  <meta name="description" content="Rome logistics, accommodation, transport, food and city tips for ETHRome 2026 builders.">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
+  <meta property="og:title" content="ETHRome 2026 Hacker Guide">
+  <meta property="og:description" content="Rome logistics, accommodation, transport, food and city tips for selected ETHRome 2026 builders.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Red+Hat+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --plum: #13080e;
+      --plum-2: #22101a;
+      --plum-3: #301320;
+      --cream: #f8fcfc;
+      --warm: #efebe6;
+      --gold: #fabb00;
+      --wine: #7d304b;
+      --crimson: #cb2b5e;
+      --ink: #13080e;
+      --muted: #6f6269;
+      --line: rgba(19, 8, 14, 0.12);
+      --display: "Outfit", system-ui, sans-serif;
+      --body: "Red Hat Display", system-ui, sans-serif;
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--body);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(19, 8, 14, 0.92);
+      color: var(--cream);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(250, 187, 0, 0.22);
+    }
+
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-logo {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .nav img { width: 150px; height: auto; display: block; }
+    .nav-links {
+      margin-left: auto;
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .nav-links a {
+      flex: 0 0 auto;
+      text-decoration: none;
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 700;
+      color: rgba(248, 252, 252, 0.76);
+      padding: 8px 10px;
+      border-radius: 8px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus { color: var(--gold); background: rgba(250, 187, 0, 0.08); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 92vh;
+      color: var(--cream);
+      background:
+        radial-gradient(circle at 20% 5%, rgba(203, 43, 94, 0.42), transparent 34%),
+        radial-gradient(circle at 82% 18%, rgba(250, 187, 0, 0.16), transparent 28%),
+        linear-gradient(145deg, #13080e 0%, #22101a 52%, #301320 100%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("/hackerguide/assets/textures/grain.gif");
+      opacity: 0.06;
+      pointer-events: none;
+      mix-blend-mode: screen;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max);
+      min-height: 92vh;
+      margin: 0 auto;
+      padding: clamp(54px, 8vw, 96px) 18px 28px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+      gap: clamp(32px, 5vw, 70px);
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 18px;
+    }
+
+    h1 {
+      font-family: var(--display);
+      font-size: clamp(48px, 8vw, 96px);
+      line-height: 0.92;
+      letter-spacing: 0;
+      margin: 0;
+      max-width: 9ch;
+    }
+
+    .hero-copy {
+      margin: 24px 0 0;
+      max-width: 56ch;
+      color: rgba(248, 252, 252, 0.8);
+      font-size: clamp(18px, 2.2vw, 22px);
+      font-weight: 500;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-family: var(--display);
+      font-size: 15px;
+      font-weight: 800;
+      border: 1px solid transparent;
+    }
+
+    .btn.primary { background: var(--gold); color: var(--plum); }
+    .btn.secondary { border-color: rgba(250, 187, 0, 0.6); color: var(--cream); }
+
+    .hero-panel {
+      border: 1px solid rgba(250, 187, 0, 0.28);
+      background: rgba(19, 8, 14, 0.42);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 32px);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-panel img {
+      width: min(100%, 360px);
+      display: block;
+      margin: 0 auto 28px;
+    }
+
+    .fact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .fact {
+      border-radius: 8px;
+      background: rgba(248, 252, 252, 0.06);
+      border: 1px solid rgba(248, 252, 252, 0.08);
+      padding: 14px;
+    }
+
+    .fact b {
+      display: block;
+      color: var(--gold);
+      font-family: var(--display);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .fact span {
+      display: block;
+      color: rgba(248, 252, 252, 0.86);
+      font-weight: 700;
+    }
+
+    .decor-colosseum {
+      position: absolute;
+      right: 0;
+      bottom: -18px;
+      width: min(48vw, 620px);
+      opacity: 0.13;
+      z-index: 0;
+    }
+
+    .meander {
+      height: 30px;
+      background: var(--gold) url("/hackerguide/assets/decors/modanatura.svg") repeat-x center;
+      background-size: auto 100%;
+    }
+
+    section {
+      padding: clamp(58px, 8vw, 108px) 18px;
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(280px, 1fr);
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 30px;
+    }
+
+    .kicker {
+      margin: 0 0 12px;
+      color: var(--wine);
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .quick {
+      background: var(--warm);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .quick-item,
+    .place,
+    .route,
+    .food-card,
+    .note {
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--line);
+      padding: 18px;
+    }
+
+    .quick-item b,
+    .place b,
+    .route b,
+    .food-card b,
+    .note b {
+      display: block;
+      font-family: var(--display);
+      font-size: 13px;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: var(--wine);
+      margin-bottom: 7px;
+    }
+
+    .quick-item span {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 22px;
+      line-height: 1.12;
+    }
+
+    .ranked {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .place {
+      min-height: 210px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .place.featured {
+      background: var(--plum);
+      color: var(--cream);
+      border-color: var(--plum);
+    }
+
+    .place.featured b { color: var(--gold); }
+    .place p { margin: 0; color: var(--muted); font-weight: 600; }
+    .place.featured p { color: rgba(248, 252, 252, 0.78); }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: auto;
+    }
+
+    .chip {
+      border-radius: 8px;
+      padding: 6px 9px;
+      background: rgba(125, 48, 75, 0.1);
+      color: var(--wine);
+      font-family: var(--display);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .inline-cta {
+      margin-top: 18px;
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: var(--plum);
+      color: var(--cream);
+      text-decoration: none;
+      font-family: var(--display);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .inline-cta:hover,
+    .inline-cta:focus {
+      background: var(--wine);
+    }
+
+    .partnered-box {
+      margin-top: 18px;
+      border-radius: 8px;
+      background: var(--plum);
+      color: var(--cream);
+      border: 1px solid rgba(250, 187, 0, 0.22);
+      padding: clamp(20px, 3vw, 28px);
+    }
+
+    .partnered-box b {
+      display: block;
+      color: var(--gold);
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .partnered-box h3 {
+      margin: 0 0 10px;
+      font-family: var(--display);
+      font-size: clamp(26px, 3.2vw, 38px);
+      line-height: 1;
+    }
+
+    .partnered-box p {
+      margin: 0;
+      max-width: 70ch;
+      color: rgba(248, 252, 252, 0.78);
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .place.featured .chip {
+      background: rgba(250, 187, 0, 0.14);
+      color: var(--gold);
+    }
+
+    .neighborhood-map {
+      position: relative;
+      margin-top: 18px;
+      width: min(100%, 840px);
+      aspect-ratio: 1393 / 1260;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .neighborhood-map img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hub-hotspot {
+      position: absolute;
+      left: 45%;
+      top: 75%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      min-height: 84px;
+      display: grid;
+      place-items: center;
+      text-decoration: none;
+      z-index: 2;
+    }
+
+    .hub-badge {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      padding: 9px 10px;
+      border-radius: 8px;
+      background: rgba(248, 252, 252, 0.78);
+      border: 2px solid rgba(203, 43, 94, 0.62);
+      box-shadow: 0 14px 34px rgba(19, 8, 14, 0.16);
+      transform: scale(0);
+      opacity: 0;
+      transition: transform 180ms ease, opacity 180ms ease;
+    }
+
+    .hub-badge span:first-child {
+      font-family: var(--display);
+      font-size: 23px;
+      font-weight: 900;
+      color: var(--wine);
+      line-height: 1;
+    }
+
+    .hub-badge span:last-child {
+      margin-top: 3px;
+      font-family: var(--display);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--plum);
+    }
+
+    .hub-hotspot:hover:not(.suppress-hover) .hub-badge {
+      transform: scale(1.15);
+      opacity: 1;
+    }
+
+    .dark {
+      position: relative;
+      overflow: hidden;
+      background: var(--plum);
+      color: var(--cream);
+    }
+
+    .dark::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("/hackerguide/assets/textures/grain.gif");
+      opacity: 0.05;
+      pointer-events: none;
+    }
+
+    .dark .wrap { position: relative; z-index: 1; }
+    .dark .kicker { color: var(--gold); }
+    .dark .lead { color: rgba(248, 252, 252, 0.72); }
+
+    .transport {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .route {
+      background: rgba(248, 252, 252, 0.06);
+      border-color: rgba(248, 252, 252, 0.12);
+    }
+
+    .route b { color: var(--gold); }
+    .route p, .route li { color: rgba(248, 252, 252, 0.78); font-weight: 600; }
+    .route p { margin: 0 0 10px; }
+    .route ul { margin: 0; padding-left: 18px; }
+
+    .food-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .food-card ul,
+    .note ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .food-card a {
+      color: var(--wine);
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-color: rgba(125, 48, 75, 0.32);
+      text-underline-offset: 3px;
+    }
+
+    .food-card a:hover,
+    .food-card a:focus {
+      color: var(--crimson);
+      text-decoration-color: currentColor;
+    }
+
+    .manual-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+      counter-reset: foodrule;
+    }
+
+    .manual-item {
+      min-height: 178px;
+      border-radius: 8px;
+      background: var(--plum);
+      color: var(--cream);
+      padding: 18px;
+      border: 1px solid rgba(250, 187, 0, 0.22);
+      counter-increment: foodrule;
+    }
+
+    .manual-item::before {
+      content: counter(foodrule, decimal-leading-zero);
+      display: block;
+      margin-bottom: 16px;
+      color: var(--gold);
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+    }
+
+    .manual-item b {
+      display: block;
+      font-family: var(--display);
+      font-size: 18px;
+      line-height: 1.08;
+      margin-bottom: 10px;
+    }
+
+    .manual-item p {
+      margin: 0;
+      color: rgba(248, 252, 252, 0.72);
+      font-weight: 600;
+    }
+
+    .food-card li + li,
+    .note li + li,
+    .route li + li { margin-top: 8px; }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(280px, 1.05fr);
+      gap: 30px;
+      align-items: start;
+    }
+
+    .rome-visual {
+      position: sticky;
+      top: 86px;
+      min-height: 440px;
+      border-radius: 8px;
+      background:
+        linear-gradient(rgba(19, 8, 14, 0.2), rgba(19, 8, 14, 0.24)),
+        url("/hackerguide/assets/decors/romans.svg") center bottom / contain no-repeat,
+        linear-gradient(145deg, var(--plum) 0%, var(--plum-3) 100%);
+      border: 1px solid rgba(250, 187, 0, 0.24);
+      overflow: hidden;
+    }
+
+    .rome-visual::before {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 120px;
+      background: url("/hackerguide/assets/decors/modanatura_cols_roof.svg") repeat-x center bottom / auto 100%;
+      opacity: 0.42;
+    }
+
+    .itinerary {
+      display: grid;
+      gap: 12px;
+    }
+
+    .note p { margin: 0; color: var(--muted); font-weight: 600; }
+
+    .survival-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    footer {
+      background: var(--plum);
+      color: var(--cream);
+      padding: 32px 18px;
+    }
+
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    footer img { width: 180px; }
+    footer a { color: rgba(248, 252, 252, 0.78); text-decoration-color: rgba(250, 187, 0, 0.55); }
+    footer p { margin: 0; color: rgba(248, 252, 252, 0.62); font-weight: 600; }
+
+    @media (max-width: 900px) {
+      .hero-inner,
+      .section-head,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-inner {
+        min-height: auto;
+      }
+
+      .hero-panel {
+        margin-bottom: 34px;
+      }
+
+      .quick-grid,
+      .ranked,
+      .food-grid,
+      .manual-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .neighborhood-map {
+        width: 100%;
+        aspect-ratio: 1393 / 1260;
+      }
+
+      .rome-visual {
+        position: relative;
+        top: auto;
+        min-height: 280px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .nav-links {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .hero-inner {
+        padding-top: 42px;
+      }
+
+      h1 {
+        font-size: 50px;
+      }
+
+      .fact-grid,
+      .quick-grid,
+      .ranked,
+      .transport,
+      .food-grid,
+      .manual-grid,
+      .survival-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-item span {
+        font-size: 20px;
+      }
+
+      .hub-hotspot {
+        left: 45%;
+        top: 75%;
+        width: 112px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Guide navigation">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#top" aria-label="ETHRome 2026 Hacker Guide">
+        <img src="/hackerguide/ethrome-nav-white.svg" alt="ETHRome">
+      </a>
+      <div class="nav-links">
+        <a href="#quick">Quick Info</a>
+        <a href="#stay">Stay</a>
+        <a href="#reach">Reach</a>
+        <a href="#food">Food</a>
+        <a href="#food-manual">Food Manual</a>
+        <a href="#rome">Rome</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <img class="decor-colosseum" src="/hackerguide/assets/decors/colosseum.svg" alt="">
+    <div class="hero-inner">
+      <div>
+        <p class="eyebrow">ETHRome 2026</p>
+        <h1>Hacker Guide</h1>
+        <p class="hero-copy">Rome logistics, food and city tips for selected builders. Everything you need before reaching Urbe Hub.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="https://maps.app.goo.gl/f9Df3VbsMGALEsEe7" target="_blank" rel="noopener">Open Maps</a>
+          <a class="btn secondary" href="https://t.me/c/4390944646/1" target="_blank" rel="noopener">Telegram Group</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="Event facts">
+        <img src="/hackerguide/assets/logo/ethRomeLogoClaim_aboveFold.svg" alt="ETHRome, by builders for builders">
+        <div class="fact-grid">
+          <div class="fact"><b>Dates</b><span>Sep 11 to 13</span></div>
+          <div class="fact"><b>Venue</b><span>Urbe Hub</span></div>
+          <div class="fact"><b>Format</b><span>40 builders</span></div>
+          <div class="fact"><b>Access</b><span>24/7</span></div>
+          <div class="fact"><b>Opening</b><span>Fri 16:00</span></div>
+          <div class="fact"><b>Closing</b><span>Sun 18:00</span></div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <div class="meander" aria-hidden="true"></div>
+
+  <section class="quick" id="quick">
+    <div class="wrap">
+      <div class="quick-grid">
+        <div class="quick-item"><b>Address</b><span>Largo Dino Frisullo snc, Testaccio</span></div>
+        <div class="quick-item"><b>Closest metro</b><span>Piramide, Metro B</span></div>
+        <div class="quick-item"><b>Food</b><span>Meals included all weekend</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stay">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Where to stay</p>
+          <h2>Book close to Piramide.</h2>
+        </div>
+        <p class="lead">The best choice is Testaccio or Ostiense. If those are full, pick a place near Metro B so reaching Urbe Hub stays easy.</p>
+      </div>
+
+      <div class="ranked">
+        <article class="place featured">
+          <b>Best default</b>
+          <h3>Testaccio and Ostiense</h3>
+          <p>Closest to Urbe Hub, local, practical and full of Roman food spots. Stay here if you want less commuting and more building.</p>
+          <div class="chips"><span class="chip">Walkable</span><span class="chip">Metro B</span><span class="chip">Roma Ostiense</span></div>
+        </article>
+        <article class="place">
+          <b>Social stay</b>
+          <h3>Trastevere</h3>
+          <p>Across the river from Testaccio, with nightlife, restaurants and an easy walk or scooter ride to the Hub.</p>
+          <div class="chips"><span class="chip">15 to 25 min</span><span class="chip">Nightlife</span></div>
+        </article>
+        <article class="place">
+          <b>Quiet stay</b>
+          <h3>San Saba and Aventino</h3>
+          <p>Residential, calm and close. Good if you want a quieter base between hacking sessions.</p>
+          <div class="chips"><span class="chip">Walkable</span><span class="chip">Calm</span></div>
+        </article>
+        <article class="place">
+          <b>Central</b>
+          <h3>Rione Monti</h3>
+          <p>Creative neighborhood between Termini and the Colosseum, connected to Piramide by Metro B.</p>
+          <div class="chips"><span class="chip">Metro B</span><span class="chip">Colosseum</span></div>
+        </article>
+        <article class="place">
+          <b>Classic Rome</b>
+          <h3>Centro Storico</h3>
+          <p>Choose this if you are staying extra days and want Pantheon, Trevi and Piazza Navona nearby.</p>
+          <div class="chips"><span class="chip">Sightseeing</span><span class="chip">Taxi or scooter</span></div>
+        </article>
+        <article class="place">
+          <b>Practical</b>
+          <h3>Esquilino and Termini</h3>
+          <p>Good for trains and airport transfers. Choose the exact block carefully and stay near metro access.</p>
+          <div class="chips"><span class="chip">Transit</span><span class="chip">Budget options</span></div>
+        </article>
+      </div>
+      <div class="neighborhood-map" aria-label="Map of recommended neighborhoods around Urbe Hub">
+        <img src="/hackerguide/testaccio-map.png" alt="Map of Testaccio, Ostiense, Trastevere, Monti, San Saba and the city centre around Urbe Hub">
+        <a class="hub-hotspot" href="https://hub.urbe.build/" target="_blank" rel="noopener" aria-label="Open Urbe Hub official website">
+          <span class="hub-badge">
+            <span>urbe HUB</span>
+            <span>official site</span>
+          </span>
+        </a>
+      </div>
+      <div class="partnered-box">
+        <b>Coming soon</b>
+        <h3>Partnered accommodations</h3>
+        <p>We are working on selected hotel and B&B deals near Urbe Hub. Discount codes and booking instructions will be added here as soon as they are confirmed.</p>
+      </div>
+      <a class="inline-cta" href="https://t.me/c/4390944646/5" target="_blank" rel="noopener">Accommodation support group</a>
+    </div>
+  </section>
+
+  <section class="dark" id="reach">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="kicker">How to reach Urbe Hub</p>
+          <h2>All roads lead to Testaccio.</h2>
+        </div>
+      </div>
+
+      <div class="transport">
+        <article class="route">
+          <b>Metro, bus, tram and train</b>
+          <p>Take Metro B to Piramide, then walk 10 to 12 minutes. Roma Ostiense is the closest major train station.</p>
+          <ul>
+            <li>Metro B: Piramide</li>
+            <li>Train: Roma Ostiense</li>
+            <li>Useful lines nearby: 170, 75, 23, 3</li>
+            <li>From Trastevere: cross Ponte Sublicio on foot</li>
+            <li>By car: free parking inside Largo Dino Frisullo</li>
+          </ul>
+        </article>
+        <article class="route">
+          <b>From Fiumicino</b>
+          <p>Best routes: FL1 regional train to Roma Ostiense, or Leonardo Express to Termini and Metro B to Piramide.</p>
+          <ul>
+            <li>Leonardo Express to Termini: 32 minutes, EUR 14</li>
+            <li>Taxi to Urbe Hub: around EUR 60</li>
+          </ul>
+        </article>
+        <article class="route">
+          <b>From Ciampino</b>
+          <p>Take an airport bus to Termini, then Metro B to Piramide. Taxi is simpler if you arrive late.</p>
+          <ul>
+            <li>Airport bus to Termini, then Metro B</li>
+            <li>ATAC bus 520 or 720 for public transport routes</li>
+            <li>Taxi to Urbe Hub: around EUR 50</li>
+          </ul>
+        </article>
+        <article class="route">
+          <b>Public transport basics</b>
+          <p>A BIT ticket costs EUR 1.50 and lasts 100 minutes across bus, tram and metro.</p>
+          <ul>
+            <li>On metro: one journey, line changes allowed without exiting</li>
+            <li>Tap&Go contactless works on ATAC</li>
+            <li>Use Moovit or Roma Mobilita for routes</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="food">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Food near the Hub</p>
+          <h2>Ship code, eat pasta.</h2>
+        </div>
+        <p class="lead">Meals are included during the hackathon. These are the places to bookmark for extra meals, coffee, aperitivo or a proper Roman dinner before and after ETHRome.</p>
+      </div>
+
+      <div class="food-grid">
+        <article class="food-card">
+          <b>Quick and easy</b>
+          <ul>
+            <li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x132f602fe0475baf:0xe0c76f9bbcb1aecc?sa=X&ved=1t:8290&ictx=111" target="_blank" rel="noopener">Trapizzino Testaccio</a>, Via Giovanni Branca 88</li>
+            <li><a href="https://www.google.com/maps/search/?api=1&query=Mercato%20Testaccio%20Rome" target="_blank" rel="noopener">Mercato Testaccio</a>, flexible lunch and street food</li>
+          </ul>
+        </article>
+        <article class="food-card">
+          <b>Roman dinner nearby</b>
+          <ul>
+            <li><a href="https://maps.app.goo.gl/vYLRHWv82ftpqT6g6" target="_blank" rel="noopener">Felice a Testaccio</a>, Via Mastro Giorgio 29</li>
+            <li><a href="https://maps.app.goo.gl/oFwzsysZgT3jP49S9" target="_blank" rel="noopener">Flavio al Velavevodetto</a>, Via di Monte Testaccio 97</li>
+            <li><a href="https://maps.app.goo.gl/7KiY6hiUp1v1LcPYA" target="_blank" rel="noopener">Da Enzo al 29</a>, Trastevere</li>
+            <li><a href="https://maps.app.goo.gl/tLvdZLrZLMN594o79" target="_blank" rel="noopener">Armando al Pantheon</a>, Pantheon area</li>
+            <li><a href="https://maps.app.goo.gl/E6kdX2JU3sNXxYcT8" target="_blank" rel="noopener">Roscioli</a>, Campo de' Fiori area</li>
+          </ul>
+        </article>
+        <article class="food-card">
+          <b>Pizza</b>
+          <ul>
+            <li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x132f6031b53ece2d:0xa45ed4df81daa052?sa=X&ved=1t:8290&ictx=111" target="_blank" rel="noopener">Pizzeria Remo a Testaccio</a>, Piazza Santa Maria Liberatrice 44</li>
+            <li><a href="https://maps.app.goo.gl/2edvynFefTepStoJ6" target="_blank" rel="noopener">Il Grottino a Testaccio</a>, Via Marmorata 165</li>
+            <li><a href="https://maps.app.goo.gl/r7eu3V6KVy91kYCq8" target="_blank" rel="noopener">Pizzarium Bonci</a>, Via della Meloria 43</li>
+            <li><a href="https://maps.app.goo.gl/xtYhZmKXgDPzpqnd9" target="_blank" rel="noopener">La Gatta Mangiona</a>, Via Federico Ozanam 30</li>
+            <li><a href="https://maps.app.goo.gl/3tE1aeJH2FvCxGnj9" target="_blank" rel="noopener">Antico Forno Roscioli</a>, Via dei Chiavari 34</li>
+            <li><a href="https://maps.app.goo.gl/Tq8J51ahiognEmgq6" target="_blank" rel="noopener">Forno Campo de' Fiori</a>, Piazza Campo de' Fiori 22</li>
+          </ul>
+        </article>
+        <article class="food-card">
+          <b>Coffee</b>
+          <ul>
+            <li><a href="https://maps.app.goo.gl/o3xaNQWehC6FinHt5" target="_blank" rel="noopener">Roscioli Caffe</a>, Piazza Benedetto Cairoli 16</li>
+            <li><a href="https://maps.app.goo.gl/HRFox7JUkL54MC2Z8" target="_blank" rel="noopener">Sant'Eustachio Il Caffe</a>, Piazza Sant'Eustachio 82</li>
+            <li><a href="https://maps.app.goo.gl/gYQagqtNxi2rrTdUA" target="_blank" rel="noopener">Tazza d'Oro</a>, Via degli Orfani 84</li>
+            <li><a href="https://maps.app.goo.gl/1Jah2f2NtyBmiSX29" target="_blank" rel="noopener">Gran Caffe La Caffettiera</a>, Piazza di Pietra 65</li>
+            <li><a href="https://maps.app.goo.gl/7D493oacHKAkLkMU8" target="_blank" rel="noopener">Panificio Bonci</a>, Via Trionfale 36</li>
+          </ul>
+        </article>
+        <article class="food-card">
+          <b>Aperitivo</b>
+          <ul>
+            <li><a href="https://maps.app.goo.gl/x33XAo7qcKBLAy6b6" target="_blank" rel="noopener">Freni e Frizioni</a>, Trastevere</li>
+            <li><a href="https://maps.app.goo.gl/sVXsqa9a24YU4jBA7" target="_blank" rel="noopener">Salotto 42</a>, Piazza di Pietra</li>
+          </ul>
+        </article>
+        <article class="food-card">
+          <b>Book ahead</b>
+          <ul>
+            <li>Felice a Testaccio</li>
+            <li>Flavio al Velavevodetto</li>
+            <li>Da Enzo al 29</li>
+            <li>Roscioli</li>
+            <li>Armando al Pantheon</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="food-manual">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Food Manual</p>
+          <h2>Roman food protocol.</h2>
+        </div>
+        <p class="lead">A tiny survival guide for eating in Rome without accidentally starting a diplomatic incident at dinner.</p>
+      </div>
+
+      <div class="manual-grid">
+        <article class="manual-item">
+          <b>Do not cut spaghetti.</b>
+          <p>Twirl it. If it looks chaotic, you are doing research.</p>
+        </article>
+        <article class="manual-item">
+          <b>Bread has a job.</b>
+          <p>Use it for the sauce left on the plate. This is not waste, this is closure.</p>
+        </article>
+        <article class="manual-item">
+          <b>Pineapple is a threat model.</b>
+          <p>On pizza, not today hacker. Stick to the classics.</p>
+        </article>
+        <article class="manual-item">
+          <b>Seafood and Parmesan: no.</b>
+          <p>If the pasta comes from the sea, the cheese stays away.</p>
+        </article>
+        <article class="manual-item">
+          <b>Cappuccino has office hours.</b>
+          <p>Morning only. After lunch, espresso is the protocol.</p>
+        </article>
+        <article class="manual-item">
+          <b>No ketchup on pasta.</b>
+          <p>Rome will not yell at you. Rome will silently remember.</p>
+        </article>
+        <article class="manual-item">
+          <b>Aperitivo is social infrastructure.</b>
+          <p>One drink, small bites, light conversation before dinner.</p>
+        </article>
+        <article class="manual-item">
+          <b>Do not rush dinner.</b>
+          <p>Italian meals are not a speedrun. Plan time for them.</p>
+        </article>
+        <article class="manual-item">
+          <b>Espresso is short.</b>
+          <p>If you want a longer coffee, ask for caffe lungo.</p>
+        </article>
+        <article class="manual-item">
+          <b>Gelato is always valid.</b>
+          <p>Before, after, between commits.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark" id="rome">
+    <div class="wrap split">
+      <div class="rome-visual" aria-hidden="true"></div>
+      <div>
+        <p class="kicker">If you have extra time</p>
+        <h2>Rome between commits.</h2>
+        <p class="lead">You do not need a full tourist itinerary. A few tight routes are enough if you are staying one extra morning or evening.</p>
+        <div class="itinerary" style="margin-top: 26px;">
+          <article class="route">
+            <b>Near the venue</b>
+            <p>Testaccio Market, Piramide Cestia, Mattatoio, Cimitero Acattolico, Monte dei Cocci, Via Galvani, Via Mastro Giorgio and the Gazometro.</p>
+          </article>
+          <article class="route">
+            <b>90 minutes</b>
+            <p>Walk from Testaccio to Trastevere through Ponte Sublicio.</p>
+          </article>
+          <article class="route">
+            <b>2 to 3 hours</b>
+            <p>Metro B to Colosseo, then Monti, Via dei Fori Imperiali and Piazza Venezia.</p>
+          </article>
+          <article class="route">
+            <b>Classic Rome</b>
+            <p>Colosseum, Fori Imperiali, Pantheon, Fontana di Trevi, Piazza Navona, Campo de' Fiori, Villa Borghese and St. Peter's Basilica.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <img src="/hackerguide/assets/logo/ethrome-light.svg" alt="ETHRome">
+      <p>
+        <a href="https://ethrome.org/">ethrome.org</a> ·
+        <a href="https://x.com/ETHRome">x.com/ETHRome</a> ·
+        <a href="mailto:hello@urbe.build">hello@urbe.build</a>
+      </p>
+    </div>
+  </footer>
+  <script>
+    document.querySelectorAll(".hub-hotspot").forEach((hotspot) => {
+      hotspot.addEventListener("click", () => {
+        hotspot.classList.add("suppress-hover");
+        hotspot.blur();
+      });
+      hotspot.addEventListener("mouseleave", () => {
+        hotspot.classList.remove("suppress-hover");
+      });
+    });
+  </script>
+</body>
+</html>
