@@ -26,6 +26,10 @@ export default function Header() {
       title: "Location",
       route: "#location",
     },
+    {
+      title: "Schedule",
+      route: "#schedule",
+    },
   ];
 
   return (

@@ -1,104 +1,125 @@
-export const schedule_days_17 = [
+// ETHRome 2026, Friday 11 to Sunday 13 September. Source of truth for these
+// times: the Hacker Manual, section 5, at ethrome.org/hackermanual/schedule.html.
+// Keep the two in sync: this is the public teaser, that one is the full version.
+
+export const schedule_days_11 = [
   {
-    hour: "1PM → 8PM",
+    hour: "4PM",
     category: "hackathon",
     category_bg: " bg-ethrome-yellow",
-    title: "Hackathon Registration",
-  },
-  {
-    hour: "1.30PM → 2.30PM",
-    category: "hackathon",
-    category_bg: " bg-ethrome-yellow",
-    title: "Team formation",
-  },
-  {
-    hour: "2.30PM → 5PM",
-    category: "Workshop",
-    category_bg: " bg-ethrome-purple",
-    category_text_color:"ethrome-white",
-    title: "Workshops",
-  },
-  {
-    hour: "5PM → 6PM",
-    category: "hackathon",
-    category_bg: " bg-ethrome-yellow",
-    title: "Opening Ceremony",
+    title: "Doors open, check-in",
   },
   {
     hour: "6PM",
     category: "hackathon",
     category_bg: " bg-ethrome-yellow",
-    title: "Hackathon Start",
+    title: "Hacking starts",
   },
   {
-    hour: "6PM → 7PM",
+    hour: "6.30PM",
+    category: "hackathon",
+    category_bg: " bg-ethrome-yellow",
+    title: "Opening Ceremony",
+  },
+  {
+    hour: "7PM → 8PM",
     category: "workshop",
     category_bg: " bg-ethrome-purple",
-    category_text_color:"ethrome-white",
-    title: "Workshops",
+    category_text_color: "ethrome-white",
+    title: "Sponsor workshops",
+  },
+  {
+    hour: "8PM",
+    category: "food",
+    category_bg: "bg-[#2572C4]",
+    category_text_color: "ethrome-white",
+    title: "Dinner",
+  },
+  {
+    hour: "12AM",
+    category: "food",
+    category_bg: "bg-[#2572C4]",
+    category_text_color: "ethrome-white",
+    title: "Midnight Roman street food",
   },
 ];
 
-export const schedule_days_18 = [
+export const schedule_days_12 = [
   {
     hour: "ALL DAY",
     category: "hackathon",
     category_bg: " bg-ethrome-yellow",
-    title: "Hacking all day!",
+    title: "Hacking, venue open 24/7",
   },
   {
-    hour: "11AM → 12PM",
+    hour: "9AM",
     category: "food",
     category_bg: "bg-[#2572C4]",
-    category_text_color:"ethrome-white",
-    title: "Merenda romana",
+    category_text_color: "ethrome-white",
+    title: "Breakfast",
   },
   {
-    hour: "4PM → 5PM",
+    hour: "1PM",
     category: "food",
     category_bg: "bg-[#2572C4]",
-    category_text_color:"ethrome-white",
-    title: "Gelato",
+    category_text_color: "ethrome-white",
+    title: "Lunch",
+  },
+  {
+    hour: "8PM",
+    category: "food",
+    category_bg: "bg-[#2572C4]",
+    category_text_color: "ethrome-white",
+    title: "Dinner",
+  },
+  {
+    hour: "12AM",
+    category: "food",
+    category_bg: "bg-[#2572C4]",
+    category_text_color: "ethrome-white",
+    title: "Midnight Roman street food",
   },
 ];
 
-export const schedule_days_19 = [
+export const schedule_days_13 = [
   {
     hour: "9AM",
-    category: "hackathon",
-    category_bg: " bg-ethrome-yellow",
-    title: "Submission Deadline",
+    category: "food",
+    category_bg: "bg-[#2572C4]",
+    category_text_color: "ethrome-white",
+    title: "Breakfast",
   },
   {
-    hour: "10AM → 1PM",
+    hour: "10AM",
     category: "hackathon",
     category_bg: " bg-ethrome-yellow",
-    title: "Pitch - Sponsor bounties",
+    title: "Submission deadline",
   },
   {
-    hour: "10AM → 2PM",
+    hour: "10.30AM",
     category: "hackathon",
     category_bg: " bg-ethrome-yellow",
-    title: "Pitch - Main Tracks",
+    title: "Judging and sponsor bounty reviews",
   },
   {
-    hour: "3PM → 4PM",
-    category: "hackathon",
-    category_bg: " bg-ethrome-yellow",
-    title: "Judging",
+    hour: "1PM",
+    category: "food",
+    category_bg: "bg-[#2572C4]",
+    category_text_color: "ethrome-white",
+    title: "Lunch",
   },
   {
-    hour: "4.30PM → 5.30PM",
+    hour: "3PM",
     category: "party",
     category_bg: "bg-[#CC2B5E]",
-    category_text_color:"ethrome-white",
-    title: "Closing Ceremony",
+    category_text_color: "ethrome-white",
+    title: "Closing Ceremony and awards",
   },
   {
-    hour: "5.30PM → 8PM",
+    hour: "4PM",
     category: "party",
     category_bg: "bg-[#CC2B5E]",
-    category_text_color:"ethrome-white",
-    title: "Closing Happy Hour",
+    category_text_color: "ethrome-white",
+    title: "End",
   },
 ];

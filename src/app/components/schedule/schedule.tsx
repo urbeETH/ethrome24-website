@@ -1,8 +1,8 @@
 import GrainBg from "../grainBg";
 import {
-  schedule_days_17,
-  schedule_days_18,
-  schedule_days_19,
+  schedule_days_11,
+  schedule_days_12,
+  schedule_days_13,
 } from "./schedule_days";
 
 export default function Schedule() {
@@ -25,13 +25,13 @@ export default function Schedule() {
         {/** schedule  */}
         <div className="w-full flex flex-col justify-start items-center px-6 gap-10 2xl:px-20 2xl:items-start">
           <div className="w-full flex flex-col justify-start items-start gap-6 xl:flex-row">
-            {/** 17 */}
+            
             <div className="w-full xl:w-1/3 flex flex-col justify-center items-start gap-2">
               <div className="text-ethrome-yellow font-bold text-sm uppercase  ">
-                OCT 17
+                FRI 11 SEP
               </div>
               <div className="w-full flex flex-col justify-start items-start gap-2">
-                {schedule_days_17.map((item, index) => (
+                {schedule_days_11.map((item, index) => (
                   <div key={index} className="relative w-full rounded-2xl">
                     <div className="sponsor_zone_box_bg"></div>
 
@@ -58,13 +58,13 @@ export default function Schedule() {
                 ))}
               </div>
             </div>
-            {/** 18 */}
+            
             <div className="w-full xl:w-1/3 flex flex-col justify-center items-start gap-2">
               <div className="text-ethrome-yellow font-bold text-sm uppercase  ">
-                OCT 18
+                SAT 12 SEP
               </div>
               <div className="w-full flex flex-col justify-start items-start gap-2">
-                {schedule_days_18.map((item, index) => (
+                {schedule_days_12.map((item, index) => (
                   <div key={index} className="relative w-full rounded-2xl">
                     <div className="sponsor_zone_box_bg"></div>
 
@@ -91,13 +91,13 @@ export default function Schedule() {
                 ))}
               </div>
             </div>
-            {/** 19 */}
+            
             <div className="w-full xl:w-1/3 flex flex-col justify-center items-start gap-2">
               <div className="text-ethrome-yellow font-bold text-sm uppercase">
-                OCT 19
+                SUN 13 SEP
               </div>
               <div className="w-full flex flex-col justify-start items-start gap-2">
-                {schedule_days_19.map((item, index) => (
+                {schedule_days_13.map((item, index) => (
                   <div key={index} className="relative w-full rounded-2xl">
                     <div className="sponsor_zone_box_bg"></div>
 

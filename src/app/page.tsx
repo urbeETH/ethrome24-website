@@ -19,8 +19,8 @@ export default function Home() {
       <AboveFold />
       <Hackathon />
       <SponsorZone />
-      {/** 
       <Schedule />
+      {/** Prizes stays off until the sponsor bounty briefs land.
       <Prizes />*/}
       <Location />
       <Experience />
