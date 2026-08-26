@@ -11,29 +11,42 @@ const nextConfig = {
         destination: "https://luma.com/huhelf53",
         permanent: false,
       },
+      {
+        // The hacker manual absorbed the Rome guide: everything that was on
+        // /hackerguide now lives at /hackermanual/rome.html, inside the wider
+        // manual. The old URL was already sent to approved hackers, so it keeps
+        // working and lands on the superset. Temporary on purpose: the guide
+        // files are still in public/hackerguide, so reverting is one line.
+        source: "/hackerguide",
+        destination: "/hackermanual",
+        permanent: false,
+      },
     ];
   },
   async rewrites() {
     return [
       {
-        // The hacker guide is a standalone static page under public/hackerguide.
-        // Next serves files in public by exact path only, so /hackerguide would
+        // The hacker manual is a standalone static site under public/hackermanual.
+        // Next serves files in public by exact path only, so /hackermanual would
         // 404 without this: it maps the clean URL onto the actual index.html.
-        // /hackerguide/ works too, via the default trailing-slash redirect.
-        source: "/hackerguide",
-        destination: "/hackerguide/index.html",
+        // /hackermanual/ works too, via the default trailing-slash redirect.
+        // Every link and asset inside those pages is absolute (/hackermanual/...)
+        // because a clean URL with no trailing slash resolves relative paths
+        // against the site root, which would break all of them.
+        source: "/hackermanual",
+        destination: "/hackermanual/index.html",
       },
     ];
   },
   async headers() {
     return [
       {
-        // The guide is unlisted: nothing on ethrome.org links to it, and it is
-        // meant for approved hackers only. The meta robots tag inside the page
+        // The manual is unlisted: nothing on ethrome.org links to it, and it is
+        // meant for approved hackers only. The meta robots tag inside each page
         // covers the HTML, this covers every asset served under the path too.
         // Deliberately NOT a robots.txt Disallow, which would publish the URL
-        // to anyone reading it.
-        source: "/hackerguide/:path*",
+        // to anyone reading it. The old /hackerguide paths keep the same header.
+        source: "/hackermanual/:path*",
         headers: [
           {
             key: "X-Robots-Tag",
@@ -42,7 +55,16 @@ const nextConfig = {
         ],
       },
       {
-        source: "/hackerguide",
+        source: "/hackermanual",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow, noarchive",
+          },
+        ],
+      },
+      {
+        source: "/hackerguide/:path*",
         headers: [
           {
             key: "X-Robots-Tag",
