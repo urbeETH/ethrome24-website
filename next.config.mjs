@@ -12,6 +12,11 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: "/ticket",
+        destination: "https://ethrome-ticket.vercel.app",
+        permanent: false,
+      },
+      {
         // The hacker manual absorbed the Rome guide: everything that was on
         // /hackerguide now lives at /hackermanual/rome.html, inside the wider
         // manual. The old URL was already sent to approved hackers, so it keeps
