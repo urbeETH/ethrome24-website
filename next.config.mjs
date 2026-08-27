@@ -12,11 +12,6 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: "/ticket",
-        destination: "https://ethrome-ticket.vercel.app",
-        permanent: false,
-      },
-      {
         // The hacker manual absorbed the Rome guide: everything that was on
         // /hackerguide now lives at /hackermanual/rome.html, inside the wider
         // manual. The old URL was already sent to approved hackers, so it keeps
@@ -40,6 +35,18 @@ const nextConfig = {
         // against the site root, which would break all of them.
         source: "/hackermanual",
         destination: "/hackermanual/index.html",
+      },
+      {
+        // The confirmation-ticket app is a separate Vercel deployment
+        // (ethrome-ticket). These proxy it under the official domain so the
+        // URL stays ethrome.org/ticket instead of redirecting to vercel.app.
+        // The app is prefix-aware: it computes its own /ticket base client-side.
+        source: "/ticket",
+        destination: "https://ethrome-ticket.vercel.app/index.html",
+      },
+      {
+        source: "/ticket/:path*",
+        destination: "https://ethrome-ticket.vercel.app/:path*",
       },
     ];
   },
