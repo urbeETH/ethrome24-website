@@ -77,19 +77,151 @@
 
       <div class="bounties">
 
-        <details class="bounty pending" id="arkiv">
+        <details class="bounty" id="arkiv">
           <summary>
             <div class="bounty-id">
               <img src="/hackermanual/assets/sponsors/arkiv-white.svg" alt="Arkiv">
-              <b>Brief still to come</b>
-              <span>Their team is in the group chat already.</span>
+              <b>A Web3 database you can actually query</b>
+              <span>Three missions at $500 each, plus $1,000 for the best use overall.</span>
             </div>
             <div class="bounty-amt">$2,500</div>
           </summary>
           <div class="bounty-body">
+            <div class="quick-grid">
+              <div class="quick-item stat"><b>$500</b><span>Mission 01, Decommission</span></div>
+              <div class="quick-item stat"><b>$500</b><span>Mission 02, Built to expire</span></div>
+              <div class="quick-item stat"><b>$500</b><span>Mission 03, Live wire</span></div>
+              <div class="quick-item stat"><b>$1,000</b><span>Best Use of Arkiv, overall</span></div>
+            </div>
+
             <div class="prose">
-              <p>What Arkiv wants built, how they judge it and how they pay lands here as soon as they send it. The amount is confirmed.</p>
-              <p>In the meantime you can ask them anything directly: <strong>@shantelleawo</strong>, <strong>@SantiagoDevRel</strong> and <strong>@ColoMM</strong> are in the Arkiv topic of the ETHRome group chat. They also run a 20 minute session on Friday at 19:00.</p>
+              <p><strong>Arkiv builds Web3 databases.</strong> It merges the guarantees of a blockchain with the convenience of a traditional database. Data lives in entities: records with typed attributes you can query and filter with real operators, not just a key you fetch by id. Every entity is owned by the wallet that signed it and carries an expiration date you choose; once it expires it stops showing up in queries, and you can renew it before that with a lifetime extension. Built for Ethereum, powered by GLM.</p>
+
+              <h3>What Arkiv is not, worth reading before you pick it</h3>
+              <p><strong>It is not file storage.</strong> It does not replace IPFS, Arweave or S3, and large files do not go on Arkiv. Think of it as the index over your data rather than the place your data lives: leave the file where it is and put an Arkiv entity beside it, a hash, a URL or a CID, plus the typed attributes you actually want to search on. Your queries hit the index; the bytes stay where they belong. If you need to split something bigger across entities there is a parent-and-chunks pattern: find them on site and they walk you through it.</p>
+              <p><strong>It is not a confidentiality layer.</strong> Entities are public and verifiable by design, so secrets and personal data stay out. Store a hash or a commitment instead, or encrypt your own data before it goes in.</p>
+
+              <h3>Why it is worth your weekend</h3>
+              <p>Arkiv is an early product and they say so: they are coming to Rome to find the issues in the docs, the faucet, the API keys, the SDK, the features and the explorer, and 40 people using all of it at once is the best test they can get. That is why every entry files a bug report, why its quality is a fifth of the score, and why a ten-minute conversation with them is a qualification requirement rather than a nice-to-have. If you like being the person who finds the edge, this is the bounty for you.</p>
+              <p>Their Friday session leaves you with a draft <code>/arkiv/schema.md</code> for your own project, which is requirement 1 of the bounty. Twenty minutes, and the first deliverable is done.</p>
+            </div>
+
+            <div class="callout warn">
+              <span class="ico">&#127919;</span>
+              <div>
+                <p><strong>Pick at least one mission.</strong> Each mission pays $500 to the best qualifying entry that completed it, and every qualifying project competes automatically for the $1,000 Best Use of Arkiv. Doing all three puts you in three prize lines, but a team wins once: it does not pay three times.</p>
+              </div>
+            </div>
+
+            <div class="prose">
+              <h3>Mission 01. Decommission &middot; $500</h3>
+              <p><strong>Done when</strong> your app answers, from Arkiv, a question it answers today through a subgraph, Ponder or a Postgres pipeline, and its read path no longer calls the indexer.</p>
+              <p><strong>The decision that decides it:</strong> what goes in attributes, which you can query, versus what goes in the payload, which you cannot. Get it wrong and every query turns into a scan. Aim for a compound filter, not single-attribute equality.</p>
+              <p><strong>They check:</strong> they run your query and see the question answered, and you link the commit from before the migration. You never have to prove a hosted service is switched off. If you did not arrive with an indexer already running, pick another mission rather than inventing one to turn off. If you did, that is a pre-existing project under the <a href="/hackermanual/rules.html">ETHRome rules</a>: say so in your submission, and only the new part gets judged.</p>
+
+              <h3>Mission 02. Built to expire &middot; $500</h3>
+              <p><strong>Done when</strong> something in your app changes because data expired on its own, not because a job deleted it. Expiration is the feature, not an add-on.</p>
+              <p><strong>Two patterns:</strong> let an entity lapse and treat its absence as the signal, or extend it on activity, which gives you a lease, a sliding expiry that nothing has to maintain.</p>
+              <p><strong>They check:</strong> the same query before and after the boundary, with no delete call in between. Keep lifetimes at seconds or a couple of minutes, because nobody can wait on Sunday morning. A recording made on Saturday counts.</p>
+
+              <h3>Mission 03. Live wire &middot; $500</h3>
+              <p><strong>Done when</strong> your app updates from a subscription rather than from a refresh loop of your own.</p>
+              <p><strong>Know this before you pick it:</strong> the SDK's subscribe helper only opens a real socket if your client uses a websocket transport. With an HTTP transport it quietly polls once a second and the code looks identical. Passing a start block to replay history forces polling too, so the backfill you reach for after a dropped connection is the very thing that turns your subscription back into a loop. Working that out is the mission; put what you find in your <code>friction.md</code>.</p>
+              <p><strong>They check:</strong> the line where you build the client, showing a websocket transport, and your live subscription with no start block. A two-wallet demo on its own cannot tell a socket from a poll, so they need both: the code and the demo (one of you writes, the other's screen updates without a refresh), plus a few lines on what happened when you dropped the connection.</p>
+            </div>
+
+            <div class="callout warn">
+              <span class="ico">&#9888;&#65039;</span>
+              <div>
+                <p><strong>Mission 03 needs a live websocket endpoint.</strong> If one is not available during the event, Arkiv says so at the opening ceremony and the mission is off. The other two missions and the $1,000 are unaffected either way.</p>
+              </div>
+            </div>
+
+            <div class="prose">
+              <h3>To qualify</h3>
+            </div>
+            <ul class="checklist">
+              <li><strong>Tick Arkiv on the ETHRome submission form</strong> and name the missions you went for.</li>
+              <li><strong>Public repo</strong> with everything they score in it by the ETHRome deadline, Sunday 10:00.</li>
+              <li><strong>A draft <code>/arkiv/schema.md</code></strong> in the repo. Their Friday session gets you there.</li>
+              <li><strong>A <code>friction.md</code> bug report</strong>: what broke, what confused you, what you worked around. It is a fifth of the score.</li>
+              <li><strong>A ten-minute conversation with the Arkiv team by Saturday 20:00.</strong> That is when you give them your repo URL. It cannot be done on Sunday morning.</li>
+            </ul>
+
+            <div class="callout warn">
+              <span class="ico">&#128279;</span>
+              <div>
+                <p><strong>Full requirements, schema template and support hours</strong> live on their ETHRome page, <a href="https://hub.arkiv.network/ethrome">hub.arkiv.network/ethrome</a>, kept current during the event. It goes live before the weekend <span class="pill tbd">TBD</span>. The list above is everything their brief states today; if their page adds a requirement, this block is updated and the Telegram group gets a ping.</p>
+              </div>
+            </div>
+
+            <div class="prose">
+              <h3>How they score, one ranking for everything</h3>
+              <p>Only entries that qualified get scored. This single ranking decides Best Use of Arkiv and, within each mission, who takes its $500.</p>
+            </div>
+            <ol class="steps">
+              <li><strong>Query depth, 30.</strong> Compound filters over typed attributes that do real work, not a lookup by id.</li>
+              <li><strong>Evidence and reproducibility, 20.</strong> They can run what you claim.</li>
+              <li><strong>Arkiv fit and trade-offs, 20.</strong> What went in attributes, what stayed in the payload, and why.</li>
+              <li><strong>Friction quality, 20.</strong> The bug report. Precise, reproducible, honest.</li>
+              <li><strong>Craft, 10.</strong> Clarity, reliability and completeness. Not visual polish.</li>
+            </ol>
+
+            <div class="prose">
+              <h3>How winners get paid</h3>
+              <p>Prizes are paid directly by the Arkiv team (Golem Factory GmbH) as a grant for delivered open-source work. ETHRome handles no part of it.</p>
+            </div>
+            <ol class="steps">
+              <li><strong>Winners are announced at the closing ceremony</strong>, Sunday 13 September at 15:00.</li>
+              <li><strong>KYC opens the next business day</strong>, run by the Arkiv team through a secure form sent to winners directly. They never ask for identity documents over Discord, email or a shared sheet.</li>
+              <li><strong>One payee per team.</strong> One person completes KYC; the rest of the team signs a one-page authorisation naming that payee.</li>
+              <li><strong>Funds are sent within 10 business days</strong> of a complete KYC pack. One prize per team. Taxes are the winner's own responsibility.</li>
+            </ol>
+            <div class="callout">
+              <span class="ico">&#128176;</span>
+              <div>
+                <p><strong>Paid in USDC on Ethereum.</strong> Arkiv confirmed the rail on 3 September: $2,500 in total, in USDC, on Ethereum. The four figures above are what a winner receives.</p>
+              </div>
+            </div>
+
+            <div class="prose">
+              <h3>Everything you need to start</h3>
+            </div>
+
+            <div class="food-grid">
+              <div class="food-card">
+                <b>Start here</b>
+                <ul>
+                  <li><a href="https://hub.arkiv.network/ethrome">Arkiv at ETHRome</a>, rules, schema template, support hours. Live before the weekend.</li>
+                  <li><a href="https://hub.arkiv.network">Arkiv Hub</a></li>
+                  <li><a href="https://docs.arkiv.network">docs.arkiv.network</a></li>
+                </ul>
+              </div>
+              <div class="food-card">
+                <b>Code and SDK</b>
+                <ul>
+                  <li>TypeScript SDK: <code>npm install @arkiv-network/sdk</code>, v0.7.x</li>
+                  <li>Searching npm? <code>arkiv-sdk</code> and <code>golem-base-sdk</code> are the previous lineage, not the one to install.</li>
+                  <li><a href="https://github.com/arkiv-network">Arkiv on GitHub</a></li>
+                </ul>
+              </div>
+              <div class="food-card">
+                <b>Ask</b>
+                <ul>
+                  <li><a href="https://discord.gg/arkiv">Arkiv Discord</a></li>
+                  <li>The Arkiv topic of the ETHRome group chat, for anything about the bounty itself</li>
+                  <li><a href="https://arkiv.network/brand">Brand assets</a>, if you want their logo in your demo</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="callout">
+              <span class="ico">&#128172;</span>
+              <div>
+                <p><strong>Who to talk to.</strong> Santiago Trujillo Zuluaga, <strong>@SantiagoDevRel</strong>, for data modelling, the SDK and the bounty sign-offs. Shantelle Awomoyi, <strong>@shantelleawo</strong>, for anything about prizes. Both are in the Arkiv topic of the ETHRome group chat and on site the whole weekend.</p>
+                <p>They walk the floor rather than sit at the table, especially on Saturday. If they are not at their spot, ask an organiser to ping them. Mentor sessions and sign-offs run all Saturday until 20:00.</p>
+                <p>Santiago's session is Friday at 19:00: <strong>From Postgres to Arkiv: web2 to web3 database in 20 minutes</strong>. A live migration of a Postgres database to Arkiv with an AI assistant connected to their ETHRome Arkiv MCP, table by table, on screen. Beginner friendly, and you leave with the schema.md the bounty asks for. Shantelle also opens the weekend with a short keynote inside the opening ceremony at 18:30.</p>
+              </div>
             </div>
           </div>
         </details>
@@ -327,13 +459,6 @@
       <div class="bounty-total">
         <b>$4,500</b>
         <span>in sponsor bounties, on top of the ETHRome prize.</span>
-      </div>
-
-      <div class="callout warn">
-        <span class="ico">&#9888;&#65039;</span>
-        <div>
-          <p><strong>Arkiv still owes its brief.</strong> You know the size of the bounty, so you can decide whether to chase it, but do not lock your architecture around Arkiv until you can read what it rewards. This page gets updated and the Telegram group gets a ping the moment it lands.</p>
-        </div>
       </div>
 
       <div class="pagenav">
