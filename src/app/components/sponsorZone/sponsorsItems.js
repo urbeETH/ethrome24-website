@@ -21,6 +21,12 @@ export const citizen = [
     width: "170",
     height: "45.64",
   },
+  {
+    sponsor_logo: "/img/sponsor_zone/sponsors/2026/ens-white.svg",
+    sponsor_link: "https://ens.domains/",
+    width: "143.44",
+    height: "45",
+  },
 ];
 
 // ETHRome 2025 sponsors, kept for the past-editions strip
