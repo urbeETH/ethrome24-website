@@ -71,7 +71,7 @@
       <ol class="steps">
         <li><strong>Sponsors choose and sponsors pay.</strong> ETHRome has no say in who wins a bounty and does not handle delivery in any way. Each sponsor has its own brief, its own criteria and its own process, and runs any KYC on its own side.</li>
         <li><strong>Apply to as many as genuinely fit.</strong> There is no limit, and going after a bounty does not affect how the ETHRome judges score you.</li>
-        <li><strong>Tick the box in the submission form.</strong> Sponsors only look at the projects that selected their bounty. If you do not tick it, you are not in the running, no matter what you built.</li>
+        <li><strong>Tick the box in the submission form.</strong> Sponsors only look at the projects that selected their bounty. If you do not tick it, you are not in the running, no matter what you built. <strong>Arkiv and Team1 also run a form of their own</strong>: for those two, ticking the box is necessary and not sufficient.</li>
         <li><strong>Show them your project on Sunday.</strong> During the judging window from 10:30, teams also walk each sponsor whose bounty they applied to through what they made. That conversation is between you and the sponsor.</li>
       </ol>
 
@@ -102,8 +102,8 @@
               <p><strong>It is not a confidentiality layer.</strong> Entities are public and verifiable by design, so secrets and personal data stay out. Store a hash or a commitment instead, or encrypt your own data before it goes in.</p>
 
               <h3>Why it is worth your weekend</h3>
-              <p>Arkiv is an early product and they say so: they are coming to Rome to find the issues in the docs, the faucet, the API keys, the SDK, the features and the explorer, and 40 people using all of it at once is the best test they can get. That is why every entry files a bug report, why its quality is a fifth of the score, and why a ten-minute conversation with them is a qualification requirement rather than a nice-to-have. If you like being the person who finds the edge, this is the bounty for you.</p>
-              <p>Their Friday session leaves you with a draft <code>/arkiv/schema.md</code> for your own project, which is requirement 1 of the bounty. Twenty minutes, and the first deliverable is done.</p>
+              <p>Arkiv is an early product and they say so: they are coming to Rome to find the issues in the docs, the faucet, the API keys, the SDK, the features and the explorer, and 40 people using all of it at once is the best test they can get. That is why every entry files a feedback report, and why it is worth a quarter of the score: what worked, what got in your way, what they should improve, with specific examples and, where it applies, the steps to reproduce. If you like being the person who finds the edge, this is the bounty for you.</p>
+              <p>Their Friday session leaves you with a draft <code>/arkiv/schema.md</code> for your own project. Twenty minutes, and your data model is done.</p>
             </div>
 
             <div class="callout warn">
@@ -126,45 +126,39 @@
 
               <h3>Mission 03. Live wire &middot; $500</h3>
               <p><strong>Done when</strong> your app updates from a subscription rather than from a refresh loop of your own.</p>
-              <p><strong>Know this before you pick it:</strong> the SDK's subscribe helper only opens a real socket if your client uses a websocket transport. With an HTTP transport it quietly polls once a second and the code looks identical. Passing a start block to replay history forces polling too, so the backfill you reach for after a dropped connection is the very thing that turns your subscription back into a loop. Working that out is the mission; put what you find in your <code>friction.md</code>.</p>
+              <p><strong>Know this before you pick it:</strong> the SDK's subscribe helper only opens a real socket if your client uses a websocket transport. With an HTTP transport it quietly polls once a second and the code looks identical. Passing a start block to replay history forces polling too, so the backfill you reach for after a dropped connection is the very thing that turns your subscription back into a loop. Working that out is the mission; put what you find in your feedback report.</p>
+              <p><strong>Where to look:</strong> the <a href="https://docs.arkiv.network/networks/tiramisu/#network-reference">Arkiv WebSocket endpoint</a> is in their network reference, and they point at <a href="https://viem.sh/docs/actions/public/watchEvent#poll-optional">event subscriptions with viem</a> as the recipe: filter the events your app needs and update the UI from the stream, with no polling loop.</p>
               <p><strong>They check:</strong> the line where you build the client, showing a websocket transport, and your live subscription with no start block. A two-wallet demo on its own cannot tell a socket from a poll, so they need both: the code and the demo (one of you writes, the other's screen updates without a refresh), plus a few lines on what happened when you dropped the connection.</p>
-            </div>
-
-            <div class="callout warn">
-              <span class="ico">&#9888;&#65039;</span>
-              <div>
-                <p><strong>Mission 03 needs a live websocket endpoint.</strong> If one is not available during the event, Arkiv says so at the opening ceremony and the mission is off. The other two missions and the $1,000 are unaffected either way.</p>
-              </div>
             </div>
 
             <div class="prose">
               <h3>To qualify</h3>
             </div>
             <ul class="checklist">
-              <li><strong>Tick Arkiv on the ETHRome submission form</strong> and name the missions you went for.</li>
-              <li><strong>Public repo</strong> with everything they score in it by the ETHRome deadline, Sunday 10:00.</li>
-              <li><strong>A draft <code>/arkiv/schema.md</code></strong> in the repo. Their Friday session gets you there.</li>
-              <li><strong>A <code>friction.md</code> bug report</strong>: what broke, what confused you, what you worked around. It is a fifth of the score.</li>
-              <li><strong>A ten-minute conversation with the Arkiv team by Saturday 20:00.</strong> That is when you give them your repo URL. It cannot be done on Sunday morning.</li>
+              <li><strong>Fill Arkiv's own form</strong>, the <a href="https://tally.so/r/vGZ98v">Arkiv bounty submission</a>. It asks which missions you went for, which SDK you used and which parts of Arkiv you touched. This is the form their team reads.</li>
+              <li><strong>Tick Arkiv on the ETHRome submission form</strong> too, so the organisers know where to send them on Sunday.</li>
+              <li><strong>A public GitHub repo</strong> with everything they score in it by the ETHRome deadline, Sunday 10:00.</li>
+              <li><strong>A deployed demo</strong> they can open, showing the core user flow you want them to follow.</li>
+              <li><strong>A feedback report</strong>: what worked, what got in your way, what they should improve. Specific examples, and steps to reproduce where it applies. A quarter of the score.</li>
+              <li><strong>Arkiv evidence</strong>: the queries, the code, whatever shows Arkiv is really doing the work in your app.</li>
             </ul>
 
             <div class="callout warn">
               <span class="ico">&#128279;</span>
               <div>
-                <p><strong>Full requirements, schema template and support hours</strong> live on their ETHRome page, <a href="https://hub.arkiv.network/ethrome">hub.arkiv.network/ethrome</a>, kept current during the event. It goes live before the weekend <span class="pill tbd">TBD</span>. The list above is everything their brief states today; if their page adds a requirement, this block is updated and the Telegram group gets a ping.</p>
+                <p><strong>Their ETHRome page is live:</strong> <a href="https://hub.arkiv.network/ethrome">hub.arkiv.network/ethrome</a> carries the submission form, the three missions, the judging criteria and the ETHRome MCP, and they keep it current during the event. If that page and this one ever disagree, theirs wins: it is their bounty, and this block follows it.</p>
               </div>
             </div>
 
             <div class="prose">
               <h3>How they score, one ranking for everything</h3>
-              <p>Only entries that qualified get scored. This single ranking decides Best Use of Arkiv and, within each mission, who takes its $500.</p>
+              <p>The same four criteria apply to all three missions and to Best Use of Arkiv. Only entries that qualified get scored, and this single ranking decides Best Use of Arkiv and, within each mission, who takes its $500. <strong>Arkiv updated these weights on Saturday 12 September</strong>, on their ETHRome page.</p>
             </div>
             <ol class="steps">
-              <li><strong>Query depth, 30.</strong> Compound filters over typed attributes that do real work, not a lookup by id.</li>
-              <li><strong>Evidence and reproducibility, 20.</strong> They can run what you claim.</li>
-              <li><strong>Arkiv fit and trade-offs, 20.</strong> What went in attributes, what stayed in the payload, and why.</li>
-              <li><strong>Friction quality, 20.</strong> The bug report. Precise, reproducible, honest.</li>
-              <li><strong>Craft, 10.</strong> Clarity, reliability and completeness. Not visual polish.</li>
+              <li><strong>Why Arkiv, 30%.</strong> What does Arkiv let your app do that a Web2 database cannot?</li>
+              <li><strong>Technical execution, 25%.</strong> Does your app work end to end? Show the core user flow and how Arkiv powers it.</li>
+              <li><strong>Usefulness and adoption potential, 20%.</strong> Who will use this, what problem it solves, and how you would reach your first 100 users.</li>
+              <li><strong>Arkiv feedback, 25%.</strong> What worked, what got in your way, what they should improve. Specific examples and, where it applies, steps to reproduce.</li>
             </ol>
 
             <div class="prose">
@@ -192,9 +186,9 @@
               <div class="food-card">
                 <b>Start here</b>
                 <ul>
-                  <li><a href="https://hub.arkiv.network/ethrome">Arkiv at ETHRome</a>, rules, schema template, support hours. Live before the weekend.</li>
-                  <li><a href="https://hub.arkiv.network">Arkiv Hub</a></li>
-                  <li><a href="https://docs.arkiv.network">docs.arkiv.network</a></li>
+                  <li><a href="https://hub.arkiv.network/ethrome">Arkiv at ETHRome</a>: submission form, missions, criteria. Live, and kept current all weekend.</li>
+                  <li><a href="https://tally.so/r/vGZ98v">The Arkiv bounty submission form</a></li>
+                  <li><a href="https://hub.arkiv.network">Arkiv Hub</a> &middot; <a href="https://docs.arkiv.network">docs.arkiv.network</a></li>
                 </ul>
               </div>
               <div class="food-card">
@@ -203,11 +197,13 @@
                   <li>TypeScript SDK: <code>npm install @arkiv-network/sdk</code>, v0.7.x</li>
                   <li>Searching npm? <code>arkiv-sdk</code> and <code>golem-base-sdk</code> are the previous lineage, not the one to install.</li>
                   <li><a href="https://github.com/arkiv-network">Arkiv on GitHub</a></li>
+                  <li><strong>ETHRome MCP</strong>: add <code>https://arkiv-mcp-gateway.vercel.app/ethrome</code> as a remote MCP server (Streamable HTTP, no wallet or key needed). Docs, recipes and prompts for your agent.</li>
                 </ul>
               </div>
               <div class="food-card">
                 <b>Ask</b>
                 <ul>
+                  <li><a href="https://discord.com/channels/1422146278883852412/1473629252183392266">Their ETHRome channel on Discord</a>, the room they point you to</li>
                   <li><a href="https://discord.gg/arkiv">Arkiv Discord</a></li>
                   <li>The Arkiv topic of the ETHRome group chat, for anything about the bounty itself</li>
                   <li><a href="https://arkiv.network/brand">Brand assets</a>, if you want their logo in your demo</li>
@@ -218,9 +214,9 @@
             <div class="callout">
               <span class="ico">&#128172;</span>
               <div>
-                <p><strong>Who to talk to.</strong> Santiago Trujillo Zuluaga, <strong>@SantiagoDevRel</strong>, for data modelling, the SDK and the bounty sign-offs. Shantelle Awomoyi, <strong>@shantelleawo</strong>, for anything about prizes. Both are in the Arkiv topic of the ETHRome group chat and on site the whole weekend.</p>
-                <p>They walk the floor rather than sit at the table, especially on Saturday. If they are not at their spot, ask an organiser to ping them. Mentor sessions and sign-offs run all Saturday until 20:00.</p>
-                <p>Santiago's session is Friday at 19:00: <strong>From Postgres to Arkiv: web2 to web3 database in 20 minutes</strong>. A live migration of a Postgres database to Arkiv with an AI assistant connected to their ETHRome Arkiv MCP, table by table, on screen. Beginner friendly, and you leave with the schema.md the bounty asks for. Shantelle also opens the weekend with a short keynote inside the opening ceremony at 18:30.</p>
+                <p><strong>Who to talk to.</strong> Santiago Trujillo Zuluaga, <strong>@SantiagoDevRel</strong>, for data modelling and the SDK. Shantelle Awomoyi, <strong>@shantelleawo</strong>, for anything about prizes. Both are in the Arkiv topic of the ETHRome group chat and on site the whole weekend.</p>
+                <p>They walk the floor rather than sit at the table. If they are not at their spot, ask an organiser to ping them.</p>
+                <p>Santiago's session is Friday at 19:00: <strong>From Postgres to Arkiv: web2 to web3 database in 20 minutes</strong>. A live migration of a Postgres database to Arkiv with an AI assistant connected to their ETHRome Arkiv MCP, table by table, on screen. Beginner friendly, and you leave with a draft schema.md for your own project. Shantelle also opens the weekend with a short keynote inside the opening ceremony at 18:30.</p>
               </div>
             </div>
           </div>
