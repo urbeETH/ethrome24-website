@@ -37,6 +37,15 @@ const nextConfig = {
         destination: "/hackermanual/index.html",
       },
       {
+        // The winners showcase is a standalone static page under public/winners,
+        // same pattern as the hacker manual: Next serves public by exact path
+        // only, so this maps the clean /winners URL onto its index.html. Every
+        // link and asset inside the page is absolute (/winners/...) for the same
+        // reason the manual's are.
+        source: "/winners",
+        destination: "/winners/index.html",
+      },
+      {
         // The confirmation-ticket app is a separate Vercel deployment
         // (ethrome-ticket). These proxy it under the official domain so the
         // URL stays ethrome.org/ticket instead of redirecting to vercel.app.
@@ -77,6 +86,28 @@ const nextConfig = {
       },
       {
         source: "/hackerguide/:path*",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow, noarchive",
+          },
+        ],
+      },
+      {
+        // The winners showcase ships unlisted by default, same as the manual:
+        // reachable at /winners for anyone with the link, kept out of search.
+        // To make it public, delete these two /winners header blocks (the page
+        // itself carries a meta robots noindex tag; remove that too).
+        source: "/winners/:path*",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow, noarchive",
+          },
+        ],
+      },
+      {
+        source: "/winners",
         headers: [
           {
             key: "X-Robots-Tag",
