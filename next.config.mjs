@@ -93,28 +93,6 @@ const nextConfig = {
           },
         ],
       },
-      {
-        // The winners showcase ships unlisted by default, same as the manual:
-        // reachable at /winners for anyone with the link, kept out of search.
-        // To make it public, delete these two /winners header blocks (the page
-        // itself carries a meta robots noindex tag; remove that too).
-        source: "/winners/:path*",
-        headers: [
-          {
-            key: "X-Robots-Tag",
-            value: "noindex, nofollow, noarchive",
-          },
-        ],
-      },
-      {
-        source: "/winners",
-        headers: [
-          {
-            key: "X-Robots-Tag",
-            value: "noindex, nofollow, noarchive",
-          },
-        ],
-      },
     ];
   },
 };
