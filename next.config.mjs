@@ -37,6 +37,15 @@ const nextConfig = {
         destination: "/hackermanual/index.html",
       },
       {
+        // The winners showcase is a standalone static page under public/winners,
+        // same pattern as the hacker manual: Next serves public by exact path
+        // only, so this maps the clean /winners URL onto its index.html. Every
+        // link and asset inside the page is absolute (/winners/...) for the same
+        // reason the manual's are.
+        source: "/winners",
+        destination: "/winners/index.html",
+      },
+      {
         // The confirmation-ticket app is a separate Vercel deployment
         // (ethrome-ticket). These proxy it under the official domain so the
         // URL stays ethrome.org/ticket instead of redirecting to vercel.app.

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ETHRome 2026: Winners and Projects</title>
+<link rel="icon" href="/winners/assets/pictogram.svg" />
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root{
+  --eth-plum:#13080E; --eth-gold:#FABB00; --eth-cream:#F8FCFC;
+  --eth-plum-surface:#301320; --eth-plum-deep:#1A0A12;
+  --eth-wine:#7D304B; --eth-crimson:#CB2B5E;
+  --eth-fg:#F8FCFC; --eth-fg-muted:rgba(248,252,252,.72); --eth-fg-faint:rgba(248,252,252,.48);
+  --eth-font-display:'Outfit',ui-sans-serif,system-ui,sans-serif;
+  --eth-font-body:'Red Hat Display',ui-sans-serif,system-ui,sans-serif;
+  --eth-radius:18px; --eth-ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--eth-plum); color:var(--eth-fg);
+  font-family:var(--eth-font-body); line-height:1.5;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+.grain{position:fixed;inset:0;background:url('/winners/assets/grain.gif');opacity:.06;mix-blend-mode:overlay;pointer-events:none;z-index:1}
+.wrap{position:relative;z-index:2;max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* ---- meander band ---- */
+.meander{height:26px;width:100%;background:url('/winners/assets/meander.svg') repeat-x center/auto 100%;opacity:.9}
+.meander.dim{opacity:.5}
+
+/* ---- hero ---- */
+.hero{
+  background:radial-gradient(120% 150% at 0% 100%,#301320 0%,#13080E 68%);
+  padding:64px 0 56px; text-align:center; position:relative;
+}
+.hero img.logo{height:64px;margin:0 auto 30px;display:block}
+.eyebrow{font-family:var(--eth-font-display);font-weight:500;letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:var(--eth-gold);margin-bottom:18px}
+.hero h1{font-family:var(--eth-font-display);font-weight:800;font-size:clamp(40px,7vw,72px);line-height:1.02;letter-spacing:-.02em}
+.hero h1 .gold{color:var(--eth-gold)}
+.hero .sub{font-family:var(--eth-font-display);font-weight:600;font-size:clamp(18px,3vw,24px);color:var(--eth-fg-muted);margin-top:14px}
+.hero .facts{margin-top:26px;font-size:15px;color:var(--eth-fg-faint);font-family:var(--eth-font-display);font-weight:500;letter-spacing:.04em}
+.hero .facts b{color:var(--eth-fg-muted);font-weight:700}
+
+/* ---- sponsor section ---- */
+.section{padding:52px 0 8px}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:26px;border-bottom:1px solid rgba(250,187,0,.22);padding-bottom:14px}
+.sec-head .mark{color:var(--eth-gold);font-size:20px;line-height:1}
+.sec-head h2{font-family:var(--eth-font-display);font-weight:800;font-size:clamp(26px,4vw,38px);letter-spacing:-.01em}
+.sec-head .tag{margin-left:auto;font-family:var(--eth-font-display);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--eth-fg-faint)}
+
+.subtrack{font-family:var(--eth-font-display);font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--eth-crimson);margin:22px 0 14px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px}
+
+/* ---- card ---- */
+.card{
+  background:var(--eth-plum-surface);
+  border:1px solid rgba(248,252,252,.08);
+  border-radius:var(--eth-radius);
+  padding:22px 22px 18px;
+  display:flex;flex-direction:column;gap:12px;
+  transition:transform .25s var(--eth-ease),border-color .25s var(--eth-ease);
+}
+.card:hover{transform:translateY(-3px);border-color:rgba(250,187,0,.4)}
+.card .top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.card h3{font-family:var(--eth-font-display);font-weight:700;font-size:22px;letter-spacing:-.01em}
+.prize{
+  display:inline-block;font-family:var(--eth-font-display);font-weight:600;font-size:11px;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--eth-plum);
+  background:var(--eth-gold);border-radius:999px;padding:5px 11px;white-space:nowrap;flex-shrink:0;
+}
+.prize.shipped{background:transparent;color:var(--eth-fg-faint);border:1px solid rgba(248,252,252,.22)}
+.card p{font-size:14.5px;color:var(--eth-fg-muted);line-height:1.45;flex-grow:1}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.links a{
+  font-family:var(--eth-font-display);font-weight:600;font-size:12.5px;letter-spacing:.02em;
+  color:var(--eth-fg);text-decoration:none;border:1px solid rgba(248,252,252,.22);
+  border-radius:9px;padding:7px 13px;transition:all .2s var(--eth-ease);display:inline-flex;align-items:center;gap:5px;
+}
+.links a:hover{background:var(--eth-gold);color:var(--eth-plum);border-color:var(--eth-gold)}
+.links a.primary{border-color:rgba(250,187,0,.55);color:var(--eth-gold)}
+.links a.primary:hover{background:var(--eth-gold);color:var(--eth-plum)}
+
+/* ---- ethrome prize ---- */
+.eth-prize{
+  margin:44px 0 8px;
+  background:linear-gradient(135deg,#301320 0%,#1A0A12 100%);
+  border:1px solid rgba(250,187,0,.35);border-radius:24px;
+  padding:44px 32px;text-align:center;position:relative;overflow:hidden;
+}
+.eth-prize .star{font-size:22px;color:var(--eth-gold);letter-spacing:.3em;margin-bottom:12px}
+.eth-prize .label{font-family:var(--eth-font-display);font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--eth-fg-faint)}
+.eth-prize .name{font-family:var(--eth-font-display);font-weight:800;font-size:clamp(34px,6vw,54px);color:var(--eth-gold);margin:8px 0 6px;letter-spacing:-.02em}
+.eth-prize .what{font-size:18px;color:var(--eth-fg-muted);font-family:var(--eth-font-display);font-weight:500}
+.eth-prize .who{font-size:14px;color:var(--eth-fg-faint);margin-top:10px}
+.eth-prize .links{justify-content:center;margin-top:20px}
+
+/* ---- footer ---- */
+.footer{background:var(--eth-plum-deep);padding:52px 0 0;text-align:center;margin-top:56px}
+.footer h4{font-family:var(--eth-font-display);font-weight:700;font-size:clamp(22px,4vw,32px);margin-bottom:10px}
+.footer p{color:var(--eth-fg-muted);font-size:16px}
+.footer a.cta{color:var(--eth-gold);text-decoration:none;font-weight:700}
+.footer .hosted{margin:30px auto 0;display:flex;flex-direction:column;align-items:center;gap:18px}
+.footer .hosted img{height:34px;opacity:.85}
+.footer .foot-meander{margin-top:34px}
+
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+  .sec-head .tag{display:none}
+  .hero{padding:48px 0 40px}
+  .card{padding:20px 18px 16px}
+}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="meander" style="position:absolute;top:0;left:0"></div>
+  <div class="wrap">
+    <img class="logo" src="/winners/assets/ethrome-logo.svg" alt="ETHRome" />
+    <div class="eyebrow">4th edition · 11–13 September 2026 · Rome</div>
+    <h1>The <span class="gold">Winners</span></h1>
+    <div class="sub">40 hours of building at Urbe Hub</div>
+    <div class="facts"><b>15 projects</b> shipped &nbsp;·&nbsp; <b>4 sponsor bounties</b> &nbsp;·&nbsp; hosted by urbe.eth</div>
+  </div>
+  <div class="meander" style="position:absolute;bottom:0;left:0"></div>
+</header>
+
+<main class="wrap">
+
+  <!-- ARKIV -->
+  <section class="section">
+    <div class="sec-head"><span class="mark">◆</span><h2>Arkiv</h2><span class="tag">Sponsor bounty</span></div>
+    <div class="grid">
+      <div class="card">
+        <div class="top"><h3>Healthsend</h3><span class="prize">Best use of Arkiv</span></div>
+        <p>Share health data through a link that expires on a date anyone can verify.</p>
+        <div class="links">
+          <a class="primary" href="https://healthsend.vercel.app" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/limone-eth/healthsend" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="top"><h3>Vespro</h3><span class="prize">Mission 02</span></div>
+        <p>Sell access to your data without revealing it.</p>
+        <div class="links">
+          <a class="primary" href="https://vespro-ten.vercel.app/sell" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/fac3m4n/vespro" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="top"><h3>Hydra</h3><span class="prize">Mission 03</span></div>
+        <p>Infrastructure agents that notice when a peer goes dark and finish its unfinished repair.</p>
+        <div class="links">
+          <a class="primary" href="https://46-225-217-63.sslip.io" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/LevRoz630/agent-memory-mesh" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="top"><h3>Wall Street Slot</h3><span class="prize">Judges Award</span></div>
+        <p>A physical arcade slot machine on Base: spin with USDC to win tokenized stocks, gold and real-world prizes.</p>
+        <div class="links">
+          <a class="primary" href="https://web-production-e2628.up.railway.app/" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/francescocirulli/rwa-slot-ethrome26" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="top"><h3>gitkiv</h3><span class="prize">Judges Award</span></div>
+        <p>GitHub's commit history and branching, running on Arkiv and Swarm instead of a database and a file store.</p>
+        <div class="links">
+          <a class="primary" href="https://gitkiv.vercel.app/" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/robdgs/gitkiv" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SWARM -->
+  <section class="section">
+    <div class="sec-head"><span class="mark">◆</span><h2>Swarm</h2><span class="tag">Sponsor bounty</span></div>
+    <div class="grid">
+      <div class="card">
+        <div class="top"><h3>APIritivo</h3><span class="prize">Winner</span></div>
+        <p>An API marketplace with time-limited access and USDC payments.</p>
+        <div class="links">
+          <a class="primary" href="https://apiritivo.vercel.app/" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/pf55351/apiritivo-eth-26" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="top"><h3>gitkiv</h3><span class="prize">Winner</span></div>
+        <p>Git-style version control with commit history on Arkiv and files on Swarm, nothing mocked.</p>
+        <div class="links">
+          <a class="primary" href="https://gitkiv.vercel.app/" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/robdgs/gitkiv" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM1 -->
+  <section class="section">
+    <div class="sec-head"><span class="mark">◆</span><h2>Team1 on Avalanche</h2><span class="tag">Sponsor bounty</span></div>
+
+    <div class="subtrack">Stablecoins that do real work</div>
+    <div class="grid">
+      <div class="card">
+        <div class="top"><h3>Vespro</h3><span class="prize">1st place</span></div>
+        <p>Sell access to your data without revealing it.</p>
+        <div class="links">
+          <a class="primary" href="https://vespro-ten.vercel.app/sell" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/fac3m4n/vespro" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="top"><h3>Deaddrop</h3><span class="prize">2nd place</span></div>
+        <p>Hire a reviewer, keep their credential private, and pay in USDC only once the encrypted report is opened.</p>
+        <div class="links">
+          <a class="primary" href="https://cutout-ethrome-2026.vercel.app" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/MihRazvan/eth-rome-2026" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="subtrack">Tokenized assets: rules to settlement</div>
+    <div class="grid">
+      <div class="card">
+        <div class="top"><h3>APIritivo</h3><span class="prize">1st place</span></div>
+        <p>An API marketplace with time-limited access and USDC payments.</p>
+        <div class="links">
+          <a class="primary" href="https://apiritivo.vercel.app/" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/pf55351/apiritivo-eth-26" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="top"><h3>Factor</h3><span class="prize">2nd place</span></div>
+        <p>A live, transparent market for short-term credit: finance outstanding invoices before they mature.</p>
+        <div class="links">
+          <a class="primary" href="https://sbornayasolyanka.vercel.app/" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/feedddosever/sbornayasolyanka" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENS -->
+  <section class="section">
+    <div class="sec-head"><span class="mark">◆</span><h2>ENS</h2><span class="tag">Sponsor bounty</span></div>
+    <div class="grid">
+      <div class="card">
+        <div class="top"><h3>unflat × agents</h3><span class="prize">Winner</span></div>
+        <p>A bank account for AI agents: an ENS name, a budget that expires on its own, yield on idle funds, an encrypted statement.</p>
+        <div class="links">
+          <a class="primary" href="https://unflat-agents.vercel.app" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/alexanderpi007/unflat-agents" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="top"><h3>PineSign</h3><span class="prize">Winner</span></div>
+        <p>Prove you sent an encrypted file and the recipient downloaded it.</p>
+        <div class="links">
+          <a class="primary" href="https://pinesign.claws.page" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/agoston0x/PineSign" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="top"><h3>Wall Street Slot</h3><span class="prize">Winner</span></div>
+        <p>A physical arcade slot machine on Base: spin with USDC to win tokenized stocks, gold and real-world prizes.</p>
+        <div class="links">
+          <a class="primary" href="https://web-production-e2628.up.railway.app/" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/francescocirulli/rwa-slot-ethrome26" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ETHROME PRIZE -->
+  <section class="eth-prize">
+    <div class="star">★</div>
+    <div class="label">ETHRome Prize</div>
+    <div class="name">PineSign</div>
+    <div class="what">One year of Urbe Hub membership</div>
+    <div class="who">built solo by agoston0x</div>
+    <div class="links">
+      <a class="primary" href="https://pinesign.claws.page" target="_blank" rel="noopener">Live</a>
+      <a href="https://github.com/agoston0x/PineSign" target="_blank" rel="noopener">Repo</a>
+    </div>
+  </section>
+
+  <!-- ALL THE OTHER PROJECTS -->
+  <section class="section">
+    <div class="sec-head"><span class="mark">◆</span><h2>The other projects</h2><span class="tag">Fifteen shipped, ten won</span></div>
+    <div class="grid">
+      <div class="card">
+        <div class="top"><h3>Ancorhash</h3><span class="prize shipped">Shipped</span></div>
+        <p>Confidential B2B notarization of documents and RWA tokenization, with zero data leakage.</p>
+        <div class="links">
+          <a class="primary" href="https://ancorhash-k80ugka8v-nxgad.vercel.app/" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/N0g4D/azure-web3-notarizer/tree/ethrome-2026" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="top"><h3>ShadowBid</h3><span class="prize shipped">Shipped</span></div>
+        <p>A procurement protocol for short-lived digital work: live expiring quotes, user-owned work data, stablecoin settlement.</p>
+        <div class="links">
+          <a class="primary" href="https://shadowbid-psi.vercel.app/" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/EdordoPng/shadowbid" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="top"><h3>Nectar</h3><span class="prize shipped">Shipped</span></div>
+        <p>A Substack-like dApp: read articles, publish your own and earn from them.</p>
+        <div class="links">
+          <a class="primary" href="https://nectar-web-six.vercel.app/" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/blackicon-eth/nectar" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="top"><h3>Ranked Shares</h3><span class="prize shipped">Shipped</span></div>
+        <p>Proportional participatory budgeting on-chain: private proposals on Swarm, expiring ballots on Arkiv, sealed votes.</p>
+        <div class="links">
+          <a class="primary" href="https://ranked-shares--ethrome.blossom.deno.net" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/sembrestels/ranked-shares" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="top"><h3>MilestonePay</h3><span class="prize shipped">Shipped</span></div>
+        <p>An escrow for crypto payments, supervised by AI agents that watch over the system's security.</p>
+        <div class="links">
+          <a class="primary" href="https://milestonepay.lollopanta.it" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/lollopanta/ytmusicultimate" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <h4>See you at the next edition.</h4>
+    <p>Build with us all year round at <a class="cta" href="https://urbe.build" target="_blank" rel="noopener">urbe.build</a></p>
+    <div class="hosted">
+      <img src="/winners/assets/hosted_by_urbe.svg" alt="hosted by urbe.eth" />
+    </div>
+  </div>
+  <div class="meander foot-meander"></div>
+</footer>
+
+</body>
+</html>
